@@ -53,31 +53,55 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const todayStr = () => new Date().toISOString().slice(0, 10);
 
 // ── Service-account auth: mint a signed JWT → exchange for an access token. ──
-function loadKey() {
-  if (process.env.GSC_KEY_JSON) return JSON.parse(process.env.GSC_KEY_JSON);
-  const file = process.env.GSC_KEY_FILE;
-  if (!file || !existsSync(file)) {
-    throw new Error(
-      'No service-account key. Set GSC_KEY_FILE=/path/to/key.json (local) or GSC_KEY_JSON=<json> (CI). See scripts/README-indexing.md'
-    );
-  }
-  return JSON.parse(readFileSync(file, 'utf8'));
+function authMode() {
+  if (process.env.GSC_OAUTH_REFRESH_TOKEN && (process.env.GSC_OAUTH_CLIENT_ID || process.env.GSC_OAUTH_CLIENT_FILE)) return 'oauth';
+  if (process.env.GSC_KEY_JSON || (process.env.GSC_KEY_FILE && existsSync(process.env.GSC_KEY_FILE))) return 'sa';
+  return null;
 }
 
-async function getAccessToken(key, scope) {
-  const b64 = (o) => Buffer.from(typeof o === 'string' ? o : JSON.stringify(o)).toString('base64url');
-  const now = Math.floor(Date.now() / 1000);
-  const head = b64({ alg: 'RS256', typ: 'JWT' });
-  const claim = b64({ iss: key.client_email, scope, aud: 'https://oauth2.googleapis.com/token', iat: now, exp: now + 3600 });
-  const sig = crypto.createSign('RSA-SHA256').update(`${head}.${claim}`).sign(key.private_key).toString('base64url');
-  const res = await fetch('https://oauth2.googleapis.com/token', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-    body: new URLSearchParams({ grant_type: 'urn:ietf:params:oauth:grant-type:jwt-bearer', assertion: `${head}.${claim}.${sig}` }),
-  });
-  const j = await res.json();
-  if (!j.access_token) throw new Error('Token exchange failed: ' + JSON.stringify(j));
-  return j.access_token;
+function oauthClient() {
+  if (process.env.GSC_OAUTH_CLIENT_FILE) {
+    const j = JSON.parse(readFileSync(process.env.GSC_OAUTH_CLIENT_FILE, 'utf8'));
+    const c = j.installed || j.web || j;
+    return { id: c.client_id, secret: c.client_secret };
+  }
+  return { id: process.env.GSC_OAUTH_CLIENT_ID, secret: process.env.GSC_OAUTH_CLIENT_SECRET };
+}
+
+// Get an access token via OAuth user credentials (preferred — works when an org
+// policy blocks service-account keys) or, failing that, a service-account key.
+async function getAccessToken() {
+  const mode = authMode();
+  if (mode === 'oauth') {
+    const { id, secret } = oauthClient();
+    const res = await fetch('https://oauth2.googleapis.com/token', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams({ client_id: id, client_secret: secret, refresh_token: process.env.GSC_OAUTH_REFRESH_TOKEN, grant_type: 'refresh_token' }),
+    });
+    const j = await res.json();
+    if (!j.access_token) throw new Error('OAuth token refresh failed: ' + JSON.stringify(j));
+    return j.access_token;
+  }
+  if (mode === 'sa') {
+    const key = process.env.GSC_KEY_JSON ? JSON.parse(process.env.GSC_KEY_JSON) : JSON.parse(readFileSync(process.env.GSC_KEY_FILE, 'utf8'));
+    const b64 = (o) => Buffer.from(typeof o === 'string' ? o : JSON.stringify(o)).toString('base64url');
+    const now = Math.floor(Date.now() / 1000);
+    const head = b64({ alg: 'RS256', typ: 'JWT' });
+    const claim = b64({ iss: key.client_email, scope: 'https://www.googleapis.com/auth/webmasters.readonly', aud: 'https://oauth2.googleapis.com/token', iat: now, exp: now + 3600 });
+    const sig = crypto.createSign('RSA-SHA256').update(`${head}.${claim}`).sign(key.private_key).toString('base64url');
+    const res = await fetch('https://oauth2.googleapis.com/token', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams({ grant_type: 'urn:ietf:params:oauth:grant-type:jwt-bearer', assertion: `${head}.${claim}.${sig}` }),
+    });
+    const j = await res.json();
+    if (!j.access_token) throw new Error('Service-account token exchange failed: ' + JSON.stringify(j));
+    return j.access_token;
+  }
+  throw new Error(
+    'No credentials. Use OAuth: GSC_OAUTH_CLIENT_ID + GSC_OAUTH_CLIENT_SECRET + GSC_OAUTH_REFRESH_TOKEN (run `node scripts/gsc-auth.mjs` to mint the refresh token), or a service-account key (GSC_KEY_FILE/GSC_KEY_JSON). See scripts/README-indexing.md'
+  );
 }
 
 // ── The crawl list: NAMES first (cartoon pages), then episodes, then listings. ──
@@ -122,7 +146,11 @@ function loadState() {
 }
 
 async function main() {
-  const key = loadKey();
+  if (!authMode()) {
+    throw new Error(
+      'No credentials. Run `node scripts/gsc-auth.mjs` (OAuth) or set GSC_KEY_FILE. See scripts/README-indexing.md'
+    );
+  }
   const urls = await buildUrlList();
   const state = loadState();
   if (state.date !== todayStr()) { state.date = todayStr(); state.sentToday = 0; } // new day → reset daily counter
@@ -136,7 +164,7 @@ async function main() {
   }
 
   console.log(`Inspecting ${budget} URLs (cursor ${state.cursor}/${urls.length}, used today ${state.sentToday}/${DAILY_LIMIT}, site ${SITE_URL})`);
-  const token = await getAccessToken(key, 'https://www.googleapis.com/auth/webmasters.readonly');
+  const token = await getAccessToken();
 
   const tally = {};
   const notIndexed = [];

@@ -15,10 +15,12 @@ dist/
 .env.*
 !.env.example
 
-# Google service-account keys — NEVER commit these
+# Google credentials — NEVER commit these
 gsc-key*.json
 *service-account*.json
 *-key.json
+client_secret*.json
+.gsc-oauth.json
 
 # OS junk
 .DS_Store
