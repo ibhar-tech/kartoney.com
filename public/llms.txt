@@ -35,12 +35,23 @@ Kartoney.com is a free Arabic-language cartoon and anime streaming platform. The
 - Responsive design (mobile + desktop)
 - RTL (right-to-left) Arabic interface
 
+## Key URLs
+
+- Home: https://kartoney.com/
+- Full library (all series): https://kartoney.com/library/
+- Genres index: https://kartoney.com/genre/
+- A series page: https://kartoney.com/cartoon/{slug}/ (e.g. /cartoon/one-piece/)
+- An episode page: https://kartoney.com/watch/{slug}/{season}-{episode}/
+- Browse by era: https://kartoney.com/era/{80s|90s|2000s|2010s}/
+- Browse by type: https://kartoney.com/category/{anime|classic|modern}/
+- Sitemap index: https://kartoney.com/sitemap.xml
+
 ## Technical Details
 
-- Static single-page application (SPA)
-- Client-side SQLite database via sql.js (WebAssembly)
-- No backend server required
-- Hash-based routing
+- Static, pre-rendered multi-page site (one crawlable HTML page per series and per episode)
+- Each page ships full text content (series names, descriptions, episode titles) in the HTML
+- No backend server required; no client-side database
+- Structured data: WebSite, Organization, TVSeries, VideoObject, BreadcrumbList (schema.org)
 
 ## Contact
 
