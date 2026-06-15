@@ -1,0 +1,48 @@
+# Kartoney.com
+
+> Kartoney (كارتوني) is the largest free Arabic cartoon and anime streaming library, featuring over 8,600 episodes across 107 series spanning 4 decades (1980s–2010s).
+
+## About
+
+Kartoney.com is a free Arabic-language cartoon and anime streaming platform. The site offers dubbed Arabic versions of classic and modern animated series. Content is organized by genre, era, and type for easy discovery.
+
+## Content Library
+
+- **Total Series**: 107 cartoon and anime series
+- **Total Episodes**: 8,611 episodes
+- **Languages**: Arabic dubbed
+- **Genres**: Action (أكشن), Adventure (مغامرة), Comedy (كوميدي), Drama (دراما), Fantasy (فنتازيا), Mystery (غموض), Romance (رومانسي), Sci-Fi (خيال علمي), Sports (رياضي), Family (عائلي)
+- **Eras**: 1980s classics, 1990s golden age, 2000s modern, 2010s contemporary
+
+## Popular Series
+
+- المحقق كونان (Detective Conan) — 437 episodes, Action/Mystery
+- ناروتو عربي (Naruto Arabic) — 692 episodes, Action/Adventure
+- وان بيس (One Piece) — 936 episodes, Action/Adventure/Fantasy
+- دراغون بول (Dragon Ball) — 153 episodes, Action/Adventure
+- سلام دانك (Slam Dunk) — 106 episodes, Sports/Comedy
+- هايدي (Heidi) — 94 episodes, Family/Drama
+- جراندايزر (Grendizer) — 74 episodes, Sci-Fi/Action
+- يوقي يو (Yu-Gi-Oh) — 546 episodes, Action
+- كابتن ماجد (Captain Tsubasa) — 128 episodes, Sports
+
+## Features
+
+- Browse by genre, era, or type
+- Search in Arabic and English
+- Season and episode navigation
+- Integrated video player with episode sidebar
+- Responsive design (mobile + desktop)
+- RTL (right-to-left) Arabic interface
+
+## Technical Details
+
+- Static single-page application (SPA)
+- Client-side SQLite database via sql.js (WebAssembly)
+- No backend server required
+- Hash-based routing
+
+## Contact
+
+- Website: https://kartoney.com
+- Domain: kartoney.com

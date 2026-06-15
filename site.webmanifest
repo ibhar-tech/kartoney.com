@@ -1,0 +1,17 @@
+{
+  "name": "كارتوني - عالم الكرتون العربي",
+  "short_name": "كارتوني",
+  "description": "أكبر مكتبة كرتون عربي مجانية. شاهد أكثر من 8000 حلقة كرتون وأنمي مدبلج بالعربية.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0e0e0e",
+  "theme_color": "#FFAC54",
+  "dir": "rtl",
+  "lang": "ar",
+  "categories": ["entertainment", "video"],
+  "icons": [
+    { "src": "/images/favicon-192x192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/images/favicon-512x512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/images/favicon-512x512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

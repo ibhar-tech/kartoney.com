@@ -1,0 +1,12 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Kartoney - Arabic Cartoons",
+  "name_for_model": "kartoney",
+  "description_for_human": "أكبر مكتبة كرتون عربي مجانية - شاهد أكثر من 8000 حلقة",
+  "description_for_model": "Kartoney.com is the largest free Arabic cartoon and anime streaming library with 8,611 episodes across 107 series. Users can browse by genre (action, adventure, comedy, drama, fantasy, mystery, romance, sci-fi, sports, family), by era (80s, 90s, 2000s, 2010s), or by type (anime, classic, modern). The site is in Arabic with RTL layout.",
+  "auth": { "type": "none" },
+  "api": { "type": "none" },
+  "logo_url": "https://kartoney.com/images/favicon-512x512.png",
+  "contact_email": "",
+  "legal_info_url": "https://kartoney.com"
+}
