@@ -35,8 +35,8 @@ export const ADS = {
   // 2) SOCIAL BAR — Adsterra's highest-earning, least-intrusive format.
   //    Create a "Social Bar" unit, GET CODE, copy the script src URL here.
   socialBar: {
-    enabled: false,
-    scriptSrc: '', // e.g. 'https://goldpalette.com/xx/yy/zz/xxyyzz.js'
+    enabled: true,
+    scriptSrc: 'https://fortunateambiguous.com/15/cd/23/15cd2395d767864c96c9820d721fd326.js',
   },
 
   // 3) NATIVE / BANNER — one in-content block (we render its container only on
