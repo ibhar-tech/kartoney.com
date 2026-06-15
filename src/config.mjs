@@ -61,6 +61,9 @@ export const url = {
   era: (e) => `/era/${e}/`,
   library: () => '/library/',
   abs: (path) => SITE.url + path,
+  // Absolute URL for an image path: same-origin posters get the origin prefix,
+  // remote URLs (rare fallbacks) are returned unchanged. For JSON-LD / sitemaps.
+  absImg: (p) => (p && p.startsWith('/') ? SITE.url + p : p || ''),
 };
 
 export const ERAS = [

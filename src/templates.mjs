@@ -2,7 +2,7 @@
  * HTML templates for every page type. Pure functions returning HTML strings.
  * Reuses the existing design-system class names from css/style.css.
  */
-import { esc, attr, num, clip, seededPick } from './util.mjs';
+import { esc, attr, num, clip, seededPick, toISO } from './util.mjs';
 import { icon } from './icons.mjs';
 import { SITE, ADS, url, ERAS, TYPES } from './config.mjs';
 import { longDesc, metaDesc } from './describe.mjs';
@@ -477,11 +477,12 @@ ${footer(data.totals)}`;
       '@type': 'VideoObject',
       name: ep.title,
       description: desc,
-      thumbnailUrl: [ep.logo || c.logo],
-      uploadDate: '2024-01-01',
+      thumbnailUrl: [url.absImg(ep.logo || c.logo)],
+      uploadDate: toISO(c.created_at) || '2024-01-01',
       contentUrl: ep.url,
       embedUrl: url.abs(url.watch(c.slug, ep.slug)),
       inLanguage: 'ar',
+      isFamilyFriendly: true,
       isPartOf: { '@type': 'TVSeries', name: c.name, url: url.abs(url.cartoon(c.slug)) },
     },
     breadcrumbLd([

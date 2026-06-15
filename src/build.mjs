@@ -8,7 +8,7 @@ import { fileURLToPath } from 'node:url';
 import { loadData } from './data.mjs';
 import { SITE, ADS, url, ERAS, TYPES } from './config.mjs';
 import { homePage, cartoonPage, episodePage, browsePage, genreChips } from './templates.mjs';
-import { num } from './util.mjs';
+import { num, esc, clip, toISO } from './util.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const DIST = join(ROOT, 'dist');
@@ -47,6 +47,26 @@ if(A.nativeBanner&&A.nativeBanner.enabled&&A.nativeBanner.scriptSrc&&A.nativeBan
 
 function xmlUrl(loc, lastmod, changefreq, priority) {
   return `  <url><loc>${SITE.url}${loc}</loc><lastmod>${lastmod}</lastmod>${changefreq ? `<changefreq>${changefreq}</changefreq>` : ''}${priority ? `<priority>${priority}</priority>` : ''}</url>`;
+}
+
+/** One <url> entry for the Google video sitemap (one per episode). */
+function videoEntry(ep, c) {
+  const title = ep.title || `${c.name} - الحلقة ${ep.episode_number}`;
+  const desc = clip(`شاهد ${title} من مسلسل ${c.name} مدبلجة بالعربية أونلاين بجودة عالية ومجاناً على كارتوني.`, 200);
+  const thumb = url.absImg(ep.logo || c.logo);
+  const date = toISO(c.created_at);
+  return `  <url>
+    <loc>${SITE.url}${url.watch(c.slug, ep.slug)}</loc>
+    <video:video>
+      <video:thumbnail_loc>${esc(thumb)}</video:thumbnail_loc>
+      <video:title>${esc(title)}</video:title>
+      <video:description>${esc(desc)}</video:description>
+      <video:content_loc>${esc(ep.url)}</video:content_loc>
+      <video:player_loc>${SITE.url}${url.watch(c.slug, ep.slug)}</video:player_loc>${date ? `\n      <video:publication_date>${date}</video:publication_date>` : ''}
+      <video:family_friendly>yes</video:family_friendly>
+      <video:live>no</video:live>
+    </video:video>
+  </url>`;
 }
 
 async function build() {
@@ -177,15 +197,23 @@ async function build() {
     ...data.cartoons.map((c) => xmlUrl(url.cartoon(c.slug), today, 'weekly', '0.8')),
   ];
   const epUrls = [];
-  for (const c of data.cartoons) for (const ep of c.allEpisodes) epUrls.push(xmlUrl(url.watch(c.slug, ep.slug), today, 'monthly', '0.5'));
+  const vidUrls = [];
+  for (const c of data.cartoons)
+    for (const ep of c.allEpisodes) {
+      epUrls.push(xmlUrl(url.watch(c.slug, ep.slug), today, 'monthly', '0.5'));
+      if (ep.url) vidUrls.push(videoEntry(ep, c));
+    }
 
   const STYLE = `<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>`;
   const wrap = (items) => `<?xml version="1.0" encoding="UTF-8"?>\n${STYLE}\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${items.join('\n')}\n</urlset>\n`;
+  const wrapVideo = (items) => `<?xml version="1.0" encoding="UTF-8"?>\n${STYLE}\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">\n${items.join('\n')}\n</urlset>\n`;
   writeFile('sitemap-pages.xml', wrap(pageUrls));
   writeFile('sitemap-episodes.xml', wrap(epUrls));
+  writeFile('sitemap-videos.xml', wrapVideo(vidUrls));
+  const child = (name) => `  <sitemap><loc>${SITE.url}/${name}</loc><lastmod>${today}</lastmod></sitemap>`;
   writeFile(
     'sitemap.xml',
-    `<?xml version="1.0" encoding="UTF-8"?>\n${STYLE}\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <sitemap><loc>${SITE.url}/sitemap-pages.xml</loc><lastmod>${today}</lastmod></sitemap>\n  <sitemap><loc>${SITE.url}/sitemap-episodes.xml</loc><lastmod>${today}</lastmod></sitemap>\n</sitemapindex>\n`
+    `<?xml version="1.0" encoding="UTF-8"?>\n${STYLE}\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${child('sitemap-pages.xml')}\n${child('sitemap-episodes.xml')}\n${child('sitemap-videos.xml')}\n</sitemapindex>\n`
   );
 
   writeFile(
@@ -194,7 +222,7 @@ async function build() {
   );
 
   const secs = ((Date.now() - t0) / 1000).toFixed(1);
-  console.log(`✅ Built ${num(pageCount)} pages + ${num(epUrls.length)} episode URLs in ${secs}s`);
+  console.log(`✅ Built ${num(pageCount)} pages + ${num(epUrls.length)} episode URLs + ${num(vidUrls.length)} video entries in ${secs}s`);
   console.log(`   ${num(data.totals.cartoons)} cartoons · ${num(data.totals.episodes)} episodes · ${num(data.genres.length)} genres`);
   console.log(`   Output: dist/`);
 }
