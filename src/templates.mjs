@@ -326,6 +326,10 @@ export function cartoonPage(c, data) {
   const statusText = c.status === 'completed' ? 'مكتمل' : 'مستمر';
   const desc = metaDesc(c);
   const about = longDesc(c);
+  // Per-episode thumbnails are mostly duplicates of the series poster; on huge
+  // series (One Piece = 936 eps) they add ~900 <img> nodes/requests. Keep them
+  // for normal series, drop them for mega-lists → far lighter DOM, same links.
+  const showThumbs = c.total_episodes <= 100;
 
   const body = `
 ${breadcrumbs([{ label: 'الرئيسية', href: '/' }, { label: 'المكتبة', href: url.library() }, { label: c.name }])}
@@ -366,9 +370,9 @@ ${breadcrumbs([{ label: 'الرئيسية', href: '/' }, { label: 'المكتب�
         ${s.episodes
           .map(
             (ep) => `<a class="episode-item" href="${url.watch(c.slug, ep.slug)}">
-          <span class="episode-number">${num(ep.episode_number)}</span>
-          <div class="episode-thumb"><img src="${attr(ep.logo || c.logo)}" alt="${attr(ep.title)}" width="140" height="79" loading="lazy" decoding="async" onerror="${ph(140, 79)}"></div>
-          <div class="episode-info"><h3 style="font-weight:700;font-size:.95rem">${esc(ep.title)}</h3></div>
+          <span class="episode-number">${num(ep.episode_number)}</span>${showThumbs ? `
+          <div class="episode-thumb"><img src="${attr(ep.logo || c.logo)}" alt="${attr(ep.title)}" width="140" height="79" loading="lazy" decoding="async" onerror="${ph(140, 79)}"></div>` : ''}
+          <div class="episode-info"><h3>${esc(ep.title)}</h3></div>
         </a>`
           )
           .join('')}
