@@ -3,10 +3,23 @@
  * a fully-linked in-memory object graph used by the generator.
  */
 import initSqlJs from 'sql.js';
-import { readFileSync } from 'node:fs';
+import { readFileSync, existsSync, readdirSync } from 'node:fs';
+import { dirname, join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { createRequire } from 'node:module';
+import { posterName, POSTER_URL_PREFIX } from './imageMap.mjs';
 
 const require = createRequire(import.meta.url);
+
+// Self-hosted posters (see imageMap.mjs). Any logo we downloaded is rewritten to
+// a same-origin /images/posters/ path so ad-blockers can't blank the page; the
+// rest fall back to their original remote URL.
+const POSTER_DIR = join(dirname(fileURLToPath(import.meta.url)), '..', 'public', 'images', 'posters');
+const localPosters = new Set(existsSync(POSTER_DIR) ? readdirSync(POSTER_DIR) : []);
+function localImage(srcUrl) {
+  const n = posterName(srcUrl);
+  return n && localPosters.has(n) ? POSTER_URL_PREFIX + n : srcUrl;
+}
 
 export async function loadData(dbPath) {
   const SQL = await initSqlJs({
@@ -73,10 +86,12 @@ export async function loadData(dbPath) {
     c.genres = genresByCartoon.get(c.id) || [];
     c.seasons = seasonsByCartoon.get(c.id) || [];
     c.allEpisodes = episodesByCartoon.get(c.id) || [];
+    c.logo = localImage(c.logo);
 
     // Unique, human-readable episode slug within the cartoon: "<season>-<episode>".
     const used = new Set();
     for (const ep of c.allEpisodes) {
+      ep.logo = localImage(ep.logo);
       const season = c.seasons.find((s) => s.id === ep.season_id);
       ep.seasonNumber = season ? season.season_number : 1;
       ep.seasonName = season ? season.name : '';

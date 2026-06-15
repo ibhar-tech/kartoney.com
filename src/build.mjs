@@ -58,8 +58,9 @@ async function build() {
   mkdirSync(DIST, { recursive: true });
   cpSync(PUBLIC, DIST, { recursive: true });
 
-  // 2) Ad runtime (from config)
-  writeFile('js/ads.js', adsRuntime());
+  // 2) Ad runtime (from config). Named neutrally — a file literally called
+  //    "ads.js" is blocked by default ad-blocker filter lists.
+  writeFile('js/widgets.js', adsRuntime());
 
   // 3) Home
   writePage('/', homePage(data));
@@ -178,12 +179,13 @@ async function build() {
   const epUrls = [];
   for (const c of data.cartoons) for (const ep of c.allEpisodes) epUrls.push(xmlUrl(url.watch(c.slug, ep.slug), today, 'monthly', '0.5'));
 
-  const wrap = (items) => `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${items.join('\n')}\n</urlset>\n`;
+  const STYLE = `<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>`;
+  const wrap = (items) => `<?xml version="1.0" encoding="UTF-8"?>\n${STYLE}\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${items.join('\n')}\n</urlset>\n`;
   writeFile('sitemap-pages.xml', wrap(pageUrls));
   writeFile('sitemap-episodes.xml', wrap(epUrls));
   writeFile(
     'sitemap.xml',
-    `<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <sitemap><loc>${SITE.url}/sitemap-pages.xml</loc><lastmod>${today}</lastmod></sitemap>\n  <sitemap><loc>${SITE.url}/sitemap-episodes.xml</loc><lastmod>${today}</lastmod></sitemap>\n</sitemapindex>\n`
+    `<?xml version="1.0" encoding="UTF-8"?>\n${STYLE}\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <sitemap><loc>${SITE.url}/sitemap-pages.xml</loc><lastmod>${today}</lastmod></sitemap>\n  <sitemap><loc>${SITE.url}/sitemap-episodes.xml</loc><lastmod>${today}</lastmod></sitemap>\n</sitemapindex>\n`
   );
 
   writeFile(

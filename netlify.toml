@@ -32,6 +32,13 @@
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
 
+# ── Sitemap stylesheet must be served as XML so browsers apply it ───
+[[headers]]
+  for = "/sitemap.xsl"
+  [headers.values]
+    Content-Type = "text/xsl; charset=utf-8"
+    Cache-Control = "public, max-age=86400"
+
 # ── Security headers (site-wide) ────────────────────────────────────
 [[headers]]
   for = "/*"

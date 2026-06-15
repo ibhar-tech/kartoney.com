@@ -65,7 +65,7 @@ ${body}
   </main>
 ${bottomNav()}
   <script src="/js/main.js" defer></script>
-  <script src="/js/ads.js" defer></script>
+  <script src="/js/widgets.js" defer></script>
 </body>
 </html>`;
 }
