@@ -2,28 +2,27 @@
   "date": "2026-06-16",
   "inspected": 5,
   "byCoverage": {
-    "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن": 4,
-    "لم يتعرّف محرّك بحث Google على عنوان URL.": 1
+    "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن": 5
   },
   "notIndexedSample": [
     {
-      "url": "https://kartoney.com/cartoon/the-mirage/",
+      "url": "https://kartoney.com/cartoon/golden-dreams/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/cartoon/champions/",
-      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
-    },
-    {
-      "url": "https://kartoney.com/cartoon/cybertron-ninjas/",
+      "url": "https://kartoney.com/cartoon/les-miserables/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/cartoon/golden-eagle/",
+      "url": "https://kartoney.com/cartoon/decisive-battle/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/cartoon/smurfs/",
+      "url": "https://kartoney.com/cartoon/little-traveler/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/cartoon/iron-man/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     }
   ],
