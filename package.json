@@ -10,7 +10,8 @@
     "dev": "node src/build.mjs && node src/serve.mjs",
     "images": "node scripts/fetch-images.mjs",
     "index": "node scripts/gsc-inspect.mjs",
-    "index:auth": "node scripts/gsc-auth.mjs"
+    "index:auth": "node scripts/gsc-auth.mjs",
+    "index:status": "node scripts/gsc-status.mjs"
   },
   "dependencies": {
     "sql.js": "^1.12.0"
