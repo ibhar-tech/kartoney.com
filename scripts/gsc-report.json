@@ -1,30 +1,813 @@
 {
   "date": "2026-06-16",
-  "inspected": 5,
+  "inspected": 561,
   "byCoverage": {
-    "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن": 5
+    "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن": 471,
+    "لم يتعرّف محرّك بحث Google على عنوان URL.": 81,
+    "تم إرسال الصفحة وتمت فهرستها": 8,
+    "تم الزحف إلى الصفحة - لم تتم فهرستها حاليًا": 1
   },
   "notIndexedSample": [
     {
-      "url": "https://kartoney.com/cartoon/blazing-serve/",
+      "url": "https://kartoney.com/cartoon/captain-tsubasa/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/cartoon/blue-energy/",
+      "url": "https://kartoney.com/cartoon/detective-conan/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/cartoon/beyblade/",
+      "url": "https://kartoney.com/cartoon/driland/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/cartoon/calimero/",
+      "url": "https://kartoney.com/cartoon/fadi-milkman/",
+      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+    },
+    {
+      "url": "https://kartoney.com/cartoon/fiona/",
+      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+    },
+    {
+      "url": "https://kartoney.com/cartoon/prairie-girl/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/cartoon/captinthapit/",
+      "url": "https://kartoney.com/cartoon/heidi/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/cartoon/unforgettable-tales/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/cartoon/beautiful-tales/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/cartoon/inspector-gadget/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/cartoon/loz-w-sukar/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/cartoon/lucy/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/cartoon/kungfu-school/",
+      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+    },
+    {
+      "url": "https://kartoney.com/cartoon/magic-kaito/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/cartoon/blue-diamond/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/cartoon/half-hero/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/cartoon/nils/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/cartoon/strawberry-village/",
+      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+    },
+    {
+      "url": "https://kartoney.com/cartoon/long-shadow/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/cartoon/sasuki/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/cartoon/tom-sawyer/",
+      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+    },
+    {
+      "url": "https://kartoney.com/cartoon/digimon/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/cartoon/ball-champions/",
+      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+    },
+    {
+      "url": "https://kartoney.com/cartoon/adnan-and-lina/",
+      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+    },
+    {
+      "url": "https://kartoney.com/cartoon/friends-pledge/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/cartoon/me-and-my-sister/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/cartoon/me-and-my-sisters/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/cartoon/me-and-my-brother/",
+      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+    },
+    {
+      "url": "https://kartoney.com/cartoon/asam-adventures/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/cartoon/ocean-secrets/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/cartoon/avatar/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/cartoon/beyblade-zero-g/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/cartoon/black-cat/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/cartoon/bleach/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/cartoon/captain-tsubasa-2/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/cartoon/code-geass/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/cartoon/dai-brave/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/cartoon/emily/",
+      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+    },
+    {
+      "url": "https://kartoney.com/cartoon/noble-boy/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/cartoon/grendizer/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/cartoon/secret-garden/",
+      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+    },
+    {
+      "url": "https://kartoney.com/cartoon/hazeem-thunder/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/cartoon/attack-on-titan/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/cartoon/sugar-letters/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/cartoon/treasure-island/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/cartoon/fullmetal-alchemist/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/cartoon/lady-oscar/",
+      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+    },
+    {
+      "url": "https://kartoney.com/cartoon/lady-lady/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/cartoon/ask-labiba/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/cartoon/lpx/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/cartoon/loly-rock/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/cartoon/lubna/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/cartoon/palm-city/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/cartoon/mowgli/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/cartoon/mazinger-z/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/cartoon/miraculous/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/cartoon/noble-fighter/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/cartoon/detective-engy/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/cartoon/masked-tiger/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/cartoon/naruto/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/cartoon/eagles-of-space/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/cartoon/one-piece/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/cartoon/one-punch-man/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/cartoon/hunter-x-hunter/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/cartoon/the-mask/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/cartoon/student-council-president/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/cartoon/giant-raad/",
+      "coverage": "تم الزحف إلى الصفحة - لم تتم فهرستها حاليًا"
+    },
+    {
+      "url": "https://kartoney.com/cartoon/ranzi/",
+      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+    },
+    {
+      "url": "https://kartoney.com/cartoon/dear-rawiah/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/cartoon/anaba-journey/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/cartoon/remi-roads/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/cartoon/remi-nobody-child/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/cartoon/fire-sword/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/cartoon/sally/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/cartoon/sandy-belle/",
+      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+    },
+    {
+      "url": "https://kartoney.com/cartoon/cinderella/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/cartoon/shama-prairies/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/cartoon/reka-flame/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/cartoon/three-braves/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/cartoon/sindbad/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/cartoon/slam-dunk/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/cartoon/earth-eagles/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/cartoon/tokyo-ghoul/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/cartoon/the-twins/",
+      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+    },
+    {
+      "url": "https://kartoney.com/cartoon/yokai-watch/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/cartoon/yugioh/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/cartoon/zorro/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/library/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/genre/",
+      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+    },
+    {
+      "url": "https://kartoney.com/genre/action/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/genre/adventure/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/genre/sports/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/genre/sci-fi/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/genre/mystery/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/genre/family/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/genre/drama/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/genre/comedy/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/genre/fantasy/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/genre/educational/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/category/anime/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/category/classic/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/category/modern/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/era/90s/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/era/2000s/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/era/2010s/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/the-mirage/1-1/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/the-mirage/1-2/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/the-mirage/1-3/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/the-mirage/1-4/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/the-mirage/1-5/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/the-mirage/1-6/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/the-mirage/1-7/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/the-mirage/1-8/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/the-mirage/1-9/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/the-mirage/1-10/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/the-mirage/1-11/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/the-mirage/1-12/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/the-mirage/1-13/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/the-mirage/1-14/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/the-mirage/1-15/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/the-mirage/1-16/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/the-mirage/1-17/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/the-mirage/1-18/",
+      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+    },
+    {
+      "url": "https://kartoney.com/watch/the-mirage/1-19/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/the-mirage/1-20/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/the-mirage/1-21/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/the-mirage/1-22/",
+      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+    },
+    {
+      "url": "https://kartoney.com/watch/the-mirage/1-23/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/the-mirage/1-24/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/the-mirage/1-25/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/the-mirage/1-26/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/the-mirage/1-27/",
+      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+    },
+    {
+      "url": "https://kartoney.com/watch/the-mirage/1-28/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/the-mirage/1-29/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/the-mirage/1-30/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/the-mirage/1-31/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/the-mirage/1-32/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/the-mirage/1-33/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/the-mirage/1-34/",
+      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+    },
+    {
+      "url": "https://kartoney.com/watch/the-mirage/1-35/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/the-mirage/1-36/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/the-mirage/1-37/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/the-mirage/1-38/",
+      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+    },
+    {
+      "url": "https://kartoney.com/watch/the-mirage/1-39/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/the-mirage/1-40/",
+      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+    },
+    {
+      "url": "https://kartoney.com/watch/the-mirage/1-41/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/the-mirage/1-42/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/the-mirage/1-43/",
+      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+    },
+    {
+      "url": "https://kartoney.com/watch/the-mirage/1-44/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/the-mirage/1-45/",
+      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+    },
+    {
+      "url": "https://kartoney.com/watch/the-mirage/1-46/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/the-mirage/1-47/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/the-mirage/1-48/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/the-mirage/1-49/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/the-mirage/1-50/",
+      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+    },
+    {
+      "url": "https://kartoney.com/watch/the-mirage/1-51/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/the-mirage/1-52/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/the-mirage/1-53/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/the-mirage/1-54/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/the-mirage/2-1/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/the-mirage/2-2/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/the-mirage/2-3/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/the-mirage/2-4/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/champions/1-1/",
+      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+    },
+    {
+      "url": "https://kartoney.com/watch/champions/1-2/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/champions/1-3/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/champions/1-4/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/champions/1-5/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/champions/1-6/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/champions/1-7/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/champions/1-8/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/champions/1-9/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/champions/1-10/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/champions/1-11/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/champions/1-12/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/champions/1-13/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/champions/1-14/",
+      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+    },
+    {
+      "url": "https://kartoney.com/watch/champions/1-15/",
+      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+    },
+    {
+      "url": "https://kartoney.com/watch/champions/1-16/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/champions/1-17/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/champions/1-18/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/champions/1-19/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/champions/1-20/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/champions/1-21/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/champions/1-22/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/champions/1-23/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/champions/1-24/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/champions/1-25/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/champions/1-26/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/champions/1-27/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/champions/1-28/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/champions/1-29/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/champions/1-30/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/champions/1-31/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/champions/1-32/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/champions/1-33/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/champions/1-34/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/champions/1-35/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/champions/1-36/",
+      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+    },
+    {
+      "url": "https://kartoney.com/watch/champions/1-37/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     }
   ],
-  "notIndexedCount": 5
+  "notIndexedCount": 553
 }
