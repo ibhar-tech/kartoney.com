@@ -18,7 +18,11 @@ const POSTER_DIR = join(dirname(fileURLToPath(import.meta.url)), '..', 'public',
 const localPosters = new Set(existsSync(POSTER_DIR) ? readdirSync(POSTER_DIR) : []);
 function localImage(srcUrl) {
   const n = posterName(srcUrl);
-  return n && localPosters.has(n) ? POSTER_URL_PREFIX + n : srcUrl;
+  if (!n) return srcUrl;
+  const webp = n.replace(/\.(jpe?g|png)$/i, '.webp'); // prefer the optimized WebP
+  if (localPosters.has(webp)) return POSTER_URL_PREFIX + webp;
+  if (localPosters.has(n)) return POSTER_URL_PREFIX + n;
+  return srcUrl;
 }
 
 export async function loadData(dbPath) {

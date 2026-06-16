@@ -8,7 +8,8 @@
     "build": "node src/build.mjs",
     "serve": "node src/serve.mjs",
     "dev": "node src/build.mjs && node src/serve.mjs",
-    "images": "node scripts/fetch-images.mjs",
+    "images": "node scripts/fetch-images.mjs && node scripts/optimize-images.mjs",
+    "webp": "node scripts/optimize-images.mjs",
     "index": "node scripts/gsc-inspect.mjs",
     "index:auth": "node scripts/gsc-auth.mjs",
     "index:status": "node scripts/gsc-status.mjs"
