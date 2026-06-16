@@ -61,8 +61,7 @@ function videoEntry(ep, c) {
       <video:thumbnail_loc>${esc(thumb)}</video:thumbnail_loc>
       <video:title>${esc(title)}</video:title>
       <video:description>${esc(desc)}</video:description>
-      <video:content_loc>${esc(ep.url)}</video:content_loc>
-      <video:player_loc>${SITE.url}${url.watch(c.slug, ep.slug)}</video:player_loc>${date ? `\n      <video:publication_date>${date}</video:publication_date>` : ''}
+      <video:content_loc>${esc(ep.url)}</video:content_loc>${date ? `\n      <video:publication_date>${date}</video:publication_date>` : ''}
       <video:family_friendly>yes</video:family_friendly>
       <video:live>no</video:live>
     </video:video>
