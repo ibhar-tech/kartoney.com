@@ -5,7 +5,7 @@
 import { esc, attr, num, clip, seededPick, toISO } from './util.mjs';
 import { icon } from './icons.mjs';
 import { SITE, ADS, url, ERAS, TYPES } from './config.mjs';
-import { longDesc, metaDesc } from './describe.mjs';
+import { longDesc, metaDesc, episodeLongDesc, episodeMetaDesc, episodeFaq } from './describe.mjs';
 
 // Inline SVG placeholder used when an external CDN image fails to load.
 const ph = (w, h) =>
@@ -428,7 +428,9 @@ export function episodePage(ep, c, data) {
   const idx = c.allEpisodes.findIndex((e) => e.id === ep.id);
   const prev = idx > 0 ? c.allEpisodes[idx - 1] : null;
   const next = idx < c.allEpisodes.length - 1 ? c.allEpisodes[idx + 1] : null;
-  const desc = clip(`شاهد ${ep.title} من مسلسل ${c.name} مدبلجة بالعربية أونلاين بجودة عالية ومجاناً على كارتوني.`, 160);
+  const desc = episodeMetaDesc(ep, c);
+  const about = episodeLongDesc(ep, c, prev, next);
+  const faqs = episodeFaq(ep, c, prev, next);
   // Window the sidebar so long series (One Piece = 936 eps) don't bloat every page.
   // The full list lives on the cartoon page; prev/next keep the crawl chain intact.
   const WIN = 12;
@@ -458,6 +460,21 @@ ${breadcrumbs([{ label: 'الرئيسية', href: '/' }, { label: c.name, href: 
         ${next ? `<a href="${url.watch(c.slug, next.slug)}" style="text-align:left"><div><div class="label">التالي</div><div>${esc(clip(next.title, 40))}</div></div>${icon('arrow_back')}</a>` : '<div></div>'}
       </div>
 ${adSlot()}
+      <section class="episode-about" style="margin-top:1.5rem">
+        <h2 class="section-title" style="margin-bottom:.75rem"><span class="accent"></span>عن الحلقة</h2>
+        <p style="color:var(--on-surface-variant);line-height:1.9">${esc(about)}</p>
+      </section>
+      <section class="episode-faq" style="margin-top:1.75rem">
+        <h2 class="section-title" style="margin-bottom:.9rem"><span class="accent gold"></span>أسئلة شائعة</h2>
+        ${faqs
+          .map(
+            (faq) => `<details style="background:var(--surface-container);border-radius:var(--radius);padding:.85rem 1rem;margin-bottom:.6rem">
+          <summary style="cursor:pointer;font-weight:700;color:var(--on-surface)">${esc(faq.q)}</summary>
+          <p style="color:var(--on-surface-variant);line-height:1.8;margin:.6rem 0 0">${esc(faq.a)}</p>
+        </details>`
+          )
+          .join('')}
+      </section>
     </div>
     <aside class="player-sidebar">
       <h2 style="font-size:1rem;display:flex;align-items:center;justify-content:space-between;gap:.5rem">
@@ -498,6 +515,15 @@ ${footer(data.totals)}`;
       { name: c.name, url: url.abs(url.cartoon(c.slug)) },
       { name: ep.title, url: url.abs(url.watch(c.slug, ep.slug)) },
     ]),
+    {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faqs.map((faq) => ({
+        '@type': 'Question',
+        name: faq.q,
+        acceptedAnswer: { '@type': 'Answer', text: faq.a },
+      })),
+    },
   ];
 
   return layout({

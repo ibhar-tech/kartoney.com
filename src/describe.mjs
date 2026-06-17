@@ -67,3 +67,82 @@ export function metaDesc(c) {
   if (s.length > 158) s = s.slice(0, 157).replace(/\s+\S*$/, '') + '…';
   return s;
 }
+
+/* ───────────────────────── EPISODE-LEVEL ─────────────────────────
+ * Episode pages have no plot data in the DB, so — like the series text —
+ * these combine only REAL facts (episode/season position, adjacent episodes,
+ * series attributes) with rotating phrasing seeded by ep.id. The point is to
+ * make each of the 8,611 pages genuinely distinct & useful, NOT to mass-produce
+ * keyword filler (which Google's helpful-content system penalizes).        */
+
+function episodeFacts(ep, c, prev, next) {
+  const total = c.allEpisodes.length;
+  const idx = c.allEpisodes.findIndex((e) => e.id === ep.id);
+  const position = idx >= 0 ? idx + 1 : ep.episode_number;
+  const type = TYPE_PHRASE[c.type] || 'من مسلسلات الكرتون';
+  const era = ERA_PHRASE[c.era] ? ` الذي يعود إلى ${ERA_PHRASE[c.era]}` : '';
+  const genres = genresList(c);
+  const seasonPart = c.total_seasons > 1 ? ` من ${ep.seasonName || 'الجزء ' + num(ep.seasonNumber)}` : '';
+  return { total, position, type, era, genres, seasonPart, prev, next };
+}
+
+/** Multi-sentence, fact-only episode description for the page body. */
+export function episodeLongDesc(ep, c, prev, next) {
+  const f = episodeFacts(ep, c, prev, next);
+  const tag = tagline(c);
+  const tagSp = tag ? ` ${tag}` : '';
+  const gPart = f.genres ? ` ضمن تصنيف ${f.genres}` : '';
+
+  const intro = `«${ep.title}» هي الحلقة رقم ${num(ep.episode_number)}${f.seasonPart} من مسلسل ${c.name}، ${f.type}${f.era}، المدبلج بالكامل إلى اللغة العربية.`;
+  const count = `وهي الحلقة ${num(f.position)} من إجمالي ${num(f.total)} حلقة${gPart}.`;
+
+  const nb = [];
+  if (f.prev) nb.push(`تأتي بعد حلقة «${f.prev.title}»`);
+  if (f.next) nb.push(`${f.prev ? 'و' : ''}يليها «${f.next.title}»`);
+  const nbSp = nb.length ? ` ${nb.join(' ')}.` : '';
+
+  const watch = `شاهد «${ep.title}» كاملةً بجودة عالية ومجاناً على كارتوني، بدون تسجيل أو اشتراك.`;
+
+  const variants = [
+    `${intro}${tagSp} ${count}${nbSp} ${watch}`,
+    `${intro} ${count}${nbSp}${tagSp} ${watch}`,
+    `تابع «${ep.title}» من ${c.name}، ${f.type}${f.era}، مدبلجة بالعربية. ${count}${nbSp}${tagSp} ${watch}`,
+  ];
+  return variants[ep.id % variants.length];
+}
+
+/** Concise ≤155-char meta description for an episode page. */
+export function episodeMetaDesc(ep, c) {
+  const variants = [
+    `شاهد ${ep.title} من ${c.name} مدبلجة بالعربية أونلاين بجودة عالية ومجاناً على كارتوني — الحلقة كاملة بدون تسجيل.`,
+    `${ep.title} — ${c.name} مدبلج عربي. شاهد الحلقة كاملةً أونلاين بجودة عالية ومجاناً على كارتوني، بدون اشتراك.`,
+  ];
+  let s = variants[ep.id % variants.length];
+  if (s.length > 158) s = s.slice(0, 157).replace(/\s+\S*$/, '') + '…';
+  return s;
+}
+
+/** Page-specific FAQ (real Q&A) — visible on-page and mirrored in FAQPage JSON-LD. */
+export function episodeFaq(ep, c, prev, next) {
+  const faqs = [
+    {
+      q: `هل ${ep.title} مدبلجة بالعربية؟`,
+      a: `نعم، ${ep.title} من مسلسل ${c.name} متوفرة مدبلجة بالكامل إلى اللغة العربية بجودة عالية على كارتوني.`,
+    },
+    {
+      q: `كيف أشاهد ${ep.title}؟`,
+      a: `شغّل الفيديو مباشرةً من المشغّل في أعلى هذه الصفحة — المشاهدة مجانية تماماً وبدون تسجيل أو اشتراك.`,
+    },
+    {
+      q: `كم عدد حلقات ${c.name}؟`,
+      a: `يضم مسلسل ${c.name} ${num(c.total_episodes)} حلقة${c.total_seasons > 1 ? ` موزعة على ${num(c.total_seasons)} أجزاء` : ''}، وجميعها متوفرة كاملةً على كارتوني.`,
+    },
+  ];
+  if (next) {
+    faqs.push({
+      q: `ما الحلقة التالية بعد ${ep.title}؟`,
+      a: `الحلقة التالية هي «${next.title}»، ويمكنك متابعتها مباشرةً بعد انتهاء هذه الحلقة من زر «التالي».`,
+    });
+  }
+  return faqs;
+}
