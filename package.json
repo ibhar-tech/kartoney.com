@@ -12,7 +12,10 @@
     "webp": "node scripts/optimize-images.mjs",
     "index": "node scripts/gsc-inspect.mjs",
     "index:auth": "node scripts/gsc-auth.mjs",
-    "index:status": "node scripts/gsc-status.mjs"
+    "index:status": "node scripts/gsc-status.mjs",
+    "bing": "node scripts/bing-submit.mjs",
+    "bing:indexnow": "node scripts/bing-submit.mjs --indexnow",
+    "bing:quota": "node scripts/bing-submit.mjs --quota"
   },
   "dependencies": {
     "sql.js": "^1.12.0"

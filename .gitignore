@@ -22,6 +22,9 @@ gsc-key*.json
 client_secret*.json
 .gsc-oauth.json
 
+# Bing Webmaster API key — NEVER commit
+.bing-key
+
 # OS junk
 .DS_Store
 Thumbs.db
