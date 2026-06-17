@@ -3,5 +3,9 @@
   "sentToday": 100,
   "cursor": 100,
   "total": 100,
-  "indexnow": null
+  "indexnow": {
+    "lastRun": "2026-06-17T13:36:56.635Z",
+    "submitted": 1000,
+    "total": 1000
+  }
 }
