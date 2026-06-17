@@ -42,6 +42,9 @@ const SITE_URL = process.env.GSC_SITE || `${SITE.url}/`; // URL-prefix property;
 const DAILY_LIMIT = Number(process.env.GSC_DAILY_LIMIT || 1800); // < 2000/day API cap
 const QPM = Number(process.env.GSC_QPM || 360); // < 600/min cap → spacing below
 const SPACING_MS = Math.ceil(60000 / QPM);
+// Each inspect call is slow (~6-7s of Google-side lookup), so we run several in
+// parallel; otherwise 1800 URLs would take ~3h (and outlive the 1h access token).
+const CONCURRENCY = Math.max(1, Number(process.env.GSC_CONCURRENCY || 12));
 const argLimit = numArg('--limit');
 const RESET = process.argv.includes('--reset');
 
@@ -122,20 +125,36 @@ async function buildUrlList() {
   return [...cartoonUrls, ...listingUrls, ...episodeUrls];
 }
 
-async function inspect(token, inspectionUrl) {
-  const res = await fetch('https://searchconsole.googleapis.com/v1/urlInspection/index:inspect', {
-    method: 'POST',
-    headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' },
-    body: JSON.stringify({ inspectionUrl, siteUrl: SITE_URL, languageCode: 'ar' }),
-  });
-  if (res.status === 429) return { retry: true };
-  if (res.status === 401 || res.status === 403) {
-    const t = await res.text();
-    throw new Error(`Auth/permission error (${res.status}). Is the service account added to the "${SITE_URL}" property? ${t}`);
+const backoff = (attempt) => Math.min(60000, 1000 * 2 ** attempt) + Math.floor(Math.random() * 500);
+
+// Inspect one URL. Retries transient failures (429 / 5xx / network) with backoff,
+// and refreshes the access token on 401 (a token lives ~1h; long runs outlive it).
+// A URL that keeps failing is returned as an error rather than killing the run.
+async function inspect(getToken, refresh, inspectionUrl) {
+  for (let attempt = 0; attempt <= 6; attempt++) {
+    let res;
+    try {
+      res = await fetch('https://searchconsole.googleapis.com/v1/urlInspection/index:inspect', {
+        method: 'POST',
+        headers: { Authorization: `Bearer ${await getToken()}`, 'Content-Type': 'application/json' },
+        body: JSON.stringify({ inspectionUrl, siteUrl: SITE_URL, languageCode: 'ar' }),
+      });
+    } catch (e) {
+      if (attempt < 6) { await sleep(backoff(attempt)); continue; } // network blip → retry
+      throw e;
+    }
+    if (res.status === 401) {
+      if (attempt >= 2) throw new Error('Auth error (401) persists after token refresh — check credentials.');
+      await refresh();
+      continue;
+    }
+    if (res.status === 403) throw new Error(`Permission error (403). Is the account added to "${SITE_URL}"? ${await res.text()}`);
+    if (res.status === 429 || res.status >= 500) { await sleep(backoff(attempt)); continue; } // rate/transient → back off
+    const j = await res.json();
+    const r = j.inspectionResult?.indexStatusResult || {};
+    return { verdict: r.verdict || 'UNKNOWN', coverage: r.coverageState || 'unknown' };
   }
-  const j = await res.json();
-  const r = j.inspectionResult?.indexStatusResult || {};
-  return { verdict: r.verdict || 'UNKNOWN', coverage: r.coverageState || 'unknown' };
+  return { verdict: 'RETRY_EXHAUSTED', coverage: 'error' }; // gave up on this one URL — non-fatal
 }
 
 function loadState() {
@@ -163,24 +182,57 @@ async function main() {
     return;
   }
 
-  console.log(`Inspecting ${budget} URLs (cursor ${state.cursor}/${urls.length}, used today ${state.sentToday}/${DAILY_LIMIT}, site ${SITE_URL})`);
-  const token = await getAccessToken();
+  console.log(`Inspecting ${budget} URLs (cursor ${state.cursor}/${urls.length}, used today ${state.sentToday}/${DAILY_LIMIT}, site ${SITE_URL}, concurrency ${CONCURRENCY})`);
+
+  // Refreshable access token: a single token expires after ~1h, so a long run
+  // (or one near the hour boundary) re-mints it instead of dying on a 401.
+  const auth = { token: await getAccessToken(), mintedAt: Date.now(), refreshing: null };
+  const refresh = () => {
+    if (!auth.refreshing) {
+      auth.refreshing = getAccessToken()
+        .then((t) => { auth.token = t; auth.mintedAt = Date.now(); })
+        .finally(() => { auth.refreshing = null; });
+    }
+    return auth.refreshing;
+  };
+  const getToken = async () => {
+    if (Date.now() - auth.mintedAt > 50 * 60 * 1000) await refresh(); // pre-empt the 1h expiry
+    return auth.token;
+  };
+
+  // Global pacing gate: keep request *starts* ≥ SPACING_MS apart so total rate
+  // stays under the 600/min cap no matter how fast the API responds.
+  let nextSlot = 0;
+  const gate = async () => {
+    const now = Date.now();
+    const wait = Math.max(0, nextSlot - now);
+    nextSlot = Math.max(now, nextSlot) + SPACING_MS;
+    if (wait) await sleep(wait);
+  };
 
   const tally = {};
   const notIndexed = [];
+  let next = 0;   // work-ticket counter (0..budget-1), handed out in cursor order
   let done = 0;
-  for (let n = 0; n < budget; n++) {
-    const i = (state.cursor + n) % urls.length;
-    const u = urls[i];
-    let res;
-    try { res = await inspect(token, u); } catch (e) { console.error('✖', e.message); break; }
-    if (res.retry) { console.log('Rate limited (429) — stopping for now.'); break; }
-    tally[res.coverage] = (tally[res.coverage] || 0) + 1;
-    if (res.verdict !== 'PASS') notIndexed.push({ url: u, coverage: res.coverage });
-    done++;
-    if (done % 100 === 0) console.log(`  …${done}/${budget}`);
-    await sleep(SPACING_MS);
+  let fatal = null;
+
+  async function worker() {
+    while (fatal === null) {
+      const n = next++; // atomic: no await between read and increment
+      if (n >= budget) break;
+      const u = urls[(state.cursor + n) % urls.length];
+      await gate();
+      let res;
+      try { res = await inspect(getToken, refresh, u); }
+      catch (e) { fatal = e; break; }
+      tally[res.coverage] = (tally[res.coverage] || 0) + 1;
+      if (res.verdict !== 'PASS') notIndexed.push({ url: u, coverage: res.coverage });
+      done++;
+      if (done % 100 === 0) console.log(`  …${done}/${budget}`);
+    }
   }
+  await Promise.all(Array.from({ length: Math.min(CONCURRENCY, budget) }, worker));
+  if (fatal) console.error('✖', fatal.message);
 
   state.cursor = (state.cursor + done) % urls.length;
   state.sentToday += done;
@@ -195,6 +247,7 @@ async function main() {
   console.log('Coverage breakdown:');
   for (const [k, v] of Object.entries(tally).sort((a, b) => b[1] - a[1])) console.log(`  ${v.toString().padStart(5)}  ${k}`);
   console.log(`Not-indexed this run: ${notIndexed.length} (sample saved to ${REPORT_FILE})`);
+  if (fatal) process.exitCode = 1; // state is saved above, but surface the failure to CI
 }
 
 main().catch((e) => { console.error('❌', e.message); process.exit(1); });
