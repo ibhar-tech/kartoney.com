@@ -15,7 +15,8 @@
     "index:status": "node scripts/gsc-status.mjs",
     "bing": "node scripts/bing-submit.mjs",
     "bing:indexnow": "node scripts/bing-submit.mjs --indexnow",
-    "bing:quota": "node scripts/bing-submit.mjs --quota"
+    "bing:quota": "node scripts/bing-submit.mjs --quota",
+    "bing:status": "node scripts/bing-status.mjs"
   },
   "dependencies": {
     "sql.js": "^1.12.0"
