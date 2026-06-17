@@ -9,7 +9,13 @@ name: GSC URL Inspection (daily)
 
 on:
   schedule:
-    - cron: '17 4 * * *' # every day ~04:17 UTC
+    # GitHub cron is best-effort — runs get delayed hours or dropped under load.
+    # Three daily attempts give redundancy; the script's quota guard
+    # (sentToday vs GSC_DAILY_LIMIT, reset per calendar day) means a later
+    # fire the same day just tops up toward the cap and never double-sends.
+    - cron: '17 4 * * *'  # ~04:17 UTC
+    - cron: '23 11 * * *' # ~11:23 UTC (fallback if the morning fire is dropped)
+    - cron: '41 18 * * *' # ~18:41 UTC (last-chance fallback)
   workflow_dispatch:
     inputs:
       limit:
