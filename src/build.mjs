@@ -133,6 +133,7 @@ async function build() {
         data,
         chips: genreChips(data, g.en),
         intro: `${num(list.length)} مسلسل في تصنيف ${g.name_ar}`,
+        parent: { label: 'التصنيفات', href: url.genresIndex() },
       })
     );
   }

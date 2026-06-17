@@ -392,14 +392,17 @@ ${footer(data.totals)}`;
     {
       '@context': 'https://schema.org',
       '@type': 'TVSeries',
+      '@id': url.abs(url.cartoon(c.slug)) + '#series',
       name: c.name,
       description: about,
       url: url.abs(url.cartoon(c.slug)),
-      image: c.logo,
+      image: url.absImg(c.logo), // schema.org images must be absolute URLs
       inLanguage: 'ar',
       genre: c.genres.map((g) => g.ar),
       numberOfEpisodes: c.total_episodes,
       numberOfSeasons: c.total_seasons,
+      ...(toISO(c.created_at) ? { datePublished: toISO(c.created_at) } : {}),
+      publisher: { '@type': 'Organization', name: SITE.nameAr, logo: { '@type': 'ImageObject', url: url.abs('/images/favicon-512x512.png') } },
     },
     breadcrumbLd([
       { name: 'الرئيسية', url: url.abs('/') },
@@ -487,6 +490,7 @@ ${footer(data.totals)}`;
       embedUrl: url.abs(url.watch(c.slug, ep.slug)),
       inLanguage: 'ar',
       isFamilyFriendly: true,
+      publisher: { '@type': 'Organization', name: SITE.nameAr, logo: { '@type': 'ImageObject', url: url.abs('/images/favicon-512x512.png') } },
       isPartOf: { '@type': 'TVSeries', name: c.name, url: url.abs(url.cartoon(c.slug)) },
     },
     breadcrumbLd([
@@ -508,9 +512,13 @@ ${footer(data.totals)}`;
 }
 
 /* ════════════════════════════ BROWSE / LISTING ════════════════════════════ */
-export function browsePage({ title, h1, description, path, cartoons, data, chips = null, intro = '' }) {
+export function browsePage({ title, h1, description, path, cartoons, data, chips = null, intro = '', parent = null }) {
+  // Optional intermediate crumb (e.g. genre pages nest under "التصنيفات").
+  const crumbs = parent
+    ? [{ label: 'الرئيسية', href: '/' }, parent, { label: h1 }]
+    : [{ label: 'الرئيسية', href: '/' }, { label: h1 }];
   const body = `
-${breadcrumbs([{ label: 'الرئيسية', href: '/' }, { label: h1 }])}
+${breadcrumbs(crumbs)}
   <section style="padding:1.5rem 2rem 6rem">
     <h1 style="font-size:2rem;font-weight:900;margin-bottom:.5rem">${esc(h1)}</h1>
     <p class="text-muted" style="margin-bottom:1.5rem">${esc(intro || `${num(cartoons.length)} مسلسل`)}</p>
@@ -518,6 +526,10 @@ ${breadcrumbs([{ label: 'الرئيسية', href: '/' }, { label: h1 }])}
     <div class="cartoons-grid">${cartoons.map((c) => portraitCard(c)).join('')}</div>
   </section>
 ${footer(data.totals)}`;
+
+  const ldCrumbs = parent
+    ? [{ name: 'الرئيسية', url: url.abs('/') }, { name: parent.label, url: url.abs(parent.href) }, { name: h1, url: url.abs(path) }]
+    : [{ name: 'الرئيسية', url: url.abs('/') }, { name: h1, url: url.abs(path) }];
 
   const jsonLd = [
     {
@@ -530,18 +542,16 @@ ${footer(data.totals)}`;
       mainEntity: {
         '@type': 'ItemList',
         numberOfItems: cartoons.length,
-        itemListElement: cartoons.slice(0, 50).map((c, i) => ({
+        itemListElement: cartoons.slice(0, 100).map((c, i) => ({
           '@type': 'ListItem',
           position: i + 1,
           url: url.abs(url.cartoon(c.slug)),
           name: c.name,
+          image: url.absImg(c.logo),
         })),
       },
     },
-    breadcrumbLd([
-      { name: 'الرئيسية', url: url.abs('/') },
-      { name: h1, url: url.abs(path) },
-    ]),
+    breadcrumbLd(ldCrumbs),
   ];
 
   return layout({ title, description, path, body, jsonLd });
