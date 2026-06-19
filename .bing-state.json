@@ -1,8 +1,8 @@
 {
-  "date": "2026-06-18",
+  "date": "2026-06-19",
   "sentToday": 100,
-  "cursor": 200,
-  "total": 200,
+  "cursor": 300,
+  "total": 300,
   "indexnow": {
     "lastRun": "2026-06-17T13:36:56.635Z",
     "submitted": 1000,
