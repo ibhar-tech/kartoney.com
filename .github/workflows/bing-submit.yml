@@ -60,5 +60,5 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add .bing-state.json scripts/bing-report.json || true
-          git commit -m "chore(bing): update submission cursor + report [skip netlify]" || echo "nothing to commit"
+          git commit -m "chore(bing): update submission cursor + report [vercel skip]" || echo "nothing to commit"
           git push || echo "nothing to push"
