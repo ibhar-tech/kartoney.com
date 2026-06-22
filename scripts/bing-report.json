@@ -1,10 +1,10 @@
 {
-  "date": "2026-06-21",
+  "date": "2026-06-22",
   "channel": "SubmitUrlBatch",
   "submitted": 100,
-  "cursor": 500,
+  "cursor": 600,
   "quotaAfter": {
     "daily": 0,
-    "monthly": 900
+    "monthly": 800
   }
 }
