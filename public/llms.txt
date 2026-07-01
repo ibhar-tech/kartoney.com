@@ -2,32 +2,17 @@
 
 > Kartoney (كارتوني) is the largest free Arabic cartoon and anime streaming library, featuring over 8,600 episodes across 107 series spanning 4 decades (1980s–2010s).
 
-## About
-
+**About**
 Kartoney.com is a free Arabic-language cartoon and anime streaming platform. The site offers dubbed Arabic versions of classic and modern animated series. Content is organized by genre, era, and type for easy discovery.
 
-## Content Library
-
+**Content Library**
 - **Total Series**: 107 cartoon and anime series
 - **Total Episodes**: 8,611 episodes
 - **Languages**: Arabic dubbed
-- **Genres**: Action (أكشن), Adventure (مغامرة), Comedy (كوميدي), Drama (دراما), Fantasy (فنتازيا), Mystery (غموض), Romance (رومانسي), Sci-Fi (خيال علمي), Sports (رياضي), Family (عائلي)
+- **Genres**: Action (أكشن), Adventure (مغامرة), Comedy (كوميدي), Drama (دراما), Fantasy (فنتازيا), Mystery (غموض), Romance (رومانسي), Sci-Fi (خيال علمي), Sports (رياضي), Family (عائلي), Educational (تعليمي)
 - **Eras**: 1980s classics, 1990s golden age, 2000s modern, 2010s contemporary
 
-## Popular Series
-
-- المحقق كونان (Detective Conan) — 437 episodes, Action/Mystery
-- ناروتو عربي (Naruto Arabic) — 692 episodes, Action/Adventure
-- وان بيس (One Piece) — 936 episodes, Action/Adventure/Fantasy
-- دراغون بول (Dragon Ball) — 153 episodes, Action/Adventure
-- سلام دانك (Slam Dunk) — 106 episodes, Sports/Comedy
-- هايدي (Heidi) — 94 episodes, Family/Drama
-- جراندايزر (Grendizer) — 74 episodes, Sci-Fi/Action
-- يوقي يو (Yu-Gi-Oh) — 546 episodes, Action
-- كابتن ماجد (Captain Tsubasa) — 128 episodes, Sports
-
-## Features
-
+**Features**
 - Browse by genre, era, or type
 - Search in Arabic and English
 - Season and episode navigation
@@ -35,25 +20,56 @@ Kartoney.com is a free Arabic-language cartoon and anime streaming platform. The
 - Responsive design (mobile + desktop)
 - RTL (right-to-left) Arabic interface
 
-## Key URLs
-
-- Home: https://kartoney.com/
-- Full library (all series): https://kartoney.com/library/
-- Genres index: https://kartoney.com/genre/
-- A series page: https://kartoney.com/cartoon/{slug}/ (e.g. /cartoon/one-piece/)
-- An episode page: https://kartoney.com/watch/{slug}/{season}-{episode}/
-- Browse by era: https://kartoney.com/era/{80s|90s|2000s|2010s}/
-- Browse by type: https://kartoney.com/category/{anime|classic|modern}/
-- Sitemap index: https://kartoney.com/sitemap.xml
-
-## Technical Details
-
+**Technical Details**
 - Static, pre-rendered multi-page site (one crawlable HTML page per series and per episode)
 - Each page ships full text content (series names, descriptions, episode titles) in the HTML
 - No backend server required; no client-side database
 - Structured data: WebSite, Organization, TVSeries, VideoObject, BreadcrumbList (schema.org)
 
-## Contact
-
+**Contact**
 - Website: https://kartoney.com
 - Domain: kartoney.com
+
+## Key URLs
+
+- [Home](https://kartoney.com/): The main landing page.
+- [Full Library](https://kartoney.com/library/): Complete catalog of all 107 cartoon and anime series.
+- [Genres Index](https://kartoney.com/genre/): Browse and filter series by genre.
+- [Sitemap Index](https://kartoney.com/sitemap.xml): The XML sitemap containing references to all pages.
+
+## Popular Cartoon Series
+
+- [Detective Conan / المحقق كونان](https://kartoney.com/cartoon/detective-conan/): 437 episodes, Action/Mystery.
+- [Naruto / ناروتو عربي](https://kartoney.com/cartoon/naruto/): 692 episodes, Action/Adventure.
+- [One Piece / وان بيس](https://kartoney.com/cartoon/one-piece/): 936 episodes, Action/Adventure/Fantasy.
+- [Slam Dunk / سلام دانك](https://kartoney.com/cartoon/slam-dunk/): 106 episodes, Sports/Comedy.
+- [Heidi / هايدي](https://kartoney.com/cartoon/heidi/): 94 episodes, Family/Drama.
+- [Grendizer / جراندايزر](https://kartoney.com/cartoon/grendizer/): 74 episodes, Sci-Fi/Action.
+- [Yu-Gi-Oh / يوقي يو](https://kartoney.com/cartoon/yugioh/): 546 episodes, Action.
+- [Captain Tsubasa / كابتن ماجد](https://kartoney.com/cartoon/captain-tsubasa/): 128 episodes, Sports.
+
+## Browse by Genre
+
+- [Action / أكشن](https://kartoney.com/genre/action/)
+- [Adventure / مغامرة](https://kartoney.com/genre/adventure/)
+- [Sports / رياضي](https://kartoney.com/genre/sports/)
+- [Sci-Fi / خيال علمي](https://kartoney.com/genre/sci-fi/)
+- [Mystery / غموض](https://kartoney.com/genre/mystery/)
+- [Family / عائلي](https://kartoney.com/genre/family/)
+- [Drama / دراما](https://kartoney.com/genre/drama/)
+- [Comedy / كوميدي](https://kartoney.com/genre/comedy/)
+- [Fantasy / فنتازيا](https://kartoney.com/genre/fantasy/)
+- [Educational / تعليمي](https://kartoney.com/genre/educational/)
+
+## Browse by Era
+
+- [1980s Classics / كرتون الثمانينات](https://kartoney.com/era/80s/)
+- [1990s Golden Age / كرتون التسعينات](https://kartoney.com/era/90s/)
+- [2000s Modern / كرتون الألفية](https://kartoney.com/era/2000s/)
+- [2010s Contemporary / أنمي حديث](https://kartoney.com/era/2010s/)
+
+## Browse by Type
+
+- [Anime / أنمي](https://kartoney.com/category/anime/)
+- [Classic Cartoons / كرتون كلاسيكي](https://kartoney.com/category/classic/)
+- [Modern Cartoons / كرتون حديث](https://kartoney.com/category/modern/)
