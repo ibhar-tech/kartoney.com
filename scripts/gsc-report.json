@@ -1,813 +1,814 @@
 {
-  "date": "2026-07-01",
+  "date": "2026-07-02",
   "inspected": 1800,
   "byCoverage": {
-    "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن": 1092,
-    "تم إرسال الصفحة وتمت فهرستها": 540,
-    "لم يتعرّف محرّك بحث Google على عنوان URL.": 164,
-    "تم الزحف إلى الصفحة - لم تتم فهرستها حاليًا": 4
+    "تم إرسال الصفحة وتمت فهرستها": 277,
+    "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن": 308,
+    "لم يتعرّف محرّك بحث Google على عنوان URL.": 74,
+    "تم الزحف إلى الصفحة - لم تتم فهرستها حاليًا": 7,
+    "error": 1134
   },
   "notIndexedSample": [
     {
-      "url": "https://kartoney.com/watch/one-piece/9-60/",
+      "url": "https://kartoney.com/watch/yugioh/4-19/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/10-1/",
+      "url": "https://kartoney.com/watch/yugioh/4-20/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/10-2/",
+      "url": "https://kartoney.com/watch/yugioh/4-22/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/10-4/",
+      "url": "https://kartoney.com/watch/yugioh/4-23/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/10-3/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/10-5/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/10-6/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/10-7/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/10-10/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/10-9/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/10-11/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/10-12/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/10-13/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/10-14/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/10-17/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/10-19/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/10-18/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/10-21/",
+      "url": "https://kartoney.com/watch/yugioh/4-24/",
       "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/10-23/",
+      "url": "https://kartoney.com/watch/yugioh/4-25/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/4-26/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/4-28/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/4-27/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/4-29/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/4-30/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/4-33/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/4-34/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/4-35/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/4-36/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/4-37/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/4-38/",
       "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/10-20/",
+      "url": "https://kartoney.com/watch/yugioh/4-40/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/10-22/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/10-25/",
+      "url": "https://kartoney.com/watch/yugioh/5-6/",
       "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/10-27/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/10-29/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/10-35/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/10-36/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/10-38/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/10-39/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/10-42/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/10-45/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/10-49/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/11-1/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/11-5/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/11-4/",
+      "url": "https://kartoney.com/watch/yugioh/5-7/",
       "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/11-6/",
+      "url": "https://kartoney.com/watch/yugioh/5-8/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/5-9/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/5-11/",
       "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/10-50/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/11-3/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/11-7/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/11-8/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/11-9/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/11-11/",
+      "url": "https://kartoney.com/watch/yugioh/5-14/",
       "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/11-13/",
+      "url": "https://kartoney.com/watch/yugioh/5-16/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/11-14/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/11-15/",
+      "url": "https://kartoney.com/watch/yugioh/5-17/",
       "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/11-16/",
+      "url": "https://kartoney.com/watch/yugioh/5-18/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/11-17/",
+      "url": "https://kartoney.com/watch/yugioh/5-21/",
       "coverage": "تم الزحف إلى الصفحة - لم تتم فهرستها حاليًا"
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/11-20/",
+      "url": "https://kartoney.com/watch/yugioh/5-22/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/11-21/",
+      "url": "https://kartoney.com/watch/yugioh/5-23/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/11-22/",
+      "url": "https://kartoney.com/watch/yugioh/5-24/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/11-23/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/11-24/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/11-25/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/11-27/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/11-28/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/11-29/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/11-34/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/11-35/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/11-38/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/11-39/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/11-41/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/11-42/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/11-43/",
+      "url": "https://kartoney.com/watch/yugioh/5-25/",
       "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/11-44/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/11-45/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/11-46/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/11-47/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/11-49/",
+      "url": "https://kartoney.com/watch/yugioh/5-28/",
       "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/11-50/",
+      "url": "https://kartoney.com/watch/yugioh/5-31/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/11-51/",
+      "url": "https://kartoney.com/watch/yugioh/5-32/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/11-52/",
+      "url": "https://kartoney.com/watch/yugioh/5-33/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/5-34/",
       "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/11-55/",
+      "url": "https://kartoney.com/watch/yugioh/5-35/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/11-56/",
+      "url": "https://kartoney.com/watch/yugioh/5-40/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/11-58/",
+      "url": "https://kartoney.com/watch/yugioh/6-1/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/6-2/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/6-3/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/6-9/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/6-10/",
       "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/11-60/",
+      "url": "https://kartoney.com/watch/yugioh/7-1/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/12-1/",
+      "url": "https://kartoney.com/watch/yugioh/7-3/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/12-2/",
+      "url": "https://kartoney.com/watch/yugioh/7-8/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/12-4/",
+      "url": "https://kartoney.com/watch/yugioh/7-9/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/12-5/",
+      "url": "https://kartoney.com/watch/yugioh/7-10/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/7-11/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/7-12/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/7-13/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/7-17/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/7-20/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/7-21/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/7-22/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/7-24/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/7-26/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/7-27/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/7-28/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/7-29/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/7-30/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/7-31/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/7-23/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/7-34/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/7-35/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/7-36/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/7-37/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/7-38/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/7-39/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/7-33/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/7-41/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/7-42/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/7-43/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/7-45/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/7-46/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/7-49/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/7-50/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/7-51/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/7-52/",
       "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/12-7/",
+      "url": "https://kartoney.com/watch/yugioh/7-53/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/12-12/",
-      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/12-14/",
+      "url": "https://kartoney.com/watch/yugioh/8-1/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/12-16/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/12-17/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/12-19/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/12-15/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/12-21/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/12-22/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/12-24/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/12-26/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/12-25/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/12-27/",
-      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/12-20/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/12-28/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/12-23/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/12-29/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/12-34/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/12-35/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/12-31/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/12-38/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/12-39/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/12-41/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/12-43/",
-      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/12-44/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/12-46/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/12-47/",
-      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/13-2/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/13-4/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/13-5/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/13-7/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/13-8/",
-      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/13-11/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/13-12/",
+      "url": "https://kartoney.com/watch/yugioh/8-2/",
       "coverage": "تم الزحف إلى الصفحة - لم تتم فهرستها حاليًا"
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/13-13/",
+      "url": "https://kartoney.com/watch/yugioh/8-3/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/13-6/",
+      "url": "https://kartoney.com/watch/yugioh/8-4/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/13-14/",
+      "url": "https://kartoney.com/watch/yugioh/8-6/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/13-15/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/13-16/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/13-20/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/13-24/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/13-26/",
+      "url": "https://kartoney.com/watch/yugioh/8-7/",
       "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/13-25/",
+      "url": "https://kartoney.com/watch/yugioh/8-8/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/13-31/",
+      "url": "https://kartoney.com/watch/yugioh/8-9/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/13-33/",
+      "url": "https://kartoney.com/watch/yugioh/8-10/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/13-34/",
+      "url": "https://kartoney.com/watch/yugioh/8-11/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/8-13/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/8-14/",
       "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/13-37/",
+      "url": "https://kartoney.com/watch/yugioh/8-15/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/13-38/",
+      "url": "https://kartoney.com/watch/yugioh/8-16/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/13-40/",
+      "url": "https://kartoney.com/watch/yugioh/8-17/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/13-41/",
+      "url": "https://kartoney.com/watch/yugioh/8-18/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/13-42/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/13-43/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/13-45/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/13-48/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/13-50/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/13-51/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/13-52/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/13-53/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/13-56/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/13-57/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/13-59/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/13-60/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/14-2/",
+      "url": "https://kartoney.com/watch/yugioh/8-20/",
       "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/14-3/",
+      "url": "https://kartoney.com/watch/yugioh/8-21/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/14-4/",
+      "url": "https://kartoney.com/watch/yugioh/8-22/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/8-23/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/8-24/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/8-19/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/8-26/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/8-27/",
       "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/14-6/",
+      "url": "https://kartoney.com/watch/yugioh/8-28/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/8-29/",
       "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/14-9/",
+      "url": "https://kartoney.com/watch/yugioh/8-30/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/14-10/",
+      "url": "https://kartoney.com/watch/yugioh/8-31/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/14-14/",
+      "url": "https://kartoney.com/watch/yugioh/8-33/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/14-16/",
+      "url": "https://kartoney.com/watch/yugioh/8-34/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/14-17/",
+      "url": "https://kartoney.com/watch/yugioh/8-35/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/8-37/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/8-32/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/8-41/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/8-43/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/8-44/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/8-45/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/8-46/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/8-47/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/8-49/",
       "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/14-18/",
+      "url": "https://kartoney.com/watch/yugioh/8-51/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/14-21/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/14-22/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/14-15/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/14-25/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/14-26/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/14-27/",
+      "url": "https://kartoney.com/watch/yugioh/8-52/",
       "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/14-28/",
+      "url": "https://kartoney.com/watch/yugioh/9-1/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/9-4/",
       "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/14-29/",
+      "url": "https://kartoney.com/watch/yugioh/9-6/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/8-48/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/9-11/",
       "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/14-30/",
+      "url": "https://kartoney.com/watch/yugioh/9-13/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/14-31/",
+      "url": "https://kartoney.com/watch/yugioh/9-15/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/14-34/",
+      "url": "https://kartoney.com/watch/yugioh/9-16/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/14-36/",
+      "url": "https://kartoney.com/watch/yugioh/9-19/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/14-37/",
+      "url": "https://kartoney.com/watch/yugioh/9-20/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/9-21/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/9-23/",
       "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/14-39/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/14-41/",
+      "url": "https://kartoney.com/watch/yugioh/9-25/",
       "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/14-43/",
+      "url": "https://kartoney.com/watch/yugioh/9-26/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/14-44/",
+      "url": "https://kartoney.com/watch/yugioh/9-27/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/14-45/",
+      "url": "https://kartoney.com/watch/yugioh/9-29/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/14-38/",
+      "url": "https://kartoney.com/watch/yugioh/9-30/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/14-50/",
+      "url": "https://kartoney.com/watch/yugioh/9-24/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/15-4/",
+      "url": "https://kartoney.com/watch/yugioh/9-31/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/15-6/",
+      "url": "https://kartoney.com/watch/yugioh/9-32/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/9-33/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/9-34/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/9-35/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/9-37/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/9-38/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/9-39/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/9-40/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/9-41/",
       "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/15-7/",
+      "url": "https://kartoney.com/watch/yugioh/9-36/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/15-10/",
+      "url": "https://kartoney.com/watch/yugioh/9-42/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/15-11/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/15-8/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/15-12/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/15-15/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/15-16/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/15-17/",
+      "url": "https://kartoney.com/watch/yugioh/9-43/",
       "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/15-18/",
+      "url": "https://kartoney.com/watch/yugioh/9-44/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/15-21/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/15-22/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/15-23/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/15-27/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/15-25/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/15-28/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/15-30/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/15-32/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/15-33/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/one-piece/15-35/",
+      "url": "https://kartoney.com/watch/yugioh/9-45/",
       "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/15-38/",
+      "url": "https://kartoney.com/watch/yugioh/9-46/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/15-36/",
+      "url": "https://kartoney.com/watch/yugioh/9-47/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/9-48/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/9-49/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/9-50/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/9-51/",
       "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/15-40/",
+      "url": "https://kartoney.com/watch/yugioh/10-1/",
       "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/15-41/",
+      "url": "https://kartoney.com/watch/yugioh/10-3/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/15-43/",
+      "url": "https://kartoney.com/watch/yugioh/10-4/",
+      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/10-5/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/15-44/",
+      "url": "https://kartoney.com/watch/yugioh/10-6/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/15-45/",
+      "url": "https://kartoney.com/watch/yugioh/10-7/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/15-39/",
+      "url": "https://kartoney.com/watch/yugioh/10-8/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/one-piece/15-42/",
+      "url": "https://kartoney.com/watch/yugioh/10-9/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/10-10/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/10-12/",
+      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/10-13/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/10-14/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/10-15/",
+      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/10-16/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/10-18/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/10-19/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/10-21/",
+      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/10-23/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/10-24/",
+      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/10-25/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/10-27/",
+      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/10-28/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/10-29/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/10-33/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/10-34/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/10-35/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/10-37/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/10-38/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/10-39/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/10-40/",
+      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/10-30/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/10-42/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/10-43/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/10-45/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/10-46/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/10-47/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/10-48/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/yugioh/10-50/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     }
   ],
-  "notIndexedCount": 1260
+  "notIndexedCount": 1523
 }
