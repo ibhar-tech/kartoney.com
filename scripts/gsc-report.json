@@ -1,814 +1,811 @@
 {
-  "date": "2026-07-02",
+  "date": "2026-07-03",
   "inspected": 1800,
   "byCoverage": {
-    "تم إرسال الصفحة وتمت فهرستها": 277,
-    "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن": 308,
-    "لم يتعرّف محرّك بحث Google على عنوان URL.": 74,
-    "تم الزحف إلى الصفحة - لم تتم فهرستها حاليًا": 7,
-    "error": 1134
+    "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن": 1,
+    "error": 1799
   },
   "notIndexedSample": [
     {
-      "url": "https://kartoney.com/watch/yugioh/4-19/",
+      "url": "https://kartoney.com/watch/detective-conan/4-69/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/4-20/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/4-70/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/4-22/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/5-2/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/4-23/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/5-3/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/4-24/",
-      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+      "url": "https://kartoney.com/watch/detective-conan/5-4/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/4-25/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/5-1/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/4-26/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/4-71/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/4-28/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/5-7/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/4-27/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/5-5/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/4-29/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/5-8/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/4-30/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/5-9/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/4-33/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/5-6/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/4-34/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/5-10/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/4-35/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/5-12/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/4-36/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/5-11/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/4-37/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/5-14/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/4-38/",
-      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+      "url": "https://kartoney.com/watch/detective-conan/5-13/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/4-40/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/5-17/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/5-6/",
-      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+      "url": "https://kartoney.com/watch/detective-conan/5-15/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/5-7/",
-      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+      "url": "https://kartoney.com/watch/detective-conan/5-18/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/5-8/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/5-16/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/5-9/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/5-20/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/5-11/",
-      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+      "url": "https://kartoney.com/watch/detective-conan/5-21/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/5-14/",
-      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+      "url": "https://kartoney.com/watch/detective-conan/5-19/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/5-16/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/5-22/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/5-17/",
-      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+      "url": "https://kartoney.com/watch/detective-conan/5-23/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/5-18/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/5-25/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/5-21/",
-      "coverage": "تم الزحف إلى الصفحة - لم تتم فهرستها حاليًا"
+      "url": "https://kartoney.com/watch/detective-conan/5-24/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/5-22/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/5-26/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/5-23/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/5-28/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/5-24/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/5-30/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/5-25/",
-      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+      "url": "https://kartoney.com/watch/detective-conan/5-29/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/5-28/",
-      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+      "url": "https://kartoney.com/watch/detective-conan/5-27/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/5-31/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/5-32/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/5-32/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/5-33/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/5-33/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/5-31/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/5-34/",
-      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+      "url": "https://kartoney.com/watch/detective-conan/5-34/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/5-35/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/5-35/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/5-40/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/5-36/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/6-1/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/5-37/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/6-2/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/5-38/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/6-3/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/5-39/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/6-9/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/5-40/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/6-10/",
-      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+      "url": "https://kartoney.com/watch/detective-conan/5-43/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/7-1/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/5-41/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/7-3/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/5-44/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/7-8/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/5-42/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/7-9/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/5-45/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/7-10/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/5-46/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/7-11/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/5-47/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/7-12/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/5-48/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/7-13/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/5-49/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/7-17/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/5-51/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/7-20/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/6-2/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/7-21/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/5-50/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/7-22/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/6-1/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/7-24/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/6-3/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/7-26/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/5-52/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/7-27/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/6-5/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/7-28/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/6-4/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/7-29/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/6-6/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/7-30/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/6-7/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/7-31/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/6-8/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/7-23/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/6-9/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/7-34/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/6-10/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/7-35/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/6-11/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/7-36/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/6-13/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/7-37/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/6-12/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/7-38/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/6-16/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/7-39/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/6-17/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/7-33/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/6-14/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/7-41/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/6-15/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/7-42/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/6-18/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/7-43/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/6-19/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/7-45/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/6-20/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/7-46/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/6-21/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/7-49/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/6-22/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/7-50/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/6-24/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/7-51/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/6-23/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/7-52/",
-      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+      "url": "https://kartoney.com/watch/detective-conan/6-26/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/7-53/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/6-25/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/8-1/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/6-28/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/8-2/",
-      "coverage": "تم الزحف إلى الصفحة - لم تتم فهرستها حاليًا"
+      "url": "https://kartoney.com/watch/detective-conan/6-29/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/8-3/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/6-27/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/8-4/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/6-30/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/8-6/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/6-32/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/8-7/",
-      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+      "url": "https://kartoney.com/watch/detective-conan/6-33/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/8-8/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/6-31/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/8-9/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/6-34/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/8-10/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/6-35/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/8-11/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/6-38/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/8-13/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/6-36/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/8-14/",
-      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+      "url": "https://kartoney.com/watch/detective-conan/6-39/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/8-15/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/6-37/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/8-16/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/6-40/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/8-17/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/6-41/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/8-18/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/6-42/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/8-20/",
-      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+      "url": "https://kartoney.com/watch/detective-conan/6-45/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/8-21/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/6-44/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/8-22/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/6-43/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/8-23/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/6-46/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/8-24/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/6-47/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/8-19/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/6-48/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/8-26/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/6-49/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/8-27/",
-      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+      "url": "https://kartoney.com/watch/detective-conan/6-50/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/8-28/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/7-1/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/8-29/",
-      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+      "url": "https://kartoney.com/watch/detective-conan/6-51/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/8-30/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/6-52/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/8-31/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/7-2/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/8-33/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/7-3/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/8-34/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/7-4/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/8-35/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/7-5/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/8-37/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/7-9/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/8-32/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/7-7/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/8-41/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/7-10/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/8-43/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/7-8/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/8-44/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/7-6/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/8-45/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/7-11/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/8-46/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/7-12/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/8-47/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/7-13/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/8-49/",
-      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+      "url": "https://kartoney.com/watch/detective-conan/7-14/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/8-51/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/7-15/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/8-52/",
-      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+      "url": "https://kartoney.com/watch/detective-conan/7-19/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/9-1/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/7-17/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/9-4/",
-      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+      "url": "https://kartoney.com/watch/detective-conan/7-16/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/9-6/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/7-18/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/8-48/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/7-20/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/9-11/",
-      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+      "url": "https://kartoney.com/watch/detective-conan/7-23/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/9-13/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/7-21/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/9-15/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/7-22/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/9-16/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/7-24/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/9-19/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/7-25/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/9-20/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/7-26/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/9-21/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/7-29/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/9-23/",
-      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+      "url": "https://kartoney.com/watch/detective-conan/7-30/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/9-25/",
-      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+      "url": "https://kartoney.com/watch/detective-conan/7-28/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/9-26/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/7-27/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/9-27/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/7-31/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/9-29/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/7-32/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/9-30/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/7-36/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/9-24/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/7-34/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/9-31/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/7-33/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/9-32/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/7-35/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/9-33/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/7-37/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/9-34/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/7-38/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/9-35/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/7-40/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/9-37/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/7-39/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/9-38/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/7-42/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/9-39/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/7-43/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/9-40/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/7-47/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/9-41/",
-      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+      "url": "https://kartoney.com/watch/detective-conan/7-41/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/9-36/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/7-44/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/9-42/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/7-45/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/9-43/",
-      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+      "url": "https://kartoney.com/watch/detective-conan/7-46/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/9-44/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/7-48/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/9-45/",
-      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+      "url": "https://kartoney.com/watch/detective-conan/7-49/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/9-46/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/7-50/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/9-47/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/7-52/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/9-48/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/7-51/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/9-49/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/8-1/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/9-50/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/8-2/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/9-51/",
-      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+      "url": "https://kartoney.com/watch/detective-conan/8-3/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/10-1/",
-      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+      "url": "https://kartoney.com/watch/detective-conan/8-4/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/10-3/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/8-7/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/10-4/",
-      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+      "url": "https://kartoney.com/watch/detective-conan/8-8/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/10-5/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/8-5/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/10-6/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/8-6/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/10-7/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/8-9/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/10-8/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/8-10/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/10-9/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/8-11/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/10-10/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/8-12/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/10-12/",
-      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+      "url": "https://kartoney.com/watch/detective-conan/8-13/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/10-13/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/8-15/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/10-14/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/8-16/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/10-15/",
-      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+      "url": "https://kartoney.com/watch/detective-conan/8-17/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/10-16/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/8-14/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/10-18/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/8-18/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/10-19/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/8-19/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/10-21/",
-      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+      "url": "https://kartoney.com/watch/detective-conan/8-20/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/10-23/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/8-21/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/10-24/",
-      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+      "url": "https://kartoney.com/watch/detective-conan/8-22/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/10-25/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/8-24/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/10-27/",
-      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+      "url": "https://kartoney.com/watch/detective-conan/8-23/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/10-28/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/8-25/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/10-29/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/8-27/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/10-33/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/8-29/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/10-34/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/8-26/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/10-35/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/8-28/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/10-37/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/8-30/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/10-38/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/8-32/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/10-39/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/8-33/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/10-40/",
-      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+      "url": "https://kartoney.com/watch/detective-conan/8-31/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/10-30/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/8-34/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/10-42/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/8-35/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/10-43/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/8-36/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/10-45/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/8-37/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/10-46/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/8-40/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/10-47/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/8-38/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/10-48/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/8-39/",
+      "coverage": "error"
     },
     {
-      "url": "https://kartoney.com/watch/yugioh/10-50/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+      "url": "https://kartoney.com/watch/detective-conan/8-41/",
+      "coverage": "error"
     }
   ],
-  "notIndexedCount": 1523
+  "notIndexedCount": 1800
 }
