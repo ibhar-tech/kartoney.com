@@ -48,15 +48,45 @@ export async function loadData(dbPath) {
     icon: g.icon,
     color: g.color,
   }));
-  const cartoons = rows('SELECT * FROM cartoons ORDER BY sort_order, id');
-  const cgRows = rows(
+  let cartoons = rows('SELECT * FROM cartoons ORDER BY sort_order, id');
+  let cgRows = rows(
     `SELECT cg.cartoon_id, g.name_ar, g.name_en, g.icon
        FROM cartoon_genres cg JOIN genres g ON cg.genre_id = g.id`
   );
-  const seasons = rows('SELECT * FROM seasons ORDER BY cartoon_id, season_number, id');
-  const episodes = rows('SELECT * FROM episodes ORDER BY cartoon_id, season_id, episode_number, id');
+  let seasons = rows('SELECT * FROM seasons ORDER BY cartoon_id, season_number, id');
+  let episodes = rows('SELECT * FROM episodes ORDER BY cartoon_id, season_id, episode_number, id');
 
   db.close();
+
+  // ── Parse hidden cartoons list ──
+  const hiddenSlugs = new Set();
+  const hiddenPath = join(dirname(fileURLToPath(import.meta.url)), '..', 'hidden-cartoons.txt');
+  if (existsSync(hiddenPath)) {
+    try {
+      const content = readFileSync(hiddenPath, 'utf8');
+      content.split(/\r?\n/).forEach((line) => {
+        const trimmed = line.trim();
+        if (trimmed && !trimmed.startsWith('#')) {
+          hiddenSlugs.add(trimmed);
+        }
+      });
+    } catch (err) {
+      console.warn('⚠️ Warning: Failed to read hidden-cartoons.txt:', err.message);
+    }
+  }
+
+  if (hiddenSlugs.size > 0) {
+    const originalCount = cartoons.length;
+    cartoons = cartoons.filter((c) => !hiddenSlugs.has(c.slug));
+    const activeIds = new Set(cartoons.map((c) => c.id));
+    cgRows = cgRows.filter((row) => activeIds.has(row.cartoon_id));
+    seasons = seasons.filter((s) => activeIds.has(s.cartoon_id));
+    episodes = episodes.filter((e) => activeIds.has(e.cartoon_id));
+    const hiddenCount = originalCount - cartoons.length;
+    if (hiddenCount > 0) {
+      console.log(`ℹ️ Excluded ${hiddenCount} cartoon(s) based on hidden-cartoons.txt`);
+    }
+  }
 
   // ── Link genres onto cartoons ──
   const genresByCartoon = new Map();

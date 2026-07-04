@@ -1,0 +1,4 @@
+# List of cartoon slugs to hide/exclude from the website.
+# One slug per line. Lines starting with '#' are ignored.
+
+one-piece
