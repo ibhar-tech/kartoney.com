@@ -1,813 +1,815 @@
 {
-  "date": "2026-07-06",
+  "date": "2026-07-07",
   "inspected": 1800,
   "byCoverage": {
-    "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن": 656,
-    "تم إرسال الصفحة وتمت فهرستها": 1009,
-    "لم يتعرّف محرّك بحث Google على عنوان URL.": 114,
-    "تم الزحف إلى الصفحة - لم تتم فهرستها حاليًا": 21
+    "تم إرسال الصفحة وتمت فهرستها": 334,
+    "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن": 224,
+    "لم يتعرّف محرّك بحث Google على عنوان URL.": 52,
+    "تم حظر الوصول إلى الصفحة بسبب مشكلة أخرى من نوع 4xx": 4,
+    "تم الزحف إلى الصفحة - لم تتم فهرستها حاليًا": 4,
+    "error": 1182
   },
   "notIndexedSample": [
     {
-      "url": "https://kartoney.com/watch/shama-prairies/1-8/",
+      "url": "https://kartoney.com/watch/calimero/1-31/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/shama-prairies/1-13/",
+      "url": "https://kartoney.com/watch/calimero/1-33/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/shama-prairies/1-14/",
+      "url": "https://kartoney.com/watch/calimero/1-34/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/shama-prairies/1-17/",
+      "url": "https://kartoney.com/watch/calimero/1-38/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/calimero/1-42/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/calimero/1-44/",
       "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
     },
     {
-      "url": "https://kartoney.com/watch/shama-prairies/1-21/",
+      "url": "https://kartoney.com/watch/calimero/1-47/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/shama-prairies/1-23/",
+      "url": "https://kartoney.com/watch/calimero/1-48/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/shama-prairies/1-24/",
+      "url": "https://kartoney.com/watch/calimero/1-50/",
       "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
     },
     {
-      "url": "https://kartoney.com/watch/shama-prairies/1-25/",
+      "url": "https://kartoney.com/watch/calimero/1-54/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/shama-prairies/1-27/",
+      "url": "https://kartoney.com/watch/calimero/1-55/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/shama-prairies/1-29/",
+      "url": "https://kartoney.com/watch/calimero/1-56/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/shama-prairies/1-31/",
+      "url": "https://kartoney.com/watch/calimero/1-57/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/shama-prairies/1-32/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/shama-prairies/1-34/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/shama-prairies/1-36/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/shama-prairies/1-38/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/shama-prairies/1-44/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/shama-prairies/1-45/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/shama-prairies/1-47/",
+      "url": "https://kartoney.com/watch/captinthapit/1-5/",
       "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
     },
     {
-      "url": "https://kartoney.com/watch/reka-flame/1-1/",
+      "url": "https://kartoney.com/watch/captinthapit/1-7/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captinthapit/1-10/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captinthapit/1-11/",
       "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
     },
     {
-      "url": "https://kartoney.com/watch/reka-flame/1-2/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/reka-flame/1-3/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/reka-flame/1-5/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/reka-flame/1-6/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/reka-flame/1-8/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/reka-flame/1-9/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/reka-flame/1-11/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/reka-flame/1-13/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/reka-flame/1-14/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/reka-flame/1-15/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/reka-flame/1-16/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/reka-flame/1-18/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/reka-flame/1-19/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/reka-flame/1-21/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/reka-flame/1-22/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/reka-flame/1-23/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/reka-flame/1-24/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/reka-flame/1-27/",
+      "url": "https://kartoney.com/watch/captinthapit/1-13/",
       "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
     },
     {
-      "url": "https://kartoney.com/watch/reka-flame/1-28/",
+      "url": "https://kartoney.com/watch/captinthapit/1-17/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captinthapit/1-20/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captinthapit/1-22/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captinthapit/1-23/",
       "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
     },
     {
-      "url": "https://kartoney.com/watch/reka-flame/1-30/",
+      "url": "https://kartoney.com/watch/captinthapit/1-25/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/reka-flame/1-32/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/reka-flame/1-39/",
+      "url": "https://kartoney.com/watch/captinthapit/1-28/",
       "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
     },
     {
-      "url": "https://kartoney.com/watch/reka-flame/1-40/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/reka-flame/1-41/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/three-braves/1-2/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/three-braves/1-3/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/three-braves/1-4/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/three-braves/1-5/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/three-braves/1-7/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/three-braves/1-10/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/three-braves/1-11/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/three-braves/1-12/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/three-braves/1-13/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/three-braves/1-14/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/three-braves/1-16/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/three-braves/1-17/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/three-braves/1-21/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/three-braves/1-23/",
+      "url": "https://kartoney.com/watch/captinthapit/1-29/",
       "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
     },
     {
-      "url": "https://kartoney.com/watch/three-braves/1-24/",
+      "url": "https://kartoney.com/watch/captinthapit/1-33/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/three-braves/1-25/",
+      "url": "https://kartoney.com/watch/captinthapit/1-34/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/three-braves/1-27/",
+      "url": "https://kartoney.com/watch/captinthapit/1-36/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/three-braves/1-29/",
+      "url": "https://kartoney.com/watch/captinthapit/1-38/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/three-braves/1-31/",
+      "url": "https://kartoney.com/watch/captinthapit/1-40/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/three-braves/1-32/",
+      "url": "https://kartoney.com/watch/captinthapit/1-41/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/three-braves/1-33/",
+      "url": "https://kartoney.com/watch/captain-tsubasa/1-1/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/three-braves/1-35/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/three-braves/1-37/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/three-braves/1-38/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/three-braves/1-42/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/three-braves/1-43/",
+      "url": "https://kartoney.com/watch/captain-tsubasa/1-2/",
       "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
     },
     {
-      "url": "https://kartoney.com/watch/sindbad/1-1/",
+      "url": "https://kartoney.com/watch/captain-tsubasa/1-3/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/sindbad/1-2/",
+      "url": "https://kartoney.com/watch/captain-tsubasa/1-4/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/sindbad/1-3/",
+      "url": "https://kartoney.com/watch/captain-tsubasa/1-5/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/1-6/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/1-12/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/1-13/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/1-15/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/1-16/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/1-19/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/1-20/",
+      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/1-24/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/1-25/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/1-26/",
+      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/1-28/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/1-30/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/1-31/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/1-33/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/1-35/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/1-37/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/1-38/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/1-39/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/1-41/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/1-43/",
+      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/1-44/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/1-45/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/1-46/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/1-48/",
+      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/1-49/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/1-54/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/2-2/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/2-3/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/2-4/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/2-6/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/2-11/",
+      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/2-12/",
+      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/2-13/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/2-14/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/2-15/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/2-17/",
+      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/2-19/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/2-23/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/2-24/",
+      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/2-25/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/2-26/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/2-28/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/2-31/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/2-32/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/2-33/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/2-36/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/2-38/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/2-40/",
+      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/2-41/",
+      "coverage": "تم حظر الوصول إلى الصفحة بسبب مشكلة أخرى من نوع 4xx"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/2-42/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/2-43/",
+      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/2-46/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/2-48/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/2-51/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/2-53/",
+      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/2-60/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/2-61/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/2-62/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/2-63/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/2-64/",
+      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/2-67/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/2-70/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/2-72/",
+      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/2-73/",
+      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/3-1/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/3-3/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/3-6/",
+      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/3-7/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/3-8/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/3-13/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/3-14/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/3-16/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/3-17/",
+      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/3-18/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/3-19/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/3-20/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/3-21/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/3-22/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/3-24/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/3-26/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/3-27/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/3-32/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/3-33/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/3-34/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/3-35/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/3-36/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/3-40/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/3-41/",
+      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/3-42/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/3-44/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/4-2/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/4-3/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/4-4/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/5-2/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/5-3/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/5-7/",
+      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/5-9/",
+      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/5-10/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/5-11/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/5-14/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/5-16/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/5-17/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/5-19/",
+      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/5-23/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/5-24/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/5-31/",
+      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/5-33/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/5-36/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/5-39/",
+      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/5-40/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/5-42/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/5-46/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/5-48/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/5-49/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/5-52/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/5-53/",
+      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/6-1/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/6-2/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/6-5/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/6-6/",
+      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/6-8/",
       "coverage": "تم الزحف إلى الصفحة - لم تتم فهرستها حاليًا"
     },
     {
-      "url": "https://kartoney.com/watch/sindbad/1-11/",
+      "url": "https://kartoney.com/watch/captain-tsubasa/6-9/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/sindbad/1-13/",
+      "url": "https://kartoney.com/watch/captain-tsubasa/6-10/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/sindbad/1-14/",
+      "url": "https://kartoney.com/watch/captain-tsubasa/6-12/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/sindbad/1-16/",
+      "url": "https://kartoney.com/watch/captain-tsubasa/6-13/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/sindbad/1-17/",
+      "url": "https://kartoney.com/watch/captain-tsubasa/6-14/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/sindbad/1-21/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/sindbad/1-26/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/sindbad/1-28/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/sindbad/1-30/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/sindbad/1-31/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/sindbad/1-36/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/sindbad/1-37/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/sindbad/1-38/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/sindbad/1-39/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/sindbad/1-40/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/sindbad/1-41/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/sindbad/1-43/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/sindbad/1-45/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/sindbad/1-46/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/sindbad/1-47/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/sindbad/1-52/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/sindbad/1-53/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/slam-dunk/1-2/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/slam-dunk/1-5/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/slam-dunk/1-8/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/slam-dunk/1-10/",
+      "url": "https://kartoney.com/watch/captain-tsubasa/6-16/",
       "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
     },
     {
-      "url": "https://kartoney.com/watch/slam-dunk/1-12/",
+      "url": "https://kartoney.com/watch/captain-tsubasa/6-19/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/slam-dunk/1-14/",
+      "url": "https://kartoney.com/watch/captain-tsubasa/6-20/",
+      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/6-23/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/6-24/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/6-25/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/6-27/",
+      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/6-28/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/6-30/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/6-31/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/6-32/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/6-34/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/6-35/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/6-37/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/6-40/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/6-46/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/6-47/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/6-48/",
+      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/6-51/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/6-52/",
       "coverage": "تم الزحف إلى الصفحة - لم تتم فهرستها حاليًا"
     },
     {
-      "url": "https://kartoney.com/watch/slam-dunk/1-15/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/slam-dunk/1-16/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/slam-dunk/1-17/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/slam-dunk/1-18/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/slam-dunk/1-19/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/slam-dunk/1-20/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/slam-dunk/1-21/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/slam-dunk/1-24/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/slam-dunk/1-25/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/slam-dunk/1-26/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/slam-dunk/1-27/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/slam-dunk/1-28/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/slam-dunk/1-30/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/slam-dunk/1-31/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/slam-dunk/1-34/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/slam-dunk/1-35/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/slam-dunk/1-36/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/slam-dunk/1-39/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/slam-dunk/1-46/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/slam-dunk/1-47/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/slam-dunk/1-49/",
+      "url": "https://kartoney.com/watch/captain-tsubasa/7-1/",
       "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
     },
     {
-      "url": "https://kartoney.com/watch/slam-dunk/1-51/",
+      "url": "https://kartoney.com/watch/captain-tsubasa/7-3/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/slam-dunk/1-52/",
+      "url": "https://kartoney.com/watch/captain-tsubasa/7-4/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/slam-dunk/1-53/",
+      "url": "https://kartoney.com/watch/captain-tsubasa/7-6/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/slam-dunk/2-2/",
+      "url": "https://kartoney.com/watch/captain-tsubasa/7-7/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/7-14/",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
+    },
+    {
+      "url": "https://kartoney.com/watch/captain-tsubasa/7-19/",
       "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
     },
     {
-      "url": "https://kartoney.com/watch/slam-dunk/2-3/",
+      "url": "https://kartoney.com/watch/captain-tsubasa/7-20/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/slam-dunk/2-7/",
+      "url": "https://kartoney.com/watch/captain-tsubasa/7-23/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/slam-dunk/2-10/",
-      "coverage": "تم الزحف إلى الصفحة - لم تتم فهرستها حاليًا"
-    },
-    {
-      "url": "https://kartoney.com/watch/slam-dunk/2-12/",
+      "url": "https://kartoney.com/watch/captain-tsubasa/7-24/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/slam-dunk/2-13/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/slam-dunk/2-14/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/slam-dunk/2-17/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/slam-dunk/2-18/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/slam-dunk/2-19/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/slam-dunk/2-21/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/slam-dunk/2-22/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/slam-dunk/2-23/",
-      "coverage": "تم الزحف إلى الصفحة - لم تتم فهرستها حاليًا"
-    },
-    {
-      "url": "https://kartoney.com/watch/slam-dunk/2-26/",
+      "url": "https://kartoney.com/watch/captain-tsubasa/7-28/",
       "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
     },
     {
-      "url": "https://kartoney.com/watch/slam-dunk/2-29/",
-      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
-    },
-    {
-      "url": "https://kartoney.com/watch/slam-dunk/2-30/",
+      "url": "https://kartoney.com/watch/captain-tsubasa/7-30/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/slam-dunk/2-31/",
+      "url": "https://kartoney.com/watch/captain-tsubasa/7-32/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/slam-dunk/2-33/",
+      "url": "https://kartoney.com/watch/captain-tsubasa/7-34/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/slam-dunk/2-34/",
+      "url": "https://kartoney.com/watch/captain-tsubasa/7-35/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/slam-dunk/2-40/",
-      "coverage": "تم الزحف إلى الصفحة - لم تتم فهرستها حاليًا"
-    },
-    {
-      "url": "https://kartoney.com/watch/slam-dunk/2-41/",
-      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
-    },
-    {
-      "url": "https://kartoney.com/watch/slam-dunk/2-44/",
+      "url": "https://kartoney.com/watch/captain-tsubasa/7-38/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/slam-dunk/2-47/",
+      "url": "https://kartoney.com/watch/captain-tsubasa/7-39/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
     },
     {
-      "url": "https://kartoney.com/watch/slam-dunk/2-48/",
+      "url": "https://kartoney.com/watch/captain-tsubasa/7-40/",
       "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/slam-dunk/2-49/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/slam-dunk/3-1/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/slam-dunk/3-2/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/earth-eagles/1-2/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/earth-eagles/1-3/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/earth-eagles/1-5/",
-      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
-    },
-    {
-      "url": "https://kartoney.com/watch/earth-eagles/1-6/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/earth-eagles/1-8/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/earth-eagles/1-9/",
-      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
-    },
-    {
-      "url": "https://kartoney.com/watch/earth-eagles/1-10/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/earth-eagles/1-12/",
-      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
-    },
-    {
-      "url": "https://kartoney.com/watch/earth-eagles/1-11/",
-      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
-    },
-    {
-      "url": "https://kartoney.com/watch/earth-eagles/1-17/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/earth-eagles/1-18/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/earth-eagles/1-21/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/earth-eagles/1-22/",
-      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
-    },
-    {
-      "url": "https://kartoney.com/watch/earth-eagles/1-23/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/earth-eagles/1-27/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/earth-eagles/1-29/",
-      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
-    },
-    {
-      "url": "https://kartoney.com/watch/earth-eagles/1-31/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/earth-eagles/1-32/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/earth-eagles/1-33/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/earth-eagles/1-34/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/earth-eagles/1-35/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/earth-eagles/1-36/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/earth-eagles/1-37/",
-      "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL."
-    },
-    {
-      "url": "https://kartoney.com/watch/earth-eagles/1-38/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/earth-eagles/1-40/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/earth-eagles/1-41/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/earth-eagles/1-43/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/earth-eagles/1-45/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/tokyo-ghoul/1-2/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/tokyo-ghoul/1-6/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/tokyo-ghoul/1-7/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/tokyo-ghoul/1-8/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/tokyo-ghoul/1-9/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/tokyo-ghoul/1-11/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/tokyo-ghoul/2-1/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/tokyo-ghoul/2-5/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/tokyo-ghoul/2-9/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/the-twins/1-9/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/the-twins/1-10/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/the-twins/1-11/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/the-twins/1-14/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/the-twins/1-15/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/the-twins/1-17/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/the-twins/1-20/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/the-twins/1-22/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/the-twins/1-26/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/yokai-watch/1-1/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/yokai-watch/1-2/",
-      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن"
-    },
-    {
-      "url": "https://kartoney.com/watch/yokai-watch/1-5/",
-      "coverage": "تم الزحف إلى الصفحة - لم تتم فهرستها حاليًا"
     }
   ],
-  "notIndexedCount": 791
+  "notIndexedCount": 1466
 }
