@@ -7,7 +7,7 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { loadData } from './data.mjs';
 import { SITE, ADS, url, ERAS, TYPES } from './config.mjs';
-import { homePage, cartoonPage, episodePage, browsePage, genreChips } from './templates.mjs';
+import { homePage, landingPage, cartoonPage, episodePage, browsePage, genreChips } from './templates.mjs';
 import { num, esc, clip, toISO } from './util.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -81,8 +81,11 @@ async function build() {
   //    "ads.js" is blocked by default ad-blocker filter lists.
   writeFile('js/widgets.js', adsRuntime());
 
-  // 3) Home
-  writePage('/', homePage(data));
+  // 3) Home (Landing Page)
+  writePage('/', landingPage(data));
+
+  // 3.5) Lives Page (Cartoon Catalog)
+  writePage('/lives/', homePage(data));
 
   // 4) Cartoon + episode pages
   for (const c of data.cartoons) {
@@ -189,6 +192,7 @@ async function build() {
   const today = new Date().toISOString().slice(0, 10);
   const pageUrls = [
     xmlUrl('/', today, 'daily', '1.0'),
+    xmlUrl('/lives/', today, 'daily', '0.95'),
     xmlUrl(url.library(), today, 'weekly', '0.9'),
     xmlUrl(url.genresIndex(), today, 'weekly', '0.8'),
     ...data.genres.map((g) => xmlUrl(url.genre(g.en), today, 'weekly', '0.7')),

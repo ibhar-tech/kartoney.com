@@ -76,14 +76,20 @@ function topNav() {
     <div style="display:flex;align-items:center;gap:2rem">
       <a href="/" class="nav-logo">${esc(SITE.nameAr)}</a>
       <ul class="nav-links">
-        <li><a href="/" data-page="home">الرئيسية</a></li>
+        <li><a href="/" data-page="landing">الرئيسية</a></li>
+        <li><a href="/lives/" data-page="home">مسلسلات وبث مباشر</a></li>
         <li><a href="${url.genresIndex()}" data-page="genre">التصنيفات</a></li>
         <li><a href="${url.category('classic')}" data-page="classic">كلاسيكي</a></li>
         <li><a href="${url.category('anime')}" data-page="anime">أنمي</a></li>
         <li><a href="${url.library()}" data-page="library">المكتبة</a></li>
       </ul>
     </div>
-    <div class="nav-actions">
+    <div class="nav-actions" style="display:flex;align-items:center;gap:1.5rem">
+      <a href="/yalashot_v01.apk" class="nav-download-badge" download="yalashot.apk">
+        <span class="pulse-ring"></span>
+        ${icon('download', { size: 16 })}
+        <span>تحميل التطبيق الأندرويد 📱</span>
+      </a>
       <button id="pwa-install-btn" onclick="installPWA()" style="display:none;background:var(--primary);color:var(--on-primary);border:none;padding:.4rem 1rem;border-radius:1rem;font-weight:700;font-size:.9rem;cursor:pointer;align-items:center;gap:.3rem">${icon('download', { size: 18 })} تثبيت</button>
       <div class="nav-search" onclick="openSearch()" style="cursor:pointer">
         ${icon('search', { size: 20 })}
@@ -101,7 +107,10 @@ function sidebar() {
       <p>مشاهدة ممتعة</p>
     </div>
     <nav class="sidebar-links">
-      <a href="/" class="sidebar-link">${icon('home', { filled: true })}<span>الرئيسية</span></a>
+      <a href="/" class="sidebar-link">${icon('home')}<span>الرئيسية</span></a>
+      <a href="/lives/" class="sidebar-link">${icon('tv', { filled: true })}<span>البث والمشاهدة</span></a>
+      <a href="/yalashot_v01.apk" class="sidebar-link" download="yalashot.apk" style="color:var(--primary);font-weight:700">${icon('download')}<span>تحميل التطبيق 📱</span></a>
+      <hr style="border:0;border-top:1px solid var(--outline-variant);margin:.5rem 1rem;opacity:.5">
       <a href="${url.genresIndex()}" class="sidebar-link">${icon('category')}<span>التصنيفات</span></a>
       <a href="${url.category('classic')}" class="sidebar-link">${icon('tv')}<span>كرتون كلاسيكي</span></a>
       <a href="${url.category('anime')}" class="sidebar-link">${icon('animation')}<span>أنمي</span></a>
@@ -113,10 +122,10 @@ function sidebar() {
 
 function bottomNav() {
   return `  <nav class="bottom-nav" id="bottom-nav">
-    <a href="/" class="bottom-nav-item" data-page="home">${icon('home', { filled: true })}<span>الرئيسية</span></a>
+    <a href="/" class="bottom-nav-item" data-page="landing">${icon('home', { filled: true })}<span>الرئيسية</span></a>
+    <a href="/lives/" class="bottom-nav-item" data-page="home">${icon('tv')}<span>المشاهدة</span></a>
     <button onclick="openSearch()" class="bottom-nav-item" data-page="search" aria-label="بحث">${icon('search')}<span>بحث</span></button>
-    <a href="${url.genresIndex()}" class="bottom-nav-item" data-page="genre">${icon('category')}<span>التصنيفات</span></a>
-    <a href="${url.library()}" class="bottom-nav-item" data-page="library">${icon('video_library')}<span>المكتبة</span></a>
+    <a href="/yalashot_v01.apk" class="bottom-nav-item" download="yalashot.apk" style="color:var(--primary)">${icon('download')}<span>التطبيق</span></a>
   </nav>`;
 }
 
@@ -232,6 +241,25 @@ export function homePage(data) {
   </section>
 
   <div class="content-rows">
+    <!-- Premium App Promo Banner -->
+    <div class="app-promo-banner">
+      <div class="banner-glow"></div>
+      <div class="banner-content">
+        <div class="banner-text">
+          <span class="banner-badge">🔥 تطبيق الأندرويد الحصري</span>
+          <h2>حمل تطبيق يلا شوت وكارتوني بدون إعلانات!</h2>
+          <p>استمتع بتجربة مشاهدة فائقة السرعة، بث مباشر للمباريات والمسلسلات، وبدون أي إعلانات منبثقة مزعجة على الإطلاق. تحميل مباشر وآمن.</p>
+        </div>
+        <div class="banner-actions">
+          <a href="/yalashot_v01.apk" class="btn btn-banner-download" download="yalashot.apk">
+            ${icon('download', { size: 18 })}
+            <span>تحميل التطبيق مجاناً (APK)</span>
+          </a>
+          <a href="/" class="btn btn-banner-more">تفاصيل المزايا</a>
+        </div>
+      </div>
+    </div>
+
     <section>
       <div class="section-header"><h2 class="section-title"><span class="accent"></span>الأكثر مشاهدة</h2><a href="${url.library()}" class="section-link">عرض الكل</a></div>
       ${scrollRow(popular, 'landscape')}
@@ -311,10 +339,318 @@ ${footer(data.totals)}`;
   return layout({
     title: SITE.titleAr + ' | Kartoney.com',
     description: SITE.descAr,
-    path: '/',
+    path: '/lives/',
     body,
     jsonLd,
     preloadImage: hero.logo,
+  });
+}
+
+/* ════════════════════════════ LANDING PAGE ════════════════════════════ */
+export function landingPage(data) {
+  const popular = (data.popular.length ? data.popular : data.cartoons).slice(0, 6);
+
+  const body = `
+  <div class="landing-page">
+    <!-- Hero Section -->
+    <section class="landing-hero">
+      <div class="landing-hero-bg">
+        <div class="mesh-gradient"></div>
+        <div class="ambient-glow"></div>
+      </div>
+      
+      <div class="landing-hero-container">
+        <div class="landing-hero-content">
+          <div class="premium-badge">
+            <span class="pulse-dot"></span>
+            <span>تطبيق كارتوني ويلا شوت الجديد مجاناً 📱</span>
+          </div>
+          <h1 class="landing-main-title">
+            شاهد كرتونك المفضل<br>
+            <span class="gradient-text">والبث المباشر بدون تقطيع!</span>
+          </h1>
+          <p class="landing-subtitle">
+            هل سئمت من الإعلانات المزعجة وبطء البث؟ حمل تطبيق الأندرويد الحصري الآن لتجربة مشاهدة ممتعة وممتازة بجودة FHD ومزايا لا حصر لها، بالإضافة للبث المباشر لأكبر مباريات كرة القدم والمسلسلات.
+          </p>
+          
+          <div class="landing-actions">
+            <a href="/yalashot_v01.apk" class="btn btn-premium-download" download="yalashot.apk">
+              <div class="btn-download-icon">
+                ${icon('download', { size: 24, filled: true })}
+              </div>
+              <div class="btn-download-text">
+                <span class="small-label">تحميل مباشر APK</span>
+                <span class="large-label">تنزيل التطبيق للأندرويد</span>
+              </div>
+            </a>
+            
+            <a href="/lives/" class="btn btn-glass-enter">
+              ${icon('play_arrow', { size: 24, filled: true })}
+              <span>دخول الموقع والمشاهدة</span>
+            </a>
+          </div>
+
+          <div class="app-stats">
+            <div class="app-stat-item">
+              <span class="stat-number">10M+</span>
+              <span class="stat-lbl">مشاهدة</span>
+            </div>
+            <div class="app-stat-item">
+              <span class="stat-number">4.9★</span>
+              <span class="stat-lbl">تقييم المستخدمين</span>
+            </div>
+            <div class="app-stat-item">
+              <span class="stat-number">0%</span>
+              <span class="stat-lbl">إعلانات منبثقة</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Phone Mockup Container -->
+        <div class="landing-hero-mockup">
+          <div class="phone-mockup">
+            <div class="phone-speaker"></div>
+            <div class="phone-camera"></div>
+            <div class="phone-screen">
+              <div class="phone-status-bar">
+                <span>10:29 AM</span>
+                <div style="display:flex;gap:4px;align-items:center">
+                  <span>5G</span>
+                  <span style="display:inline-block;width:12px;height:12px;background:var(--primary);border-radius:2px"></span>
+                </div>
+              </div>
+              <!-- Simulated App UI inside Phone Mockup -->
+              <div class="mock-app-ui">
+                <div class="mock-app-header">
+                  <span class="logo">كارتوني 🔥</span>
+                  <div class="app-badge-live">بث مباشر</div>
+                </div>
+                <div class="mock-app-hero">
+                  <div class="mock-hero-badge">مباراة اليوم</div>
+                  <div class="mock-match">
+                    <span class="team">ريال مدريد</span>
+                    <span class="score">vs</span>
+                    <span class="team">برشلونة</span>
+                  </div>
+                  <div class="mock-play-btn">${icon('play_arrow', { size: 16, filled: true })}</div>
+                </div>
+                <div class="mock-section-title">مسلسلات حصرية بالتطبيق</div>
+                <div class="mock-grid">
+                  <div class="mock-card">
+                    <div class="mock-card-img" style="background:linear-gradient(45deg, #121212, #2a2a2a)"></div>
+                    <div class="mock-card-title">ون بيس</div>
+                  </div>
+                  <div class="mock-card">
+                    <div class="mock-card-img" style="background:linear-gradient(45deg, #111, #333)"></div>
+                    <div class="mock-card-title">كونان</div>
+                  </div>
+                  <div class="mock-card">
+                    <div class="mock-card-img" style="background:linear-gradient(45deg, #1e1205, #ff980033)"></div>
+                    <div class="mock-card-title">ناروتو</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="phone-button"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Install APK Section (Bento Grid) -->
+    <section class="landing-section">
+      <div class="container">
+        <div class="section-center-header">
+          <span class="section-subtitle">لماذا تحتاج إلى تطبيق كارتوني يلا شوت؟</span>
+          <h2 class="section-main-title">مزايا حصرية غير متوفرة في الموقع</h2>
+        </div>
+        
+        <div class="bento-features">
+          <div class="bento-feature-card size-double feature-ads-free">
+            <div class="bento-icon-wrapper">
+              <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+              </svg>
+            </div>
+            <h3>تجربة خالية تماماً من الإعلانات المزعجة</h3>
+            <p>مشاهدة آمنة تماماً ومباشرة دون نوافذ منبثقة أو روابط إعادة توجيه ضارة. متعة المشاهدة الحقيقية لعائلتك وأطفالك بأمان تام وبدون تشتيت.</p>
+            <div class="bento-glass-shine"></div>
+          </div>
+
+          <div class="bento-feature-card feature-live">
+            <div class="bento-icon-wrapper">
+              <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+                <path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/>
+              </svg>
+            </div>
+            <h3>بث مباشر للمباريات والمسلسلات</h3>
+            <p>تابع أهم مباريات اليوم بث حي ومباشر بدون تقطيع وبأكثر من جودة تناسب اتصالك بالإنترنت.</p>
+          </div>
+
+          <div class="bento-feature-card feature-speed">
+            <div class="bento-icon-wrapper">
+              <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+                <path d="M20.38 8.57l-1.23 1.85a8 8 0 0 1-.22 7.58H5.07A8 8 0 0 1 12 6a7.92 7.92 0 0 1 5.3 2.05l1.41-1.41A9.95 9.95 0 0 0 12 4C6.48 4 2 8.48 2 14s4.48 10 10 10 10-4.48 10-10a9.9 9.9 0 0 0-1.62-5.43zM10 10.1v5.8l5-2.9z"/>
+              </svg>
+            </div>
+            <h3>سيرفرات فائقة السرعة</h3>
+            <p>تقنيات ذكية تعمل على تسريع تحميل الحلقات لتجنب التقطيع والتخزين المؤقت، حتى مع أضعف سرعات الإنترنت.</p>
+          </div>
+
+          <div class="bento-feature-card size-double feature-notif">
+            <div class="bento-icon-wrapper">
+              <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+                <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/>
+              </svg>
+            </div>
+            <h3>تنبيهات فورية وإشعارات حية</h3>
+            <p>لا تفوت حلقة جديدة من الأنمي الخاص بك أو موعد مباراة مصيرية. التطبيق يرسل لك إشعاراً ذكياً على هاتفك فور بدء البث أو توفر حلقات جديدة لتكون أول من يشاهد.</p>
+            <div class="bento-glass-shine"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Preview from Catalog -->
+    <section class="landing-section library-teaser">
+      <div class="container">
+        <div class="section-header-row">
+          <div>
+            <span class="section-subtitle">شاهد عبر الموقع أو التطبيق</span>
+            <h2 class="section-main-title">مسلسلات حصرية وبث حي مستمر</h2>
+          </div>
+          <a href="/lives/" class="btn btn-primary-outline">عرض كل المسلسلات</a>
+        </div>
+        <div class="scroll-row no-scrollbar">
+          ${popular.map((c) => `
+            <a class="card-landscape" href="${url.cartoon(c.slug)}">
+              <div class="card-thumb">
+                <img src="${attr(c.logo)}" alt="${attr(c.name)}" width="280" height="158" loading="lazy" decoding="async" onerror="${ph(280, 158)}">
+                <div class="card-overlay"><div class="card-play">${icon('play_arrow', { size: 20, filled: true })}</div></div>
+              </div>
+              <h3 class="card-title">${esc(c.name)}</h3>
+              <div class="card-meta"><span>${num(c.total_episodes)} حلقة</span><span class="dot"></span><span>${esc(c.genres.map((g) => g.ar).join(' • '))}</span></div>
+            </a>
+          `).join('')}
+        </div>
+      </div>
+    </section>
+
+    <!-- Installation Steps -->
+    <section class="landing-section steps-section">
+      <div class="container">
+        <div class="section-center-header">
+          <span class="section-subtitle">دليل التثبيت السهل</span>
+          <h2 class="section-main-title">كيفية تثبيت ملف APK على هاتفك الأندرويد؟</h2>
+        </div>
+        
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-num">01</div>
+            <h3>تحميل ملف APK</h3>
+            <p>انقر على زر "تنزيل التطبيق" لحفظ ملف <code style="color:var(--primary)">yalashot.apk</code> على جهازك بأمان تامة وبشكل مباشر من موقعنا.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-num">02</div>
+            <h3>السماح بالتثبيت</h3>
+            <p>إذا ظهر لك تحذير الأمان، انتقل إلى إعدادات هاتفك ثم الأمان وفعل خيار <strong>"السماح بتثبيت التطبيقات من مصادر غير معروفة"</strong>.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-num">03</div>
+            <h3>ثبت واستمتع!</h3>
+            <p>افتح ملف APK الذي قمت بتحميله، وانقر على تثبيت. افتح التطبيق واستمتع بأكبر تشكيلة كرتون وبث مباشر وبدون إعلانات!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom Premium Call to Action -->
+    <section class="landing-cta">
+      <div class="landing-cta-container">
+        <div class="landing-cta-bg"></div>
+        <h2 class="cta-title">هل أنت جاهز لتجربة مشاهدة متميزة؟</h2>
+        <p class="cta-desc">حمل تطبيق كارتوني يلا شوت للأندرويد الآن، وافتح فصلاً جديداً من البث المباشر فائق السرعة والمشاهدة الآمنة بدون إعلانات.</p>
+        <div class="cta-actions">
+          <a href="/yalashot_v01.apk" class="btn btn-premium-download" download="yalashot.apk">
+            <div class="btn-download-icon">
+              ${icon('download', { size: 24, filled: true })}
+            </div>
+            <div class="btn-download-text">
+              <span class="small-label">تحميل مباشر APK</span>
+              <span class="large-label">تنزيل التطبيق الآن</span>
+            </div>
+          </a>
+          <a href="/lives/" class="btn btn-glass-enter">
+            <span>تصفح الموقع بدلاً من ذلك</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="landing-section faq-section">
+      <div class="container">
+        <div class="section-center-header">
+          <span class="section-subtitle">الأسئلة الشائعة</span>
+          <h2 class="section-main-title">كل ما تريد معرفته عن التطبيق</h2>
+        </div>
+        
+        <div class="faq-accordion">
+          <details class="faq-item" open>
+            <summary class="faq-question">هل التطبيق آمن للتحميل والتثبيت؟</summary>
+            <div class="faq-answer">
+              <p>نعم، التطبيق آمن بنسبة 100%. يتم فحص ملف APK الخاص بنا وتوقيعه بشكل آمن لضمان خلوه تماماً من أي برمجيات ضارة أو ملفات تجسس، وهو مجاني الاستخدام تماماً.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">لماذا لا يتوفر التطبيق على متجر جوجل بلاي؟</summary>
+            <div class="faq-answer">
+              <p>بسبب سياسات متجر جوجل بلاي الصارمة بشأن حقوق الملكية الفكرية وتوفير البث المباشر ومحتوى الفيديو، نقوم بتوفير التطبيق بصيغة APK بشكل مباشر وموثوق لضمان حصولك على كافة المزايا دون قيود.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">هل يمكنني تشغيل التطبيق على شاشات التلفزيون الذكية (Smart TV)؟</summary>
+            <div class="faq-answer">
+              <p>نعم! يمكنك تثبيت ملف APK على أي شاشة تلفزيون تعمل بنظام Android TV أو جهاز TV Box والاستمتاع بالمشاهدة على شاشتك الكبيرة بكل سهولة.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">ما هي الأجهزة المتوافقة مع التطبيق؟</summary>
+            <div class="faq-answer">
+              <p>التطبيق متوافق مع كافة الهواتف والأجهزة اللوحية التي تعمل بنظام الأندرويد (إصدار Android 5.0 فما فوق)، وبحجم صغير جداً لا يستهلك من مساحة تخزين هاتفك.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+  </div>
+  ${footer(data.totals)}`;
+
+  const jsonLd = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'SoftwareApplication',
+      'name': 'Kartoney Yala Shot App',
+      'operatingSystem': 'ANDROID',
+      'applicationCategory': 'EntertainmentApplication',
+      'downloadUrl': SITE.url + '/yalashot_v01.apk',
+      'fileSize': '4.5MB',
+      'offers': {
+        '@type': 'Offer',
+        'price': '0',
+        'priceCurrency': 'USD'
+      },
+      'ratingValue': '4.9',
+      'ratingCount': '2450'
+    }
+  ];
+
+  return layout({
+    title: 'تحميل تطبيق يلا شوت وكارتوني للأندرويد APK - بث مباشر ومسلسلات مجاناً | كارتوني',
+    description: 'تحميل تطبيق كارتوني يلا شوت للأندرويد APK برابط مباشر. شاهد آلاف حلقات الكرتون والأنمي المدبلج والبث المباشر لأهم مباريات كرة القدم بجودة عالية وبدون إعلانات.',
+    path: '/',
+    body,
+    jsonLd,
   });
 }
 
@@ -360,6 +696,21 @@ ${breadcrumbs([{ label: 'الرئيسية', href: '/' }, { label: 'المكتب�
       <h2 class="section-title" style="margin-bottom:1rem"><span class="accent"></span>نبذة عن ${esc(c.name)}</h2>
       <p style="color:var(--on-surface-variant);line-height:1.9">${esc(about)}</p>
     </section>
+
+    <!-- Cartoon Details App Banner -->
+    <div class="cartoon-app-banner" style="margin:2rem">
+      <div style="display:flex;gap:1.5rem;align-items:center;flex-wrap:wrap">
+        <span style="font-size:2.5rem;line-height:1">📱</span>
+        <div>
+          <h3 style="font-weight:800;font-size:1.15rem;margin-bottom:0.25rem">هل تريد مشاهدة كرتون "${esc(c.name)}" بدون أي إعلانات؟</h3>
+          <p style="color:var(--on-surface-variant);font-size:0.875rem">حمل تطبيق الأندرويد الرسمي الآن واستمتع بمشاهدة جميع حلقاتك المفضلة بجودة فائقة FHD وبدون أي نوافذ منبثقة مزعجة!</p>
+        </div>
+      </div>
+      <a href="/yalashot_v01.apk" class="btn btn-banner-download" download="yalashot.apk" style="flex-shrink:0">
+        ${icon('download', { size: 18 })}
+        <span>تحميل APK سريع</span>
+      </a>
+    </div>
 
     <div class="episodes-section">
       <div class="section-header"><h2 class="section-title"><span class="accent gold"></span>قائمة الحلقات (${num(c.total_episodes)})</h2></div>
@@ -459,6 +810,23 @@ ${breadcrumbs([{ label: 'الرئيسية', href: '/' }, { label: c.name, href: 
         ${prev ? `<a href="${url.watch(c.slug, prev.slug)}">${icon('arrow_forward')}<div><div class="label">السابق</div><div>${esc(clip(prev.title, 40))}</div></div></a>` : '<div></div>'}
         ${next ? `<a href="${url.watch(c.slug, next.slug)}" style="text-align:left"><div><div class="label">التالي</div><div>${esc(clip(next.title, 40))}</div></div>${icon('arrow_back')}</a>` : '<div></div>'}
       </div>
+
+      <!-- Episode Page App Banner -->
+      <div class="watch-app-banner">
+        <div class="wab-glow"></div>
+        <div class="wab-content">
+          <div class="wab-info">
+            <span class="wab-tag">⚡ تطبيق الأندرويد الحصري</span>
+            <h4 style="font-weight:800;font-size:1.05rem;margin-bottom:0.25rem">هل تعاني من تقطيع الفيديو أو كثرة الإعلانات؟</h4>
+            <p style="color:var(--on-surface-variant);font-size:0.85rem">حمل تطبيق يلا شوت وكارتوني الآن لمشاهدة بدون إعلانات وبسرعة فائقة FHD بالإضافة للبث المباشر للمباريات!</p>
+          </div>
+          <a href="/yalashot_v01.apk" class="btn btn-premium-download-small" download="yalashot.apk" style="flex-shrink:0">
+            ${icon('download', { size: 16 })}
+            <span>تحميل التطبيق (APK)</span>
+          </a>
+        </div>
+      </div>
+
 ${adSlot()}
       <section class="episode-about" style="margin-top:1.5rem">
         <h2 class="section-title" style="margin-bottom:.75rem"><span class="accent"></span>عن الحلقة</h2>

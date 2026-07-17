@@ -22,11 +22,13 @@
   (function markActiveNav() {
     var path = location.pathname;
     var key = 'home';
-    if (path.indexOf('/genre') === 0) key = 'genre';
+    if (path === '/') key = 'landing';
+    else if (path.indexOf('/lives') === 0) key = 'home';
+    else if (path.indexOf('/genre') === 0) key = 'genre';
     else if (path.indexOf('/category/anime') === 0) key = 'anime';
     else if (path.indexOf('/category/classic') === 0) key = 'classic';
     else if (path.indexOf('/library') === 0) key = 'library';
-    else if (path !== '/') key = '';
+    else key = '';
     document.querySelectorAll('[data-page]').forEach(function (a) {
       a.classList.toggle('active', a.getAttribute('data-page') === key);
     });

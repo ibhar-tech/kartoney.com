@@ -53,6 +53,7 @@ export const ADS = {
 // ── URL builders (single source of truth for the whole site) ──────────
 export const url = {
   home: () => '/',
+  lives: () => '/lives/',
   cartoon: (slug) => `/cartoon/${slug}/`,
   watch: (slug, epSlug) => `/watch/${slug}/${epSlug}/`,
   genre: (en) => `/genre/${en}/`,
