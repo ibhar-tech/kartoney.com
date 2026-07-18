@@ -9,19 +9,12 @@
     "serve": "node src/serve.mjs",
     "dev": "node src/build.mjs && node src/serve.mjs",
     "images": "node scripts/fetch-images.mjs && node scripts/optimize-images.mjs",
-    "webp": "node scripts/optimize-images.mjs",
-    "index": "node scripts/gsc-inspect.mjs",
-    "index:auth": "node scripts/gsc-auth.mjs",
-    "index:status": "node scripts/gsc-status.mjs",
-    "bing": "node scripts/bing-submit.mjs",
-    "bing:indexnow": "node scripts/bing-submit.mjs --indexnow",
-    "bing:quota": "node scripts/bing-submit.mjs --quota",
-    "bing:status": "node scripts/bing-status.mjs"
+    "webp": "node scripts/optimize-images.mjs"
   },
   "dependencies": {
     "sql.js": "^1.12.0"
   },
   "engines": {
-    "node": "20.x"
+    "node": "24.x"
   }
 }

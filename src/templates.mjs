@@ -55,6 +55,7 @@ ${FAVICONS}
 ${preloadImage ? `  <link rel="preload" as="image" href="${attr(preloadImage)}" fetchpriority="high">\n` : ''}  <link rel="stylesheet" href="/css/style.css">
 ${jsonLd.map((j) => `  <script type="application/ld+json">${JSON.stringify(j)}</script>`).join('\n')}
 ${extraHead}
+  <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
 ${topNav()}
