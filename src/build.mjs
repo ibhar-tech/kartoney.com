@@ -193,6 +193,7 @@ async function build() {
   const pageUrls = [
     xmlUrl('/', today, 'daily', '1.0'),
     xmlUrl('/lives/', today, 'daily', '0.95'),
+    xmlUrl('/live_streaming_apps.html', today, 'weekly', '0.9'),
     xmlUrl(url.library(), today, 'weekly', '0.9'),
     xmlUrl(url.genresIndex(), today, 'weekly', '0.8'),
     ...data.genres.map((g) => xmlUrl(url.genre(g.en), today, 'weekly', '0.7')),

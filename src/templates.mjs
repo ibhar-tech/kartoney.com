@@ -87,10 +87,10 @@ function topNav() {
       </ul>
     </div>
     <div class="nav-actions" style="display:flex;align-items:center;gap:1.5rem">
-      <a href="/yalashot_v01.apk" class="nav-download-badge" download="yalashot.apk">
+      <a href="/live_streaming_apps.html" class="nav-download-badge">
         <span class="pulse-ring"></span>
-        ${icon('download', { size: 16 })}
-        <span>تحميل التطبيق الأندرويد 📱</span>
+        ${icon('tv', { size: 16 })}
+        <span>تطبيقاتنا (موبايل، شاشة، كمبيوتر) 🔥</span>
       </a>
       <button id="pwa-install-btn" onclick="installPWA()" style="display:none;background:var(--primary);color:var(--on-primary);border:none;padding:.4rem 1rem;border-radius:1rem;font-weight:700;font-size:.9rem;cursor:pointer;align-items:center;gap:.3rem">${icon('download', { size: 18 })} تثبيت</button>
       <div class="nav-search" onclick="openSearch()" style="cursor:pointer">
@@ -111,7 +111,7 @@ function sidebar() {
     <nav class="sidebar-links">
       <a href="/" class="sidebar-link">${icon('home')}<span>الرئيسية</span></a>
       <a href="/lives/" class="sidebar-link">${icon('tv', { filled: true })}<span>البث والمشاهدة</span></a>
-      <a href="/yalashot_v01.apk" class="sidebar-link" download="yalashot.apk" style="color:var(--primary);font-weight:700">${icon('download')}<span>تحميل التطبيق 📱</span></a>
+      <a href="/live_streaming_apps.html" class="sidebar-link" style="color:var(--primary);font-weight:700">${icon('tv')}<span>تحميل تطبيقاتنا 🔥</span></a>
       <hr style="border:0;border-top:1px solid var(--outline-variant);margin:.5rem 1rem;opacity:.5">
       <a href="${url.genresIndex()}" class="sidebar-link">${icon('category')}<span>التصنيفات</span></a>
       <a href="${url.category('classic')}" class="sidebar-link">${icon('tv')}<span>كرتون كلاسيكي</span></a>
@@ -127,7 +127,7 @@ function bottomNav() {
     <a href="/" class="bottom-nav-item" data-page="landing">${icon('home', { filled: true })}<span>الرئيسية</span></a>
     <a href="/lives/" class="bottom-nav-item" data-page="home">${icon('tv')}<span>المشاهدة</span></a>
     <button onclick="openSearch()" class="bottom-nav-item" data-page="search" aria-label="بحث">${icon('search')}<span>بحث</span></button>
-    <a href="/yalashot_v01.apk" class="bottom-nav-item" download="yalashot.apk" style="color:var(--primary)">${icon('download')}<span>التطبيق</span></a>
+    <a href="/live_streaming_apps.html" class="bottom-nav-item" style="color:var(--primary)">${icon('tv')}<span>تطبيقاتنا</span></a>
   </nav>`;
 }
 
