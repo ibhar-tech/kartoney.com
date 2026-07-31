@@ -26,6 +26,15 @@ Kartoney.com is a free Arabic-language cartoon and anime streaming platform. The
 - No backend server required; no client-side database
 - Structured data: WebSite, Organization, TVSeries, VideoObject, BreadcrumbList (schema.org)
 
+**Android App — Ostora Online O² (الأسطورة أونلاين)**
+- A free Android app distributed from this site as a direct APK: https://kartoney.com/ostora_online_v1.1.apk
+- One package covers phones, tablets and Android TV; there is no separate TV build and no desktop version.
+- Version 1.1, 5 MB, requires Android 7.0 or newer. No account, no subscription, ad-supported.
+- The entire Kartoney catalogue (107 series, 8,611 episodes) is bundled inside the app, so browsing works without waiting on a server; playback still needs a connection.
+- Also carries live TV, radio and on-demand libraries: Ostora TV (5,142 titles), YacineTV (317 channels), Free TV (14,359 channels), Global TV (761 channels), Radios (212 stations), Rokia (26 recitations), Syria Live (10 channels).
+- Player features: subtitle selection, 0.5x-2x playback speed, picture-in-picture, favourites, home-screen widget, Arabic search across 6,248 titles.
+- Download and install page: https://kartoney.com/live_streaming_apps.html
+
 **Contact**
 - Website: https://kartoney.com
 - Domain: kartoney.com
@@ -33,6 +42,7 @@ Kartoney.com is a free Arabic-language cartoon and anime streaming platform. The
 ## Key URLs
 
 - [Home](https://kartoney.com/): The main landing page.
+- [Download the Android App](https://kartoney.com/live_streaming_apps.html): Install page for Ostora Online O² — phone, tablet and Android TV.
 - [Full Library](https://kartoney.com/library/): Complete catalog of all 107 cartoon and anime series.
 - [Genres Index](https://kartoney.com/genre/): Browse and filter series by genre.
 - [Sitemap Index](https://kartoney.com/sitemap.xml): The XML sitemap containing references to all pages.

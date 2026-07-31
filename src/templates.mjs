@@ -90,7 +90,7 @@ function topNav() {
       <a href="/live_streaming_apps.html" class="nav-download-badge">
         <span class="pulse-ring"></span>
         ${icon('tv', { size: 16 })}
-        <span>تطبيقاتنا (موبايل، شاشة، كمبيوتر) 🔥</span>
+        <span>التطبيق (هاتف · تابلت · تلفزيون) 🔥</span>
       </a>
       <button id="pwa-install-btn" onclick="installPWA()" style="display:none;background:var(--primary);color:var(--on-primary);border:none;padding:.4rem 1rem;border-radius:1rem;font-weight:700;font-size:.9rem;cursor:pointer;align-items:center;gap:.3rem">${icon('download', { size: 18 })} تثبيت</button>
       <div class="nav-search" onclick="openSearch()" style="cursor:pointer">
@@ -111,7 +111,7 @@ function sidebar() {
     <nav class="sidebar-links">
       <a href="/" class="sidebar-link">${icon('home')}<span>الرئيسية</span></a>
       <a href="/lives/" class="sidebar-link">${icon('tv', { filled: true })}<span>البث والمشاهدة</span></a>
-      <a href="/live_streaming_apps.html" class="sidebar-link" style="color:var(--primary);font-weight:700">${icon('tv')}<span>تحميل تطبيقاتنا 🔥</span></a>
+      <a href="/live_streaming_apps.html" class="sidebar-link" style="color:var(--primary);font-weight:700">${icon('tv')}<span>تحميل التطبيق 🔥</span></a>
       <hr style="border:0;border-top:1px solid var(--outline-variant);margin:.5rem 1rem;opacity:.5">
       <a href="${url.genresIndex()}" class="sidebar-link">${icon('category')}<span>التصنيفات</span></a>
       <a href="${url.category('classic')}" class="sidebar-link">${icon('tv')}<span>كرتون كلاسيكي</span></a>
@@ -127,7 +127,7 @@ function bottomNav() {
     <a href="/" class="bottom-nav-item" data-page="landing">${icon('home', { filled: true })}<span>الرئيسية</span></a>
     <a href="/lives/" class="bottom-nav-item" data-page="home">${icon('tv')}<span>المشاهدة</span></a>
     <button onclick="openSearch()" class="bottom-nav-item" data-page="search" aria-label="بحث">${icon('search')}<span>بحث</span></button>
-    <a href="/live_streaming_apps.html" class="bottom-nav-item" style="color:var(--primary)">${icon('tv')}<span>تطبيقاتنا</span></a>
+    <a href="/live_streaming_apps.html" class="bottom-nav-item" style="color:var(--primary)">${icon('tv')}<span>التطبيق</span></a>
   </nav>`;
 }
 
@@ -249,15 +249,15 @@ export function homePage(data) {
       <div class="banner-content">
         <div class="banner-text">
           <span class="banner-badge">🔥 تطبيق الأندرويد الحصري</span>
-          <h2>حمل تطبيق يلا شوت وكارتوني بدون إعلانات!</h2>
-          <p>استمتع بتجربة مشاهدة فائقة السرعة، بث مباشر للمباريات والمسلسلات، وبدون أي إعلانات منبثقة مزعجة على الإطلاق. تحميل مباشر وآمن.</p>
+          <h2>حمل تطبيق الأسطورة أونلاين — كارتوني في جيبك</h2>
+          <p>مكتبة كارتوني كاملة مدمجة داخل التطبيق، مع البث المباشر وآلاف القنوات. ملف واحد يعمل على الهاتف والتابلت وتلفزيون أندرويد. تحميل مباشر وآمن.</p>
         </div>
         <div class="banner-actions">
-          <a href="https://github.com/ibhar-tech/YalaShot-Releases/releases/download/v1.0.0/yalashot-mobile.apk" class="btn btn-banner-download" download="yalashot.apk">
+          <a href="/ostora_online_v1.1.apk" class="btn btn-banner-download" download="ostora_online_v1.1.apk">
             ${icon('download', { size: 18 })}
             <span>تحميل التطبيق مجاناً (APK)</span>
           </a>
-          <a href="/" class="btn btn-banner-more">تفاصيل المزايا</a>
+          <a href="/live_streaming_apps.html" class="btn btn-banner-more">تفاصيل المزايا</a>
         </div>
       </div>
     </div>
@@ -365,18 +365,18 @@ export function landingPage(data) {
         <div class="landing-hero-content">
           <div class="premium-badge">
             <span class="pulse-dot"></span>
-            <span>تطبيق كارتوني ويلا شوت الجديد مجاناً 📱</span>
+            <span>تطبيق الأسطورة أونلاين — للهاتف والتابلت والتلفزيون 📱</span>
           </div>
           <h1 class="landing-main-title">
             شاهد كرتونك المفضل<br>
-            <span class="gradient-text">والبث المباشر بدون تقطيع!</span>
+            <span class="gradient-text">على كل شاشة عندك!</span>
           </h1>
           <p class="landing-subtitle">
-            هل سئمت من الإعلانات المزعجة وبطء البث؟ حمل تطبيق الأندرويد الحصري الآن لتجربة مشاهدة ممتعة وممتازة بجودة FHD ومزايا لا حصر لها، بالإضافة للبث المباشر لأكبر مباريات كرة القدم والمسلسلات.
+            ملف APK واحد يعمل على الهاتف والتابلت وتلفزيون أندرويد. مكتبة كارتوني كاملة مدمجة بداخله — 107 مسلسل و8611 حلقة — مع البث المباشر وآلاف القنوات والإذاعات، مجاناً وبدون تسجيل حساب.
           </p>
           
           <div class="landing-actions">
-            <a href="https://github.com/ibhar-tech/YalaShot-Releases/releases/download/v1.0.0/yalashot-mobile.apk" class="btn btn-premium-download" download="yalashot.apk">
+            <a href="/ostora_online_v1.1.apk" class="btn btn-premium-download" download="ostora_online_v1.1.apk">
               <div class="btn-download-icon">
                 ${icon('download', { size: 24, filled: true })}
               </div>
@@ -394,16 +394,16 @@ export function landingPage(data) {
 
           <div class="app-stats">
             <div class="app-stat-item">
-              <span class="stat-number">10M+</span>
-              <span class="stat-lbl">مشاهدة</span>
+              <span class="stat-number">8,611</span>
+              <span class="stat-lbl">حلقة داخل التطبيق</span>
             </div>
             <div class="app-stat-item">
-              <span class="stat-number">4.9★</span>
-              <span class="stat-lbl">تقييم المستخدمين</span>
+              <span class="stat-number">3</span>
+              <span class="stat-lbl">هاتف · تابلت · تلفزيون</span>
             </div>
             <div class="app-stat-item">
-              <span class="stat-number">0%</span>
-              <span class="stat-lbl">إعلانات منبثقة</span>
+              <span class="stat-number" dir="ltr">5 MB</span>
+              <span class="stat-lbl">حجم التطبيق</span>
             </div>
           </div>
         </div>
@@ -411,47 +411,9 @@ export function landingPage(data) {
         <!-- Phone Mockup Container -->
         <div class="landing-hero-mockup">
           <div class="phone-mockup">
-            <div class="phone-speaker"></div>
-            <div class="phone-camera"></div>
             <div class="phone-screen">
-              <div class="phone-status-bar">
-                <span>10:29 AM</span>
-                <div style="display:flex;gap:4px;align-items:center">
-                  <span>5G</span>
-                  <span style="display:inline-block;width:12px;height:12px;background:var(--primary);border-radius:2px"></span>
-                </div>
-              </div>
-              <!-- Simulated App UI inside Phone Mockup -->
-              <div class="mock-app-ui">
-                <div class="mock-app-header">
-                  <span class="logo">كارتوني 🔥</span>
-                  <div class="app-badge-live">بث مباشر</div>
-                </div>
-                <div class="mock-app-hero">
-                  <div class="mock-hero-badge">مباراة اليوم</div>
-                  <div class="mock-match">
-                    <span class="team">ريال مدريد</span>
-                    <span class="score">vs</span>
-                    <span class="team">برشلونة</span>
-                  </div>
-                  <div class="mock-play-btn">${icon('play_arrow', { size: 16, filled: true })}</div>
-                </div>
-                <div class="mock-section-title">مسلسلات حصرية بالتطبيق</div>
-                <div class="mock-grid">
-                  <div class="mock-card">
-                    <div class="mock-card-img" style="background:linear-gradient(45deg, #121212, #2a2a2a)"></div>
-                    <div class="mock-card-title">ون بيس</div>
-                  </div>
-                  <div class="mock-card">
-                    <div class="mock-card-img" style="background:linear-gradient(45deg, #111, #333)"></div>
-                    <div class="mock-card-title">كونان</div>
-                  </div>
-                  <div class="mock-card">
-                    <div class="mock-card-img" style="background:linear-gradient(45deg, #1e1205, #ff980033)"></div>
-                    <div class="mock-card-title">ناروتو</div>
-                  </div>
-                </div>
-              </div>
+              <!-- A real screenshot of the app, not a drawing of one. -->
+              <img src="/images/app/home.webp" alt="الشاشة الرئيسية لتطبيق الأسطورة أونلاين" width="540" height="1200" fetchpriority="high" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block">
             </div>
             <div class="phone-button"></div>
           </div>
@@ -463,7 +425,7 @@ export function landingPage(data) {
     <section class="landing-section">
       <div class="container">
         <div class="section-center-header">
-          <span class="section-subtitle">لماذا تحتاج إلى تطبيق كارتوني يلا شوت؟</span>
+          <span class="section-subtitle">لماذا تحتاج إلى تطبيق الأسطورة أونلاين؟</span>
           <h2 class="section-main-title">مزايا حصرية غير متوفرة في الموقع</h2>
         </div>
         
@@ -550,7 +512,7 @@ export function landingPage(data) {
           <div class="step-card">
             <div class="step-num">01</div>
             <h3>تحميل ملف APK</h3>
-            <p>انقر على زر "تنزيل التطبيق" لحفظ ملف <code style="color:var(--primary)">yalashot.apk</code> على جهازك بأمان تامة وبشكل مباشر من موقعنا.</p>
+            <p>انقر على زر "تنزيل التطبيق" لحفظ ملف <code style="color:var(--primary)">ostora_online_v1.1.apk</code> على جهازك بأمان تامة وبشكل مباشر من موقعنا.</p>
           </div>
           <div class="step-card">
             <div class="step-num">02</div>
@@ -571,9 +533,9 @@ export function landingPage(data) {
       <div class="landing-cta-container">
         <div class="landing-cta-bg"></div>
         <h2 class="cta-title">هل أنت جاهز لتجربة مشاهدة متميزة؟</h2>
-        <p class="cta-desc">حمل تطبيق كارتوني يلا شوت للأندرويد الآن، وافتح فصلاً جديداً من البث المباشر فائق السرعة والمشاهدة الآمنة بدون إعلانات.</p>
+        <p class="cta-desc">حمل تطبيق الأسطورة أونلاين الآن، وشاهد كارتوني والبث المباشر على هاتفك وتابلتك وتلفزيونك بملف واحد.</p>
         <div class="cta-actions">
-          <a href="https://github.com/ibhar-tech/YalaShot-Releases/releases/download/v1.0.0/yalashot-mobile.apk" class="btn btn-premium-download" download="yalashot.apk">
+          <a href="/ostora_online_v1.1.apk" class="btn btn-premium-download" download="ostora_online_v1.1.apk">
             <div class="btn-download-icon">
               ${icon('download', { size: 24, filled: true })}
             </div>
@@ -619,7 +581,7 @@ export function landingPage(data) {
           <details class="faq-item">
             <summary class="faq-question">ما هي الأجهزة المتوافقة مع التطبيق؟</summary>
             <div class="faq-answer">
-              <p>التطبيق متوافق مع كافة الهواتف والأجهزة اللوحية التي تعمل بنظام الأندرويد (إصدار Android 5.0 فما فوق)، وبحجم صغير جداً لا يستهلك من مساحة تخزين هاتفك.</p>
+              <p>التطبيق متوافق مع الهواتف والأجهزة اللوحية وتلفزيونات أندرويد (إصدار Android 7.0 فما فوق) بملف واحد، وبحجم 5 ميغابايت فقط.</p>
             </div>
           </details>
         </div>
@@ -632,24 +594,25 @@ export function landingPage(data) {
     {
       '@context': 'https://schema.org',
       '@type': 'SoftwareApplication',
-      'name': 'Kartoney Yala Shot App',
-      'operatingSystem': 'ANDROID',
-      'applicationCategory': 'EntertainmentApplication',
-      'downloadUrl': 'https://github.com/ibhar-tech/YalaShot-Releases/releases/download/v1.0.0/yalashot-mobile.apk',
-      'fileSize': '4.5MB',
+      'name': 'Ostora Online O²',
+      'alternateName': 'الأسطورة أونلاين',
+      'operatingSystem': 'Android 7.0+',
+      'applicationCategory': 'MultimediaApplication',
+      'softwareVersion': '1.1',
+      'downloadUrl': 'https://kartoney.com/ostora_online_v1.1.apk',
+      'installUrl': 'https://kartoney.com/live_streaming_apps.html',
+      'fileSize': '5 MB',
       'offers': {
         '@type': 'Offer',
         'price': '0',
         'priceCurrency': 'USD'
-      },
-      'ratingValue': '4.9',
-      'ratingCount': '2450'
+      }
     }
   ];
 
   return layout({
-    title: 'تحميل تطبيق يلا شوت وكارتوني للأندرويد APK - بث مباشر ومسلسلات مجاناً | كارتوني',
-    description: 'تحميل تطبيق كارتوني يلا شوت للأندرويد APK برابط مباشر. شاهد آلاف حلقات الكرتون والأنمي المدبلج والبث المباشر لأهم مباريات كرة القدم بجودة عالية وبدون إعلانات.',
+    title: 'تحميل تطبيق الأسطورة أونلاين APK - كرتون وبث مباشر للهاتف والتلفزيون | كارتوني',
+    description: 'تحميل تطبيق الأسطورة أونلاين APK برابط مباشر. 8611 حلقة كرتون وأنمي مدبلج مدمجة داخل التطبيق، مع البث المباشر وآلاف القنوات — على الهاتف والتابلت وتلفزيون أندرويد.',
     path: '/',
     body,
     jsonLd,
@@ -705,10 +668,10 @@ ${breadcrumbs([{ label: 'الرئيسية', href: '/' }, { label: 'المكتب�
         <span style="font-size:2.5rem;line-height:1">📱</span>
         <div>
           <h3 style="font-weight:800;font-size:1.15rem;margin-bottom:0.25rem">هل تريد مشاهدة كرتون "${esc(c.name)}" بدون أي إعلانات؟</h3>
-          <p style="color:var(--on-surface-variant);font-size:0.875rem">حمل تطبيق الأندرويد الرسمي الآن واستمتع بمشاهدة جميع حلقاتك المفضلة بجودة فائقة FHD وبدون أي نوافذ منبثقة مزعجة!</p>
+          <p style="color:var(--on-surface-variant);font-size:0.875rem">حمل تطبيق الأسطورة أونلاين — كل حلقات كارتوني بداخله، ولا إعلان يظهر قبل بدء التشغيل.</p>
         </div>
       </div>
-      <a href="https://github.com/ibhar-tech/YalaShot-Releases/releases/download/v1.0.0/yalashot-mobile.apk" class="btn btn-banner-download" download="yalashot.apk" style="flex-shrink:0">
+      <a href="/ostora_online_v1.1.apk" class="btn btn-banner-download" download="ostora_online_v1.1.apk" style="flex-shrink:0">
         ${icon('download', { size: 18 })}
         <span>تحميل APK سريع</span>
       </a>
@@ -820,9 +783,9 @@ ${breadcrumbs([{ label: 'الرئيسية', href: '/' }, { label: c.name, href: 
           <div class="wab-info">
             <span class="wab-tag">⚡ تطبيق الأندرويد الحصري</span>
             <h4 style="font-weight:800;font-size:1.05rem;margin-bottom:0.25rem">هل تعاني من تقطيع الفيديو أو كثرة الإعلانات؟</h4>
-            <p style="color:var(--on-surface-variant);font-size:0.85rem">حمل تطبيق يلا شوت وكارتوني الآن لمشاهدة بدون إعلانات وبسرعة فائقة FHD بالإضافة للبث المباشر للمباريات!</p>
+            <p style="color:var(--on-surface-variant);font-size:0.85rem">حمل تطبيق الأسطورة أونلاين — مكتبة كارتوني كاملة، بث مباشر، ونافذة عائمة على هاتفك وتلفزيونك.</p>
           </div>
-          <a href="https://github.com/ibhar-tech/YalaShot-Releases/releases/download/v1.0.0/yalashot-mobile.apk" class="btn btn-premium-download-small" download="yalashot.apk" style="flex-shrink:0">
+          <a href="/ostora_online_v1.1.apk" class="btn btn-premium-download-small" download="ostora_online_v1.1.apk" style="flex-shrink:0">
             ${icon('download', { size: 16 })}
             <span>تحميل التطبيق (APK)</span>
           </a>
