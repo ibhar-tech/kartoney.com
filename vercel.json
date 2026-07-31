@@ -29,7 +29,6 @@
       ]
     },
     {
-      "_comment": "Cloudflare sits in front of this origin and overrides Cache-Control here: it serves max-age=14400 whatever this asks for, so a replaced APK would be handed out stale for four hours. Download links therefore carry ?v=<version> — bump it with every release. The Content-Type is honoured, and it matters: without it some Android browsers refuse to hand the file to the package installer.",
       "source": "/(.*).apk",
       "headers": [
         { "key": "Content-Type", "value": "application/vnd.android.package-archive" },
