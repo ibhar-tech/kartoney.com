@@ -253,7 +253,7 @@ export function homePage(data) {
           <p>مكتبة كارتوني كاملة مدمجة داخل التطبيق، مع البث المباشر وآلاف القنوات. ملف واحد يعمل على الهاتف والتابلت وتلفزيون أندرويد. تحميل مباشر وآمن.</p>
         </div>
         <div class="banner-actions">
-          <a href="/ostora_online_v1.1.apk" class="btn btn-banner-download" download="ostora_online_v1.1.apk">
+          <a href="/ostora_online_v1.1.apk?v=1.1" class="btn btn-banner-download" download="ostora_online_v1.1.apk">
             ${icon('download', { size: 18 })}
             <span>تحميل التطبيق مجاناً (APK)</span>
           </a>
@@ -376,7 +376,7 @@ export function landingPage(data) {
           </p>
           
           <div class="landing-actions">
-            <a href="/ostora_online_v1.1.apk" class="btn btn-premium-download" download="ostora_online_v1.1.apk">
+            <a href="/ostora_online_v1.1.apk?v=1.1" class="btn btn-premium-download" download="ostora_online_v1.1.apk">
               <div class="btn-download-icon">
                 ${icon('download', { size: 24, filled: true })}
               </div>
@@ -535,7 +535,7 @@ export function landingPage(data) {
         <h2 class="cta-title">هل أنت جاهز لتجربة مشاهدة متميزة؟</h2>
         <p class="cta-desc">حمل تطبيق الأسطورة أونلاين الآن، وشاهد كارتوني والبث المباشر على هاتفك وتابلتك وتلفزيونك بملف واحد.</p>
         <div class="cta-actions">
-          <a href="/ostora_online_v1.1.apk" class="btn btn-premium-download" download="ostora_online_v1.1.apk">
+          <a href="/ostora_online_v1.1.apk?v=1.1" class="btn btn-premium-download" download="ostora_online_v1.1.apk">
             <div class="btn-download-icon">
               ${icon('download', { size: 24, filled: true })}
             </div>
@@ -671,7 +671,7 @@ ${breadcrumbs([{ label: 'الرئيسية', href: '/' }, { label: 'المكتب�
           <p style="color:var(--on-surface-variant);font-size:0.875rem">حمل تطبيق الأسطورة أونلاين — كل حلقات كارتوني بداخله، ولا إعلان يظهر قبل بدء التشغيل.</p>
         </div>
       </div>
-      <a href="/ostora_online_v1.1.apk" class="btn btn-banner-download" download="ostora_online_v1.1.apk" style="flex-shrink:0">
+      <a href="/ostora_online_v1.1.apk?v=1.1" class="btn btn-banner-download" download="ostora_online_v1.1.apk" style="flex-shrink:0">
         ${icon('download', { size: 18 })}
         <span>تحميل APK سريع</span>
       </a>
@@ -785,7 +785,7 @@ ${breadcrumbs([{ label: 'الرئيسية', href: '/' }, { label: c.name, href: 
             <h4 style="font-weight:800;font-size:1.05rem;margin-bottom:0.25rem">هل تعاني من تقطيع الفيديو أو كثرة الإعلانات؟</h4>
             <p style="color:var(--on-surface-variant);font-size:0.85rem">حمل تطبيق الأسطورة أونلاين — مكتبة كارتوني كاملة، بث مباشر، ونافذة عائمة على هاتفك وتلفزيونك.</p>
           </div>
-          <a href="/ostora_online_v1.1.apk" class="btn btn-premium-download-small" download="ostora_online_v1.1.apk" style="flex-shrink:0">
+          <a href="/ostora_online_v1.1.apk?v=1.1" class="btn btn-premium-download-small" download="ostora_online_v1.1.apk" style="flex-shrink:0">
             ${icon('download', { size: 16 })}
             <span>تحميل التطبيق (APK)</span>
           </a>
