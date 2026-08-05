@@ -14,27 +14,32 @@ second TV package.
      button label, and the JSON-LD block.
    - `public/live_streaming_apps.js` — `btn-download-now` in both languages.
    - `public/llms.txt` — the app section.
-3. **Bump `?v=` on every download link.** See below — this is not optional.
-4. `npm run build`, then commit and push. Vercel deploys on push to `main`.
+3. **Bump `?v=` on every download link.** See below.
+4. `npm run build && npx wrangler deploy`, then commit and push.
+
+## Deploying
+
+The site runs on Cloudflare Workers static assets, served by the `kartoney.com/*` route in
+`wrangler.toml`. **Pushing to `main` does not deploy** — nothing is wired to the repo yet, so
+production only changes when someone runs `npx wrangler deploy`. Vercel still builds on push
+but no longer serves any traffic; deleting that project is safe whenever you want.
+
+To roll back to Vercel, comment out the `[[routes]]` block and redeploy. The apex DNS record
+still points at Vercel behind the proxy, so traffic falls through within seconds.
 
 ## Why the links carry `?v=<version>`
 
-kartoney.com is served through Cloudflare, which **overrides `Cache-Control` on this zone**.
-`vercel.json` asks for `max-age=300` on `/(.*).apk` and the edge serves `max-age=14400`
-regardless — the `X-Robots-Tag` from the same rule *is* applied, so the rule matches and only
-the TTL is ignored. Nothing in this repo can change that.
+Historically Cloudflare's zone-level Browser Cache TTL rewrote `max-age=300` to
+`max-age=14400` on the APK, so a replaced file was handed out stale for four hours. **That no
+longer applies** — zone cache settings do not touch Worker responses, and the APK now serves
+the `max-age=300, must-revalidate` from `public/_headers` verbatim.
 
-Two things follow:
+The `?v=` is still worth keeping as cheap insurance, since Cloudflare keys its cache on the
+full URL including the query, but it is no longer load-bearing.
 
-- **A replaced APK is handed out stale for four hours** unless the URL changes. A new version
-  number in the filename is not enough on its own if a link is ever reused; the `?v=` is the
-  guarantee, since Cloudflare keys its cache on the full URL including the query.
-- **Requesting a not-yet-deployed URL caches the 404.** Verifying a new file against
-  kartoney.com while the build is still running stores Vercel's 404 page at that URL for four
-  hours, and a Vercel redeploy does not clear it — Vercel cannot purge Cloudflare. This
-  happened on the v1.1 launch: the download worked from Frankfurt and 404'd from Paris for
-  the same URL. Wait for the deploy to finish before touching the new path, or clear it with
-  Cloudflare → Caching → Purge.
+One trap survives: **requesting a not-yet-deployed URL caches the 404.** Wait for
+`wrangler deploy` to finish before touching a new path, or clear it via
+Cloudflare → Caching → Purge.
 
 ## Checks worth running after a deploy
 
@@ -56,5 +61,7 @@ installer.
 
 ## One more trap
 
-`vercel.json` is validated against a schema, and **unknown keys fail the deployment** — there
-is no way to leave a comment in it. Notes about it belong in this file.
+`wrangler deploy` will not attach `kartoney.com` as a `custom_domain` while the Vercel A
+records exist, and a deploy that hits that error **leaves the Worker with no assets attached**
+— every path 404s until you redeploy. That is why the domain is wired up as a `[[routes]]`
+entry instead, which needs no DNS change at all.

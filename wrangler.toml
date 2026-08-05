@@ -6,3 +6,17 @@ compatibility_date = "2026-08-05"
 [assets]
 directory = "./dist"
 html_handling = "force-trailing-slash"
+
+# A route, deliberately not a custom domain. The apex DNS record still points at
+# Vercel through the Cloudflare proxy; this Worker intercepts the request first,
+# so Vercel is never contacted but stays one config change away. Removing this
+# block and redeploying puts the site back on Vercel within seconds.
+#
+# A custom_domain would instead require deleting the Vercel A records — and a
+# deploy that hits that error leaves the Worker with no assets attached.
+#
+# Apex only: www.kartoney.com is handled by a zone Redirect Rule that 301s to
+# the apex ahead of the Worker, and claiming it here would take that over.
+[[routes]]
+pattern = "kartoney.com/*"
+zone_name = "kartoney.com"
