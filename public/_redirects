@@ -1,0 +1,7 @@
+# Cloudflare static assets always strips `.html` from a URL — no html_handling
+# value serves /live_streaming_apps.html directly, so the canonical URL for the
+# app page had to become /live_streaming_apps/ on the move off Vercel.
+# This makes the old indexed URL a permanent redirect so Google consolidates it
+# instead of treating the target as a separate page. Without the rule the
+# built-in handler still redirects, but as a 307 (temporary), which does not.
+/live_streaming_apps.html  /live_streaming_apps/  301

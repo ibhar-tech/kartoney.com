@@ -1,0 +1,8 @@
+name = "kartoney"
+compatibility_date = "2026-08-05"
+
+# Assets-only Worker: no `main`, so nothing but dist/ is served.
+# Headers live in public/_headers (copied into dist/ by the build).
+[assets]
+directory = "./dist"
+html_handling = "force-trailing-slash"

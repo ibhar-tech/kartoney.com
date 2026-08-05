@@ -1,8 +1,10 @@
-/* Kartoney service worker — v2 (static multi-page site)
+/* Kartoney service worker — static multi-page site.
  * Network-first for HTML (always fresh pages), cache-first for static assets.
- * Bumping CACHE_NAME purges the old client-SQLite app shell. */
-const CACHE_NAME = 'kartoney-v2';
-const PRECACHE = ['/', '/css/style.css', '/js/main.js', '/site.webmanifest', '/fonts/cairo-arabic.woff2'];
+ * __ASSET_V__ is substituted by src/build.mjs with a hash of the CSS/JS bundle,
+ * so any change to them both busts the precache URLs and rotates CACHE_NAME —
+ * which drops every stale entry on activate. */
+const CACHE_NAME = 'kartoney-__ASSET_V__';
+const PRECACHE = ['/', '/css/style.css?v=__ASSET_V__', '/js/main.js?v=__ASSET_V__', '/site.webmanifest', '/fonts/cairo-arabic.woff2'];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(

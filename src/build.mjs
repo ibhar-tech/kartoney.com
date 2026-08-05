@@ -2,9 +2,11 @@
  * Kartoney static-site generator.
  * Reads data/kartoney.db and emits a fully crawlable static site into dist/.
  */
-import { writeFileSync, mkdirSync, rmSync, cpSync, existsSync } from 'node:fs';
+import { writeFileSync, readFileSync, mkdirSync, rmSync, cpSync, existsSync } from 'node:fs';
+import { createHash } from 'node:crypto';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { asset } from './assets.mjs';
 import { loadData } from './data.mjs';
 import { SITE, ADS, url, ERAS, TYPES } from './config.mjs';
 import { homePage, landingPage, cartoonPage, episodePage, browsePage, genreChips } from './templates.mjs';
@@ -80,6 +82,16 @@ async function build() {
   // 2) Ad runtime (from config). Named neutrally — a file literally called
   //    "ads.js" is blocked by default ad-blocker filter lists.
   writeFile('js/widgets.js', adsRuntime());
+
+  // 2.5) Hash the CSS/JS bundle and stamp it into sw.js. Must run after the
+  //      public/ copy and widgets.js, and before any page is rendered — pages
+  //      embed the version via av() from assets.mjs.
+  // ponytail: one hash for all three files. 66 KB total, so a CSS edit
+  //           re-fetching main.js too is cheaper than three cache keys.
+  const h = createHash('sha1');
+  for (const f of ['css/style.css', 'js/main.js', 'js/widgets.js']) h.update(readFileSync(join(DIST, f)));
+  asset.v = h.digest('hex').slice(0, 8);
+  writeFile('sw.js', readFileSync(join(PUBLIC, 'sw.js'), 'utf8').replaceAll('__ASSET_V__', asset.v));
 
   // 3) Home (Landing Page)
   writePage('/', landingPage(data));
@@ -193,7 +205,7 @@ async function build() {
   const pageUrls = [
     xmlUrl('/', today, 'daily', '1.0'),
     xmlUrl('/lives/', today, 'daily', '0.95'),
-    xmlUrl('/live_streaming_apps.html', today, 'weekly', '0.9'),
+    xmlUrl('/live_streaming_apps/', today, 'weekly', '0.9'),
     xmlUrl(url.library(), today, 'weekly', '0.9'),
     xmlUrl(url.genresIndex(), today, 'weekly', '0.8'),
     ...data.genres.map((g) => xmlUrl(url.genre(g.en), today, 'weekly', '0.7')),

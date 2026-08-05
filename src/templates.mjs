@@ -3,6 +3,7 @@
  * Reuses the existing design-system class names from css/style.css.
  */
 import { esc, attr, num, clip, seededPick, toISO } from './util.mjs';
+import { av } from './assets.mjs';
 import { icon } from './icons.mjs';
 import { SITE, ADS, url, ERAS, TYPES } from './config.mjs';
 import { longDesc, metaDesc, episodeLongDesc, episodeMetaDesc, episodeFaq } from './describe.mjs';
@@ -52,11 +53,9 @@ ${FAVICONS}
   <meta name="twitter:description" content="${attr(description)}">
   <meta name="twitter:image" content="${attr(img)}">
   <link rel="preload" as="font" type="font/woff2" href="/fonts/cairo-arabic.woff2" crossorigin>
-${preloadImage ? `  <link rel="preload" as="image" href="${attr(preloadImage)}" fetchpriority="high">\n` : ''}  <link rel="stylesheet" href="/css/style.css">
+${preloadImage ? `  <link rel="preload" as="image" href="${attr(preloadImage)}" fetchpriority="high">\n` : ''}  <link rel="stylesheet" href="${av('/css/style.css')}">
 ${jsonLd.map((j) => `  <script type="application/ld+json">${JSON.stringify(j)}</script>`).join('\n')}
 ${extraHead}
-  <script defer src="/_vercel/insights/script.js"></script>
-  <script defer src="/_vercel/speed-insights/script.js"></script>
 </head>
 <body>
 ${topNav()}
@@ -66,8 +65,8 @@ ${searchOverlay()}
 ${body}
   </main>
 ${bottomNav()}
-  <script src="/js/main.js" defer></script>
-  <script src="/js/widgets.js" defer></script>
+  <script src="${av('/js/main.js')}" defer></script>
+  <script src="${av('/js/widgets.js')}" defer></script>
 </body>
 </html>`;
 }
@@ -87,7 +86,7 @@ function topNav() {
       </ul>
     </div>
     <div class="nav-actions" style="display:flex;align-items:center;gap:1.5rem">
-      <a href="/live_streaming_apps.html" class="nav-download-badge">
+      <a href="/live_streaming_apps/" class="nav-download-badge">
         <span class="pulse-ring"></span>
         ${icon('tv', { size: 16 })}
         <span>التطبيق (هاتف · تابلت · تلفزيون) 🔥</span>
@@ -111,7 +110,7 @@ function sidebar() {
     <nav class="sidebar-links">
       <a href="/" class="sidebar-link">${icon('home')}<span>الرئيسية</span></a>
       <a href="/lives/" class="sidebar-link">${icon('tv', { filled: true })}<span>البث والمشاهدة</span></a>
-      <a href="/live_streaming_apps.html" class="sidebar-link" style="color:var(--primary);font-weight:700">${icon('tv')}<span>تحميل التطبيق 🔥</span></a>
+      <a href="/live_streaming_apps/" class="sidebar-link" style="color:var(--primary);font-weight:700">${icon('tv')}<span>تحميل التطبيق 🔥</span></a>
       <hr style="border:0;border-top:1px solid var(--outline-variant);margin:.5rem 1rem;opacity:.5">
       <a href="${url.genresIndex()}" class="sidebar-link">${icon('category')}<span>التصنيفات</span></a>
       <a href="${url.category('classic')}" class="sidebar-link">${icon('tv')}<span>كرتون كلاسيكي</span></a>
@@ -127,7 +126,7 @@ function bottomNav() {
     <a href="/" class="bottom-nav-item" data-page="landing">${icon('home', { filled: true })}<span>الرئيسية</span></a>
     <a href="/lives/" class="bottom-nav-item" data-page="home">${icon('tv')}<span>المشاهدة</span></a>
     <button onclick="openSearch()" class="bottom-nav-item" data-page="search" aria-label="بحث">${icon('search')}<span>بحث</span></button>
-    <a href="/live_streaming_apps.html" class="bottom-nav-item" style="color:var(--primary)">${icon('tv')}<span>التطبيق</span></a>
+    <a href="/live_streaming_apps/" class="bottom-nav-item" style="color:var(--primary)">${icon('tv')}<span>التطبيق</span></a>
   </nav>`;
 }
 
@@ -257,7 +256,7 @@ export function homePage(data) {
             ${icon('download', { size: 18 })}
             <span>تحميل التطبيق مجاناً (APK)</span>
           </a>
-          <a href="/live_streaming_apps.html" class="btn btn-banner-more">تفاصيل المزايا</a>
+          <a href="/live_streaming_apps/" class="btn btn-banner-more">تفاصيل المزايا</a>
         </div>
       </div>
     </div>
@@ -600,7 +599,7 @@ export function landingPage(data) {
       'applicationCategory': 'MultimediaApplication',
       'softwareVersion': '1.1',
       'downloadUrl': 'https://kartoney.com/ostora_online_v1.1.apk',
-      'installUrl': 'https://kartoney.com/live_streaming_apps.html',
+      'installUrl': 'https://kartoney.com/live_streaming_apps/',
       'fileSize': '5 MB',
       'offers': {
         '@type': 'Offer',
