@@ -72,19 +72,88 @@
     }
   }
 
-  /* ── Season tabs (cartoon page) ── */
+  /* ── Season tabs (cartoon page) ──
+   * Chips on desktop, native <select> on mobile — both drive the same switch. */
   var tabs = document.getElementById('season-tabs');
+  function switchSeason(id) {
+    document.querySelectorAll('.season-list').forEach(function (list) {
+      list.style.display = list.dataset.season === id ? '' : 'none';
+    });
+    if (tabs) tabs.querySelectorAll('.season-tab').forEach(function (t) { t.classList.toggle('active', t.dataset.season === id); });
+    var sel = document.getElementById('season-select');
+    if (sel && sel.value !== id) sel.value = id;
+  }
   if (tabs) {
     tabs.addEventListener('click', function (e) {
       var btn = e.target.closest('.season-tab');
       if (!btn) return;
-      var id = btn.dataset.season;
-      tabs.querySelectorAll('.season-tab').forEach(function (t) { t.classList.toggle('active', t === btn); });
-      document.querySelectorAll('.season-list').forEach(function (list) {
-        list.style.display = list.dataset.season === id ? '' : 'none';
+      switchSeason(btn.dataset.season);
+    });
+    var act = tabs.querySelector('.season-tab.active');
+    if (act && act.scrollIntoView) act.scrollIntoView({ block: 'nearest', inline: 'center' });
+  }
+  var seasonSel = document.getElementById('season-select');
+  if (seasonSel) seasonSel.addEventListener('change', function () { switchSeason(seasonSel.value); });
+
+  /* ── Mobile playlist sheet (watch page) ──
+   * The player-sidebar doubles as a bottom sheet: one tap on the toolbar
+   * button opens it without scrolling past the whole page. */
+  (function playlistSheet() {
+    var openBtn = document.getElementById('open-playlist');
+    var panel = document.getElementById('playlist-panel');
+    var backdrop = document.getElementById('playlist-backdrop');
+    var closeBtn = document.getElementById('close-playlist');
+    if (!openBtn || !panel) return;
+    function show() {
+      panel.classList.add('open');
+      if (backdrop) backdrop.hidden = false;
+      var act = panel.querySelector('.sidebar-ep.active');
+      if (act && act.scrollIntoView) setTimeout(function () { act.scrollIntoView({ block: 'center' }); }, 250);
+    }
+    function hide() {
+      panel.classList.remove('open');
+      if (backdrop) backdrop.hidden = true;
+    }
+    openBtn.addEventListener('click', show);
+    if (closeBtn) closeBtn.addEventListener('click', hide);
+    if (backdrop) backdrop.addEventListener('click', hide);
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') hide(); });
+  })();
+
+  /* ── Auto-next episode ──
+   * On 'ended', offer the next episode with a short countdown (cancelable).
+   * Keeps binge sessions going = more watched episodes per visit. */
+  (function autoNext() {
+    var v = document.getElementById('video-player');
+    var nextLink = document.getElementById('next-ep-link');
+    if (!v || !nextLink) return;
+    v.addEventListener('ended', function () {
+      var holder = document.getElementById('video-container');
+      if (!holder || document.getElementById('next-up-card')) return;
+      var card = document.createElement('div');
+      card.id = 'next-up-card';
+      var title = (nextLink.textContent || 'الحلقة التالية').trim().replace(/\s+/g, ' ');
+      card.innerHTML =
+        '<div class="nu-label">الحلقة التالية</div>' +
+        '<div class="nu-title">' + title.replace(/^التالي\s*/, '') + '</div>' +
+        '<div class="nu-timer">تبدأ بعد <span class="nu-count">7</span></div>' +
+        '<div class="nu-actions"><button type="button" class="nu-cancel">إلغاء</button></div>';
+      holder.appendChild(card);
+      var count = 7;
+      var timerEl = card.querySelector('.nu-count');
+      var iv = setInterval(function () {
+        count -= 1;
+        if (timerEl) timerEl.textContent = String(count);
+        if (count <= 0) { clearInterval(iv); try { sessionStorage.setItem('kg_auto', '1'); } catch (e) {} location.href = nextLink.href; }
+      }, 1000);
+      card.querySelector('.nu-cancel').addEventListener('click', function () {
+        clearInterval(iv);
+        card.remove();
       });
     });
-  }
+    /* Playback after the auto-next navigation is handled by js/player.js:
+       sound-on first, muted + unmute pill as the mobile-policy fallback. */
+  })();
 
   /* ── Search overlay ── */
   var searchIndex = null;
@@ -150,6 +219,27 @@
     if (e.key === 'Escape') window.closeSearch();
     if (e.key === '/' && document.activeElement.tagName !== 'INPUT') { e.preventDefault(); window.openSearch(); }
   });
+
+  /* ── Video player: keep playback inside the page player ──
+   * PIP (and the controls download button) move viewing outside the page,
+   * which bypasses the player experience the site is monetized around.
+   * The <video> tag carries disablepictureinpicture + controlslist="nodownload"
+   * server-side; this is the belt-and-suspenders fallback for browsers that
+   * ignore the attribute or expose PIP via their own UI (Safari). */
+  (function guardPlayer() {
+    var v = document.getElementById('video-player');
+    if (!v) return;
+    try { v.disablePictureInPicture = true; } catch (e) {}
+    v.addEventListener('enterpictureinpicture', function () {
+      if (document.pictureInPictureElement) document.exitPictureInPicture().catch(function () {});
+    });
+    if (typeof v.webkitSetPresentationMode === 'function') {
+      v.addEventListener('webkitpresentationmodechanged', function () {
+        if (v.webkitPresentationMode === 'picture-in-picture') v.webkitSetPresentationMode('inline');
+      });
+    }
+    v.addEventListener('contextmenu', function (e) { e.preventDefault(); });
+  })();
 
   /* ── PWA: install prompt + service worker ── */
   var deferred = null;

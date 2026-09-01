@@ -4,7 +4,7 @@
  * tagline. No plot facts are invented — only real attributes are combined, with
  * rotating phrasing so the 107 series pages don't read as one template.
  */
-import { num } from './util.mjs';
+import { num, dubbed } from './util.mjs';
 
 const ERA_PHRASE = {
   '80s': 'ثمانينات القرن الماضي',
@@ -61,7 +61,7 @@ export function longDesc(c) {
 /** Concise ≤155-char meta description. */
 export function metaDesc(c) {
   const genres = c.genres.slice(0, 2).map((g) => g.ar).join('، ');
-  const parts = [`شاهد ${c.name} مدبلج عربي كامل`, `${num(c.total_episodes)} حلقة`];
+  const parts = [`شاهد ${dubbed(c.name)} كامل`, `${num(c.total_episodes)} حلقة`];
   if (genres) parts.push(genres);
   let s = parts.join(' — ') + `. جميع الحلقات أونلاين بجودة عالية ومجاناً على كارتوني.`;
   if (s.length > 158) s = s.slice(0, 157).replace(/\s+\S*$/, '') + '…';

@@ -36,15 +36,54 @@ function writeFile(name, content) {
 }
 
 function adsRuntime() {
+  const natives = ADS.nativeBanners.filter((n) => n.enabled && n.containerId && n.scriptSrc);
+  const banners = ADS.banners.filter((b) => b.enabled && b.adKey && b.invokeSrc);
   return `/* generated from src/config.mjs — edit ads there, not here */
-(function(){var A=${JSON.stringify(ADS)};
-function inject(src,attrs){var s=document.createElement('script');s.src=src;s.async=true;if(attrs)Object.keys(attrs).forEach(function(k){s.setAttribute(k,attrs[k]);});document.body.appendChild(s);}
-if(A.popunder&&A.popunder.enabled&&A.popunder.scriptSrc){var f=false,ev=['click','touchstart','scroll','keydown'];
-function fire(){if(f)return;f=true;inject(A.popunder.scriptSrc);ev.forEach(function(e){window.removeEventListener(e,fire);});}
-ev.forEach(function(e){window.addEventListener(e,fire,{passive:true});});setTimeout(fire,8000);}
-if(A.socialBar&&A.socialBar.enabled&&A.socialBar.scriptSrc){window.addEventListener('load',function(){setTimeout(function(){inject(A.socialBar.scriptSrc);},1500);});}
-if(A.nativeBanner&&A.nativeBanner.enabled&&A.nativeBanner.scriptSrc&&A.nativeBanner.containerId){window.addEventListener('load',function(){if(!document.getElementById(A.nativeBanner.containerId))return;setTimeout(function(){inject(A.nativeBanner.scriptSrc,{'data-cfasync':'false'});},1200);});}
+(function(){var PU=${JSON.stringify(ADS.popunder.enabled ? ADS.popunder.scriptSrc : '')},SB=${JSON.stringify(ADS.socialBar.enabled ? ADS.socialBar.scriptSrc : '')},NB=${JSON.stringify(natives)},BN=${JSON.stringify(banners)};
+function inject(src){var s=document.createElement('script');s.src=src;s.async=true;s.setAttribute('data-cfasync','false');document.body.appendChild(s);}
+/* Popunder: at most once per browser session, and only after a real interaction. */
+if(PU){var done=false;try{done=sessionStorage.getItem('kg_pu')==='1';}catch(e){}
+if(!done){var fired=false;
+function fire(){if(fired)return;fired=true;try{sessionStorage.setItem('kg_pu','1');}catch(e){}inject(PU);['click','touchstart','keydown','scroll'].forEach(function(e){window.removeEventListener(e,fire);});}
+['click','touchstart','keydown','scroll'].forEach(function(e){window.addEventListener(e,fire,{passive:true});});setTimeout(fire,8000);}}
+/* Social bar: after load, off the critical path. */
+if(SB){window.addEventListener('load',function(){setTimeout(function(){inject(SB);},1500);});}
+/* Native banners: the containers are server-rendered; load each unit's script
+   only when its container scrolls near the viewport (CWV + viewability). */
+if(NB.length&&'IntersectionObserver' in window){
+var loaded={};
+var io=new IntersectionObserver(function(entries){entries.forEach(function(en){
+if(!en.isIntersecting)return;io.unobserve(en.target);
+var id=en.target.id;if(!id||loaded[id])return;loaded[id]=1;
+for(var i=0;i<NB.length;i++)if(NB[i].containerId===id){inject(NB[i].scriptSrc);break;}
+});},{rootMargin:'500px 0px'});
+NB.forEach(function(n){var d=document.getElementById(n.containerId);if(d)io.observe(d);});}
+/* Banner units: each mounted inside its own iframe so the atOptions global of
+   one unit can't clobber another's. A sticky anchor dismissed this session
+   (kg_anchor_off) stays hidden and its iframe is never created. */
+BN.forEach(function(b){
+var host=document.querySelector('.ad-slot[data-banner="'+b.id+'"]');if(!host)return;
+if(b.id==='mobileAnchor'){var off=false;try{off=sessionStorage.getItem('kg_anchor_off')==='1';}catch(e){}
+if(off){host.style.display='none';return;}}
+var f=document.createElement('iframe');
+f.width=b.width;f.height=b.height;f.scrolling='no';f.title='إعلان';
+f.setAttribute('frameborder','0');
+f.style.cssText='border:0;display:block;margin:0 auto;max-width:100%;width:'+b.width+'px;height:'+b.height+'px;';
+host.appendChild(f);
+try{var d=f.contentDocument;d.open();d.write('<body style="margin:0"><script>var atOptions={"key":"'+b.adKey+'","format":"iframe","height":'+b.height+',"width":'+b.width+',"params":{}};<\\/script><script src="'+b.invokeSrc+'"><\\/script></body>');d.close();}catch(e){}
+});
 })();`;
+}
+
+/** Conservative CSS minifier: comments, whitespace, trailing semicolons.
+ *  The stylesheet has no data-URI or content strings, so this is safe. */
+function minifyCss(css) {
+  return css
+    .replace(/\/\*[\s\S]*?\*\//g, '')
+    .replace(/\s+/g, ' ')
+    .replace(/\s*([{}:;,>~])\s*/g, '$1')
+    .replace(/;}/g, '}')
+    .trim();
 }
 
 function xmlUrl(loc, lastmod, changefreq, priority) {
@@ -83,13 +122,18 @@ async function build() {
   //    "ads.js" is blocked by default ad-blocker filter lists.
   writeFile('js/widgets.js', adsRuntime());
 
+  // 2.2) Minify the CSS in dist/ only (public/ stays readable). Runs before
+  //      the bundle hash is computed so pages reference the minified bytes.
+  const cssFile = join(DIST, 'css', 'style.css');
+  writeFileSync(cssFile, minifyCss(readFileSync(cssFile, 'utf8')));
+
   // 2.5) Hash the CSS/JS bundle and stamp it into sw.js. Must run after the
   //      public/ copy and widgets.js, and before any page is rendered — pages
   //      embed the version via av() from assets.mjs.
   // ponytail: one hash for all three files. 66 KB total, so a CSS edit
   //           re-fetching main.js too is cheaper than three cache keys.
   const h = createHash('sha1');
-  for (const f of ['css/style.css', 'js/main.js', 'js/widgets.js']) h.update(readFileSync(join(DIST, f)));
+  for (const f of ['css/style.css', 'js/main.js', 'js/widgets.js', 'js/player.js']) h.update(readFileSync(join(DIST, f)));
   asset.v = h.digest('hex').slice(0, 8);
   writeFile('sw.js', readFileSync(join(PUBLIC, 'sw.js'), 'utf8').replaceAll('__ASSET_V__', asset.v));
 

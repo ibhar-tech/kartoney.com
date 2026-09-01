@@ -6,6 +6,7 @@ compatibility_date = "2026-08-05"
 [assets]
 directory = "./dist"
 html_handling = "force-trailing-slash"
+not_found_handling = "404-page"
 
 # A route, deliberately not a custom domain. The apex DNS record still points at
 # Vercel through the Cloudflare proxy; this Worker intercepts the request first,

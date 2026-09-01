@@ -56,3 +56,14 @@ export function toISO(dbDate) {
   if (/^\d{4}-\d{2}-\d{2}$/.test(s)) return `${s}T00:00:00+00:00`;
   return '';
 }
+
+/**
+ * Append a "dubbed" qualifier to a series name without duplicating words it
+ * already contains ("ناروتو عربي" + "مدبلج عربي" → "ناروتو عربي مدبلج").
+ */
+export function dubbed(name) {
+  const n = String(name || '').trim();
+  if (/مدبلج/.test(n)) return n;
+  if (/عربي|العربية/.test(n)) return `${n} مدبلج`;
+  return `${n} مدبلج عربي`;
+}

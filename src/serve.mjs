@@ -30,11 +30,12 @@ async function resolve(pathname) {
 
 createServer(async (req, res) => {
   const { pathname } = new URL(req.url, 'http://localhost');
-  const file = await resolve(pathname);
-  if (!file) { res.writeHead(404, { 'Content-Type': 'text/html; charset=utf-8' }); res.end('<h1>404</h1>'); return; }
+  let file = await resolve(pathname);
+  let status = 200;
+  if (!file) { file = join(DIST, '404.html'); status = 404; }
   try {
     const buf = await readFile(file);
-    res.writeHead(200, { 'Content-Type': MIME[extname(file)] || 'application/octet-stream' });
+    res.writeHead(status, { 'Content-Type': MIME[extname(file)] || 'application/octet-stream' });
     res.end(buf);
   } catch {
     res.writeHead(500); res.end('500');
