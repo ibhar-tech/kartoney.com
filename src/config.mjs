@@ -82,28 +82,28 @@ export const ADS = {
   //    From GET CODE: the atOptions 'key' → adKey, the invoke.js src →
   //    invokeSrc, plus the unit's width/height. One instance per page.
   banners: [
-    // Live: 300x250 unit (key 522f21ca…) in the watch-page episode sidebar.
-    { id: 'watchSidebarBox', enabled: true, adKey: '522f21cac4b8add62d4f48119bec242f', invokeSrc: 'https://fortunateambiguous.com/522f21cac4b8add62d4f48119bec242f/invoke.js', width: 300, height: 250 },
+    // Adsterra allows ONE unit per dimension per site. The 300x250 is
+    // allocated to the PLAYER LIFECYCLE (preroll + pause ad share it — they
+    // are temporally exclusive, never rendered at the same time). The watch
+    // sidebar therefore uses a 160x300 unit instead (see watchSidebarBox).
+    { id: 'watchSidebarBox', enabled: false, adKey: '', invokeSrc: '', width: 160, height: 300 },
     // Live: 320x50 unit (key f6f8326a…) as the sticky mobile anchor.
     { id: 'mobileAnchor', enabled: true, adKey: 'f6f8326a3201e7ca1ffde64dece4dd63', invokeSrc: 'https://fortunateambiguous.com/f6f8326a3201e7ca1ffde64dece4dd63/invoke.js', width: 320, height: 50, stickyMobile: true },
   ],
 
   // 5) PLAYER-LIFECYCLE ADS (public/js/player.js) — wired to the video
-  //    player's state machine, per the koralive production playbook:
-  //    first play of a session → preroll countdown overlay with a banner;
-  //    every user pause → 300x250 pause ad, hidden on resume.
-  //    Both need their own Adsterra "Banner" unit (300x250) — create two more
-  //    units in the dashboard and paste key + invoke.js here. An empty adKey
-  //    disables that slot gracefully (player behaves exactly as before).
+  //    player's state machine: first play of a session → preroll countdown
+  //    overlay with the banner; every user pause → pause ad, hidden on resume.
+  //    Both share the site's single 300x250 unit (they can never co-render).
   playerAds: {
     // Shows ONCE per browser session (oncePerSession: false → every episode).
     // Flow: user presses play → 5s countdown with the ad → «تشغيل الحلقة»
     // button appears → tap resumes playback inside the tap gesture (always
     // allowed by mobile browsers, unlike an automatic resume after 5s).
-    preroll: { enabled: true, adKey: '', invokeSrc: '', width: 300, height: 250, seconds: 5, oncePerSession: true },
+    preroll: { enabled: true, adKey: '522f21cac4b8add62d4f48119bec242f', invokeSrc: 'https://fortunateambiguous.com/522f21cac4b8add62d4f48119bec242f/invoke.js', width: 300, height: 250, seconds: 5, oncePerSession: true },
     // Shows when the viewer pauses mid-video; hides on resume. The ✕ close
     // starts a cooldown (minutes) so pausing often never feels punishing.
-    pauseAd: { enabled: true, adKey: '', invokeSrc: '', width: 300, height: 250, cooldownMinutes: 5 },
+    pauseAd: { enabled: true, adKey: '522f21cac4b8add62d4f48119bec242f', invokeSrc: 'https://fortunateambiguous.com/522f21cac4b8add62d4f48119bec242f/invoke.js', width: 300, height: 250, cooldownMinutes: 5 },
   },
 };
 
