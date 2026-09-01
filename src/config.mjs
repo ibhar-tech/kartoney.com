@@ -86,7 +86,7 @@ export const ADS = {
     // allocated to the PLAYER LIFECYCLE (preroll + pause ad share it — they
     // are temporally exclusive, never rendered at the same time). The watch
     // sidebar therefore uses a 160x300 unit instead (see watchSidebarBox).
-    { id: 'watchSidebarBox', enabled: false, adKey: '', invokeSrc: '', width: 160, height: 300 },
+    { id: 'watchSidebarBox', enabled: true, adKey: '403609566fcf3fa6456d6fea1e6450c6', invokeSrc: 'https://fortunateambiguous.com/403609566fcf3fa6456d6fea1e6450c6/invoke.js', width: 160, height: 300 },
     // Live: 320x50 unit (key f6f8326a…) as the sticky mobile anchor.
     { id: 'mobileAnchor', enabled: true, adKey: 'f6f8326a3201e7ca1ffde64dece4dd63', invokeSrc: 'https://fortunateambiguous.com/f6f8326a3201e7ca1ffde64dece4dd63/invoke.js', width: 320, height: 50, stickyMobile: true },
   ],
