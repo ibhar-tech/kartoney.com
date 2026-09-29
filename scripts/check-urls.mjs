@@ -31,7 +31,7 @@ const SHOW = arg('show', null);
 const REFERER = arg('referer', 'https://kartoney.com/');
 const JSON_OUT = arg('json', null);
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124 Safari/537.36';
-const CONCURRENCY = 16;
+const CONCURRENCY = parseInt(arg("concurrency", "16"), 10);
 const TIMEOUT_MS = 20000;
 
 async function loadEpisodes() {

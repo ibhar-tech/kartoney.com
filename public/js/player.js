@@ -22,6 +22,34 @@
   var box = document.getElementById('video-container');
   if (!v || !box) return;
 
+  /* ── HLS (.m3u8) support ──────────────────────────────────────────────
+   * Safari/iOS play HLS natively; everyone else gets the self-hosted
+   * hls.js light build wired to the same <video> element, so the ad
+   * lifecycle (play/pause events) keeps working unchanged. */
+  (function initHls() {
+    var srcEl = v.querySelector('source');
+    var src = srcEl ? srcEl.getAttribute('src') : (v.getAttribute('src') || '');
+    if (!/\.m3u8(\?|#|$)/i.test(src)) return;
+    if (v.canPlayType('application/vnd.apple.mpegurl')) return; // native
+    var load = function () {
+      if (!window.Hls || !window.Hls.isSupported()) return;
+      v.removeAttribute('src');
+      if (srcEl) v.removeChild(srcEl);
+      v.preload = 'auto';
+      var hls = new window.Hls({ enableWorker: true, lowLatencyMode: false });
+      hls.loadSource(src);
+      hls.attachMedia(v);
+      hls.on(window.Hls.Events.ERROR, function (_, data) {
+        if (data.fatal) { try { hls.destroy(); } catch (e) {} }
+      });
+    };
+    if (window.Hls) return load();
+    var s = document.createElement('script');
+    s.src = '/js/hls.light.min.js';
+    s.onload = load;
+    document.head.appendChild(s);
+  })();
+
   /* ── config from the server ─────────────────────────────────────────── */
   function num(x, d) { var n = parseInt(x, 10); return isNaN(n) ? d : n; }
   var PREROLL = {

@@ -740,7 +740,7 @@ ${breadcrumbs([{ label: 'الرئيسية', href: '/' }, { label: c.name, href: 
       })()}>
 ${isDirectMedia(ep.url)
           ? `<video id="video-player" controls preload="none" playsinline webkit-playsinline x5-playsinline disablepictureinpicture controlslist="nodownload noplaybackrate noremoteplayback" oncontextmenu="return false" poster="${attr(ep.logo || c.logo)}" data-title="${attr(ep.title)}" data-series="${attr(c.name)}">
-          <source src="${attr(ep.url)}" type="video/mp4">
+          <source src="${attr(ep.url)}" type="${/\.m3u8(\?|#|$)/i.test(ep.url) ? 'application/x-mpegURL' : 'video/mp4'}">
           المتصفح لا يدعم تشغيل الفيديو.
         </video>`
           : `<iframe class="video-embed" src="${attr(ep.url)}" title="${attr(ep.title)}" loading="lazy" allow="autoplay; fullscreen; encrypted-media; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>`}

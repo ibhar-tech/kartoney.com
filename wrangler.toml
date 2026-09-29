@@ -2,6 +2,11 @@ name = "kartoney"
 compatibility_date = "2026-08-05"
 
 # Assets-only Worker: no `main`, so nothing but dist/ is served.
+# worker/index.js exists but is DORMANT — an HLS playlist generator + segment
+# proxy (see scripts/spacetoongo-map.mjs). To activate: set main =
+# "worker/index.js" and binding = "ASSETS" under [assets]. Not live because the
+# Spacetoon GO public bucket turned out to hold JP-audio assets only (AR dubs
+# sit behind their JWT-signed service) — no /hls/ URLs are referenced today.
 # Headers live in public/_headers (copied into dist/ by the build).
 [assets]
 directory = "./dist"
