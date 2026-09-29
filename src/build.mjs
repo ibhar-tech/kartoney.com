@@ -9,6 +9,7 @@ import { fileURLToPath } from 'node:url';
 import { asset } from './assets.mjs';
 import { loadData } from './data.mjs';
 import { SITE, ADS, url, ERAS, TYPES, CHANNELS } from './config.mjs';
+import { IMPORTED_CHANNELS } from './channels-imported.mjs';
 import { homePage, cartoonPage, episodePage, browsePage, genreChips, liveIndexPage, liveChannelPage } from './templates.mjs';
 import { num, esc, clip, toISO } from './util.mjs';
 
@@ -142,9 +143,9 @@ async function build() {
   writePage('/', homePage(data));
   writePage('/lives/', homePage(data));
 
-  // 3.7) Live cartoon TV channels
+  // 3.7) Live cartoon TV channels (curated + imported, live-verified)
   writePage(url.live(), liveIndexPage());
-  for (const ch of CHANNELS) writePage(url.liveChannel(ch.slug), liveChannelPage(ch));
+  for (const ch of [...CHANNELS, ...IMPORTED_CHANNELS]) writePage(url.liveChannel(ch.slug), liveChannelPage(ch));
 
   // 4) Cartoon + episode pages
   for (const c of data.cartoons) {
@@ -253,7 +254,7 @@ async function build() {
     xmlUrl('/', today, 'daily', '1.0'),
     xmlUrl('/lives/', today, 'daily', '0.95'),
     xmlUrl(url.live(), today, 'hourly', '0.9'),
-    ...CHANNELS.map((ch) => xmlUrl(url.liveChannel(ch.slug), today, 'hourly', '0.85')),
+    ...[...CHANNELS, ...IMPORTED_CHANNELS].map((ch) => xmlUrl(url.liveChannel(ch.slug), today, 'hourly', '0.85')),
     xmlUrl(url.library(), today, 'weekly', '0.9'),
     xmlUrl(url.genresIndex(), today, 'weekly', '0.8'),
     ...data.genres.map((g) => xmlUrl(url.genre(g.en), today, 'weekly', '0.7')),

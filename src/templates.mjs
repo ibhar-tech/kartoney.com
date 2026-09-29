@@ -6,6 +6,7 @@ import { esc, attr, num, clip, seededPick, toISO, dubbed } from './util.mjs';
 import { av } from './assets.mjs';
 import { icon } from './icons.mjs';
 import { SITE, ADS, ADBLOCK, url, ERAS, TYPES, CHANNELS } from './config.mjs';
+import { IMPORTED_CHANNELS } from './channels-imported.mjs';
 import { longDesc, metaDesc, episodeLongDesc, episodeMetaDesc, episodeFaq } from './describe.mjs';
 
 // Direct-media URLs render in the native <video> player (with the ad/UX layer
@@ -858,17 +859,25 @@ ${footer(data.totals)}`;
 /* ════════════════════════════ LIVE TV ════════════════════════════ */
 // /live/ — channel grid; /live/<slug>/ — player page. Direct channels stream
 // via /live-stream/<b64>.m3u8 (Worker resolves the CURRENT playlist from the
-// foupix player page); embed channels iframe that page.
+// foupix player page); embed channels iframe that page. Curated channels come
+// from config.mjs (Arabic), the live-verified global cartoon channels from
+// the auto-generated src/channels-imported.mjs.
 const b64url = (s) => Buffer.from(s).toString('base64url');
 const liveStreamUrl = (ch) => '/live-stream/' + b64url(JSON.stringify(ch.m3u8 ? { m: ch.m3u8 } : { h: ch.htm })) + '.m3u8';
+const ALL_CHANNELS = [
+  ...CHANNELS.map((c) => ({ ...c, group: c.group || 'arabic' })),
+  ...IMPORTED_CHANNELS,
+];
 
 export function liveIndexPage() {
-  const cards = CHANNELS.map((ch) => `
+  const card = (ch) => `
       <a class="bento-item" href="${url.liveChannel(ch.slug)}" style="min-height:190px">
         <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:4rem;background:linear-gradient(135deg,var(--surface-container),var(--surface-container-high))">${ch.emoji}</div>
         <div class="bento-small-overlay"></div>
         <div class="bento-small-title"><h4><span class="live-dot" style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#ff1744;margin-inline-end:6px;box-shadow:0 0 8px #ff1744"></span>${esc(ch.name)}</h4></div>
-      </a>`).join('\n');
+      </a>`;
+  const arabic = ALL_CHANNELS.filter((c) => c.group === 'arabic');
+  const global = ALL_CHANNELS.filter((c) => c.group === 'global');
 
   const body = `
 ${breadcrumbs([{ label: 'الرئيسية', href: '/' }, { label: 'البث المباشر' }])}
@@ -876,8 +885,16 @@ ${breadcrumbs([{ label: 'الرئيسية', href: '/' }, { label: 'البث ال
     <div class="section-header" style="margin-bottom:1.25rem">
       <h1 class="section-title"><span class="accent" style="background:#ff1744"></span>قنوات الكرتون المباشرة 🔴</h1>
     </div>
-    <p style="color:var(--on-surface-variant);max-width:720px;margin-bottom:2rem;line-height:1.9">شاهد أقوى قنوات الكرتون والأطفال بثاً مباشراً ومجاناً — سبيستون، كرتون نتورك، إم بي سي 3، مجيد، طه والمزيد. البث يعمل مباشرة من المتصفح على الهاتف والحاسوب والتلفزيون.</p>
-    <div class="bento-grid">${cards}
+    <p style="color:var(--on-surface-variant);max-width:720px;margin-bottom:2rem;line-height:1.9">شاهد أقوى قنوات الكرتون والأطفال بثاً مباشراً ومجاناً — سبيستون، كرتون نتورك، إم بي سي 3، مجيد، طه، نيكلوديون، توم وجيري ون بيس يوقي يو والمزيد. البث يعمل مباشرة من المتصفح على الهاتف والحاسوب والتلفزيون.</p>
+    <div class="section-header" style="margin-bottom:1rem">
+      <h2 class="section-title" style="font-size:1.25rem"><span class="accent"></span>القنوات العربية</h2>
+    </div>
+    <div class="bento-grid">${arabic.map(card).join('\n')}
+    </div>
+    <div class="section-header" style="margin:2.5rem 0 1rem">
+      <h2 class="section-title" style="font-size:1.25rem"><span class="accent gold"></span>قنوات الكرتون العالمية</h2>
+    </div>
+    <div class="bento-grid">${global.map(card).join('\n')}
     </div>
   </article>`;
 
@@ -891,7 +908,7 @@ ${breadcrumbs([{ label: 'الرئيسية', href: '/' }, { label: 'البث ال
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         name: 'قنوات الكرتون المباشرة',
-        itemListElement: CHANNELS.map((ch, i) => ({ '@type': 'ListItem', position: i + 1, name: ch.name, url: url.abs(url.liveChannel(ch.slug)) })),
+        itemListElement: ALL_CHANNELS.map((ch, i) => ({ '@type': 'ListItem', position: i + 1, name: ch.name, url: url.abs(url.liveChannel(ch.slug)) })),
       },
     ],
   });
@@ -909,7 +926,10 @@ export function liveChannelPage(ch) {
         <iframe class="video-embed" src="${attr(ch.htm)}" title="${attr(ch.name)} - بث مباشر" allow="autoplay; fullscreen; encrypted-media" allowfullscreen referrerpolicy="no-referrer"></iframe>
       </div>`;
 
-  const others = CHANNELS.filter((c) => c.slug !== ch.slug);
+  const others = [
+    ...ALL_CHANNELS.filter((c) => c.slug !== ch.slug && c.group === (ch.group || 'arabic')),
+    ...ALL_CHANNELS.filter((c) => c.slug !== ch.slug && c.group !== (ch.group || 'arabic')),
+  ].slice(0, 8);
   const body = `
 ${breadcrumbs([{ label: 'الرئيسية', href: '/' }, { label: 'البث المباشر', href: url.live() }, { label: ch.name }])}
   <article class="player-page">
