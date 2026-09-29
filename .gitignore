@@ -43,3 +43,6 @@ npm-debug.log*
 
 # Local DB migration backups (data/checkpoint before a URL rewrite)
 data/kartoney.db.bak-*
+
+# wrangler local dev state (miniflare caches)
+.wrangler/
