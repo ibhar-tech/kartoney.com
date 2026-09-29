@@ -137,9 +137,11 @@ export const ADBLOCK = {
 export const CHANNELS = [
   { slug: 'spacetoon', name: 'سبيستون', emoji: '🚀', desc: 'بث مباشر لقناة سبيستون — كرتون وأنمي مدبلج على مدار الساعة', mode: 'direct', htm: 'https://streamxx.foupix.com:8443/spacetoon/mbc3.htm' },
   { slug: 'cartoon-network', name: 'كرتون نتورك بالعربية', emoji: '📺', desc: 'بث مباشر لقناة كرتون نتورك العربية', mode: 'direct', htm: 'https://streamxx.foupix.com:8443/cn_arabia/mbc3.htm' },
-  { slug: 'taha', name: 'قناة طه', emoji: '🐣', desc: 'بث مباشر لقناة طه للأطفال', mode: 'direct', m3u8: 'https://media1.livaat.com/static/TAHA_TV/playlist.m3u8' },
   { slug: 'mbc-3', name: 'إم بي سي 3', emoji: '🎬', desc: 'بث مباشر لقناة إم بي سي 3 — أفلام وكرتون للأطفال', mode: 'embed', htm: 'https://streamxx.foupix.com:8443/mbc3/mbc3.htm' },
   { slug: 'majid', name: 'قناة مجيد', emoji: '🦸', desc: 'بث مباشر لقناة مجيد من إم بي سي', mode: 'embed', htm: 'https://streamxx.foupix.com:8443/majed/mbc3.htm' },
+  { slug: 'taha', name: 'قناة طه', emoji: '🐣', desc: 'بث مباشر لقناة طه للأطفال — أفلام ورسوم ومحتوى تعليمي', mode: 'direct', m3u8: 'https://stream.starmenajo.com/hls/app/live/ts:fhd.m3u8' },
+  { slug: 'atfal-mawaheb', name: 'أطفال ومواهب', emoji: '🌟', desc: 'بث مباشر لقناة أطفال ومواهب — برامج ومواهب للأطفال', mode: 'direct', m3u8: 'https://5aafcc5de91f1.streamlock.net/atfal1.com/atfal2/playlist.m3u8' },
+  { slug: 'sat7-kids', name: 'سات 7 للأطفال', emoji: '🎈', desc: 'بث مباشر لقناة سات 7 كيدز — رسوم وبرامج للأطفال', mode: 'direct', m3u8: 'https://svs.itworkscdn.net/sat7kidslive/sat7kids.smil/playlist_dvr.m3u8' },
 ];
 
 // ── URL builders (single source of truth for the whole site) ──────────
