@@ -21,6 +21,67 @@ const VARIANTS = [
   { name: 'v3', bandwidth: 500000, resolution: '640x360' },
 ];
 
+/* ── /vid/<base64url({p, f?})>.mp4 — arabic-toons.com resolver ────────────
+ * arabic-toons episode pages are anonymous and mint a foupix CDN token that
+ * is ~6h-valid, NOT IP-bound and NOT path-bound (one token plays any file).
+ * The DB stores an opaque /vid/… URL; on request the Worker fetches the page
+ * (or a bootstrap page when only the file path survives), extracts videoSrc,
+ * substitutes the path when needed, caches the minted URL ~3.5h at the edge,
+ * and 302s the <video> element to the MP4. Pages must be fetched with a
+ * browser UA and gently (transient 403s above ~4 req/s). */
+const BROWSER_UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124 Safari/537.36';
+
+async function fetchEpisodePage(url) {
+  for (let attempt = 0; attempt < 2; attempt++) {
+    try {
+      const res = await fetch(url, {
+        headers: { 'User-Agent': BROWSER_UA, Accept: 'text/html,*/*' },
+        redirect: 'follow',
+        signal: AbortSignal.timeout(15000),
+        cf: { cacheTtl: 1800, cacheEverything: true },
+      });
+      if (res.status === 403 || res.status >= 500) { await new Promise((r) => setTimeout(r, 1500)); continue; }
+      if (!res.ok) return null;
+      return await res.text();
+    } catch { await new Promise((r) => setTimeout(r, 800)); }
+  }
+  return null;
+}
+
+async function resolveVid(pathId, ctx) {
+  let target;
+  try {
+    const b64 = pathId.replace(/-/g, '+').replace(/_/g, '/');
+    target = JSON.parse(atob(b64 + '='.repeat((4 - (b64.length % 4)) % 4)));
+  } catch { return new Response('bad vid id', { status: 400 }); }
+  if (!target.p) return new Response('bad vid payload', { status: 400 });
+
+  const cacheKey = new Request('https://vid.kartoney.internal/' + pathId);
+  const cache = caches.default;
+  const hit = await cache.match(cacheKey).catch(() => null);
+  if (hit) return Response.redirect(await hit.text(), 302);
+
+  const html = await fetchEpisodePage(target.p);
+  if (!html) return new Response('source page unreachable', { status: 502 });
+  const m = html.match(/videoSrc\s*=\s*"(https:\\?\/\\?\/stream[^"]+foupix[^"]+)"/);
+  if (!m) return new Response('no videoSrc on page', { status: 502 });
+  let video = m[1].replace(/\\\//g, '/');
+
+  if (target.f) {
+    // Orphaned file (source page deleted): tokens are path-agnostic, so graft
+    // the minted query string onto the surviving file URL.
+    const q = video.slice(video.indexOf('?'));
+    video = target.f + q;
+  }
+
+  if (ctx) {
+    ctx.waitUntil(cache.put(cacheKey, new Response(video, {
+      headers: { 'Content-Type': 'text/plain', 'Cache-Control': 'public, max-age=12600' }, // 3.5h < 6h token life
+    })));
+  }
+  return Response.redirect(video, 302);
+}
+
 /** All object keys under <asset>/ (paginated). Returns [] when the prefix is absent. */
 async function listAsset(asset) {
   const keys = [];
@@ -88,9 +149,48 @@ function mediaPlaylist(asset, variant, keys, durationHint) {
   return lines.join('\n') + '\n';
 }
 
+/* ── /live-stream/<base64url({h}|{m}).m3u8 — live channel resolver ────────
+ * Live playlists rotate; the foupix player pages always contain the CURRENT
+ * m3u8. {h: playerPage} → fetch page (browser UA, edge-cached 10 min), extract
+ * the stream, 302 to it (the streams themselves are CORS-open). {m: url} →
+ * straight 302 for fixed playlists. No media bytes transit this Worker. */
+async function resolveLiveStream(pathId, ctx) {
+  let target;
+  try {
+    const b64 = pathId.replace(/-/g, '+').replace(/_/g, '/');
+    target = JSON.parse(atob(b64 + '='.repeat((4 - (b64.length % 4)) % 4)));
+  } catch { return new Response('bad live id', { status: 400 }); }
+
+  const cacheKey = new Request('https://live.kartoney.internal/' + pathId);
+  const cache = caches.default;
+  const hit = await cache.match(cacheKey).catch(() => null);
+  if (hit) return Response.redirect(await hit.text(), 302);
+
+  let stream = target.m || null;
+  if (!stream && target.h) {
+    const html = await fetchEpisodePage(target.h);
+    if (html) stream = html.match(/https?:\/\/[^"'\s]+\.m3u8[^"'\s]*/)?.[0] || null;
+  }
+  if (!stream) return new Response('live stream unavailable', { status: 502 });
+
+  if (ctx) {
+    ctx.waitUntil(cache.put(cacheKey, new Response(stream, {
+      headers: { 'Content-Type': 'text/plain', 'Cache-Control': 'public, max-age=600' },
+    })));
+  }
+  return Response.redirect(stream, 302);
+}
+
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
+
+    const vid = url.pathname.match(/^\/vid\/([A-Za-z0-9_-]+)\.mp4$/);
+    if (vid) return resolveVid(vid[1], ctx);
+
+    const live = url.pathname.match(/^\/live-stream\/([A-Za-z0-9_-]+)\.m3u8$/);
+    if (live) return resolveLiveStream(live[1], ctx);
+
     const m = url.pathname.match(/^\/hls\/([0-9a-f]{32})(?:\/(.*))?$/);
     if (!m) return env.ASSETS.fetch(request);
 

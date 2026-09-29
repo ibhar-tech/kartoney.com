@@ -8,8 +8,8 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { asset } from './assets.mjs';
 import { loadData } from './data.mjs';
-import { SITE, ADS, url, ERAS, TYPES } from './config.mjs';
-import { homePage, cartoonPage, episodePage, browsePage, genreChips } from './templates.mjs';
+import { SITE, ADS, url, ERAS, TYPES, CHANNELS } from './config.mjs';
+import { homePage, cartoonPage, episodePage, browsePage, genreChips, liveIndexPage, liveChannelPage } from './templates.mjs';
 import { num, esc, clip, toISO } from './util.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -142,6 +142,10 @@ async function build() {
   writePage('/', homePage(data));
   writePage('/lives/', homePage(data));
 
+  // 3.7) Live cartoon TV channels
+  writePage(url.live(), liveIndexPage());
+  for (const ch of CHANNELS) writePage(url.liveChannel(ch.slug), liveChannelPage(ch));
+
   // 4) Cartoon + episode pages
   for (const c of data.cartoons) {
     writePage(url.cartoon(c.slug), cartoonPage(c, data));
@@ -248,6 +252,8 @@ async function build() {
   const pageUrls = [
     xmlUrl('/', today, 'daily', '1.0'),
     xmlUrl('/lives/', today, 'daily', '0.95'),
+    xmlUrl(url.live(), today, 'hourly', '0.9'),
+    ...CHANNELS.map((ch) => xmlUrl(url.liveChannel(ch.slug), today, 'hourly', '0.85')),
     xmlUrl(url.library(), today, 'weekly', '0.9'),
     xmlUrl(url.genresIndex(), today, 'weekly', '0.8'),
     ...data.genres.map((g) => xmlUrl(url.genre(g.en), today, 'weekly', '0.7')),

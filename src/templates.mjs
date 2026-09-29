@@ -5,7 +5,7 @@
 import { esc, attr, num, clip, seededPick, toISO, dubbed } from './util.mjs';
 import { av } from './assets.mjs';
 import { icon } from './icons.mjs';
-import { SITE, ADS, ADBLOCK, url, ERAS, TYPES } from './config.mjs';
+import { SITE, ADS, ADBLOCK, url, ERAS, TYPES, CHANNELS } from './config.mjs';
 import { longDesc, metaDesc, episodeLongDesc, episodeMetaDesc, episodeFaq } from './describe.mjs';
 
 // Direct-media URLs render in the native <video> player (with the ad/UX layer
@@ -299,6 +299,7 @@ function topNav() {
       <ul class="nav-links">
         <li><a href="/" data-page="landing">الرئيسية</a></li>
         <li><a href="/lives/" data-page="home">مسلسلات وبث مباشر</a></li>
+        <li><a href="/live/" data-page="live" style="color:#ff5252">🔴 بث مباشر</a></li>
         <li><a href="${url.genresIndex()}" data-page="genre">التصنيفات</a></li>
         <li><a href="${url.category('classic')}" data-page="classic">كلاسيكي</a></li>
         <li><a href="${url.category('anime')}" data-page="anime">أنمي</a></li>
@@ -325,6 +326,7 @@ function sidebar() {
     <nav class="sidebar-links">
       <a href="/" class="sidebar-link">${icon('home')}<span>الرئيسية</span></a>
       <a href="/lives/" class="sidebar-link">${icon('tv', { filled: true })}<span>البث والمشاهدة</span></a>
+      <a href="/live/" class="sidebar-link" style="color:#ff5252;font-weight:700">${icon('play_circle')}<span>🔴 البث المباشر</span></a>
       <hr style="border:0;border-top:1px solid var(--outline-variant);margin:.5rem 1rem;opacity:.5">
       <a href="${url.genresIndex()}" class="sidebar-link">${icon('category')}<span>التصنيفات</span></a>
       <a href="${url.category('classic')}" class="sidebar-link">${icon('tv')}<span>كرتون كلاسيكي</span></a>
@@ -339,6 +341,7 @@ function bottomNav() {
   return `  <nav class="bottom-nav" id="bottom-nav">
     <a href="/" class="bottom-nav-item" data-page="landing">${icon('home', { filled: true })}<span>الرئيسية</span></a>
     <a href="/lives/" class="bottom-nav-item" data-page="home">${icon('tv')}<span>المشاهدة</span></a>
+    <a href="/live/" class="bottom-nav-item" data-page="live" style="color:#ff5252">${icon('play_circle')}<span>مباشر</span></a>
     <button onclick="openSearch()" class="bottom-nav-item" data-page="search" aria-label="بحث">${icon('search')}<span>بحث</span></button>
   </nav>`;
 }
@@ -849,6 +852,98 @@ ${footer(data.totals)}`;
     ogImage: ep.logo || c.logo,
     ogType: 'video.episode',
     scripts: `  <script src="${av('/js/player.js')}" defer></script>`,
+  });
+}
+
+/* ════════════════════════════ LIVE TV ════════════════════════════ */
+// /live/ — channel grid; /live/<slug>/ — player page. Direct channels stream
+// via /live-stream/<b64>.m3u8 (Worker resolves the CURRENT playlist from the
+// foupix player page); embed channels iframe that page.
+const b64url = (s) => Buffer.from(s).toString('base64url');
+const liveStreamUrl = (ch) => '/live-stream/' + b64url(JSON.stringify(ch.m3u8 ? { m: ch.m3u8 } : { h: ch.htm })) + '.m3u8';
+
+export function liveIndexPage() {
+  const cards = CHANNELS.map((ch) => `
+      <a class="bento-item" href="${url.liveChannel(ch.slug)}" style="min-height:190px">
+        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:4rem;background:linear-gradient(135deg,var(--surface-container),var(--surface-container-high))">${ch.emoji}</div>
+        <div class="bento-small-overlay"></div>
+        <div class="bento-small-title"><h4><span class="live-dot" style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#ff1744;margin-inline-end:6px;box-shadow:0 0 8px #ff1744"></span>${esc(ch.name)}</h4></div>
+      </a>`).join('\n');
+
+  const body = `
+${breadcrumbs([{ label: 'الرئيسية', href: '/' }, { label: 'البث المباشر' }])}
+  <article style="padding:0 0 3rem">
+    <div class="section-header" style="margin-bottom:1.25rem">
+      <h1 class="section-title"><span class="accent" style="background:#ff1744"></span>قنوات الكرتون المباشرة 🔴</h1>
+    </div>
+    <p style="color:var(--on-surface-variant);max-width:720px;margin-bottom:2rem;line-height:1.9">شاهد أقوى قنوات الكرتون والأطفال بثاً مباشراً ومجاناً — سبيستون، كرتون نتورك، إم بي سي 3، مجيد، طه والمزيد. البث يعمل مباشرة من المتصفح على الهاتف والحاسوب والتلفزيون.</p>
+    <div class="bento-grid">${cards}
+    </div>
+  </article>`;
+
+  return layout({
+    title: 'بث مباشر لقنوات الكرتون - شاهد سبيستون وكرتون نتورك اون لاين | كارتوني',
+    description: 'بث مباشر ومجاني لقنوات الكرتون العربية: سبيستون، كرتون نتورك بالعربية، إم بي سي 3، مجيد وطه — يشمل أنمي وكرتون مدبلج على مدار الساعة.',
+    path: url.live(),
+    body,
+    jsonLd: [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: 'قنوات الكرتون المباشرة',
+        itemListElement: CHANNELS.map((ch, i) => ({ '@type': 'ListItem', position: i + 1, name: ch.name, url: url.abs(url.liveChannel(ch.slug)) })),
+      },
+    ],
+  });
+}
+
+export function liveChannelPage(ch) {
+  const player = ch.mode === 'direct'
+    ? `<div class="video-container" id="video-container">
+        <video id="video-player" controls playsinline webkit-playsinline x5-playsinline controlslist="nodownload noremoteplayback" data-title="${attr(ch.name)}" data-series="بث مباشر">
+          <source src="${attr(liveStreamUrl(ch))}" type="application/x-mpegURL">
+          المتصفح لا يدعم تشغيل البث المباشر.
+        </video>
+      </div>`
+    : `<div class="video-container" id="video-container" style="aspect-ratio:16/9">
+        <iframe class="video-embed" src="${attr(ch.htm)}" title="${attr(ch.name)} - بث مباشر" allow="autoplay; fullscreen; encrypted-media" allowfullscreen referrerpolicy="no-referrer"></iframe>
+      </div>`;
+
+  const others = CHANNELS.filter((c) => c.slug !== ch.slug);
+  const body = `
+${breadcrumbs([{ label: 'الرئيسية', href: '/' }, { label: 'البث المباشر', href: url.live() }, { label: ch.name }])}
+  <article class="player-page">
+    <div class="player-main">
+${player}
+      <h1 class="video-title"><span class="live-dot" style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#ff1744;margin-inline-end:8px;box-shadow:0 0 10px #ff1744"></span>${esc(ch.name)} — بث مباشر</h1>
+      <p style="color:var(--on-surface-variant);line-height:1.9;max-width:720px">${esc(ch.desc)}. البث مباشر وقد يتوقف مؤقتاً أثناء الإعلانات أو بين البرامج — انتظر أو حدّث الصفحة.</p>
+    </div>
+    <aside class="player-side">
+      <div class="section-header"><h2 class="section-title"><span class="accent" style="background:#ff1744"></span>قنوات أخرى</h2></div>
+      <div style="display:grid;gap:.75rem">
+        ${others.map((c) => `<a href="${url.liveChannel(c.slug)}" style="display:flex;align-items:center;gap:.9rem;padding:.85rem 1rem;background:var(--surface-container);border-radius:var(--radius);text-decoration:none;color:var(--on-surface)">
+          <span style="font-size:1.8rem">${c.emoji}</span>
+          <span style="font-weight:700;font-size:.95rem">${esc(c.name)}</span>
+        </a>`).join('\n')}
+      </div>
+    </aside>
+  </article>`;
+
+  return layout({
+    title: `${ch.name} بث مباشر - شاهد ${ch.name} اون لاين مجاناً | كارتوني`,
+    description: `بث مباشر لقناة ${ch.name} — ${ch.desc}. شاهد مجاناً من المتصفح على كارتوني.`,
+    path: url.liveChannel(ch.slug),
+    body,
+    jsonLd: [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'BroadcastChannel',
+        name: ch.name,
+        description: ch.desc,
+        url: url.abs(url.liveChannel(ch.slug)),
+      },
+    ],
+    scripts: ch.mode === 'direct' ? `  <script src="${av('/js/player.js')}" defer></script>` : '',
   });
 }
 

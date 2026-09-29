@@ -1,15 +1,15 @@
 name = "kartoney"
 compatibility_date = "2026-08-05"
+main = "worker/index.js"
 
-# Assets-only Worker: no `main`, so nothing but dist/ is served.
-# worker/index.js exists but is DORMANT — an HLS playlist generator + segment
-# proxy (see scripts/spacetoongo-map.mjs). To activate: set main =
-# "worker/index.js" and binding = "ASSETS" under [assets]. Not live because the
-# Spacetoon GO public bucket turned out to hold JP-audio assets only (AR dubs
-# sit behind their JWT-signed service) — no /hls/ URLs are referenced today.
-# Headers live in public/_headers (copied into dist/ by the build).
+# Assets serve first; worker/index.js handles only unmatched paths:
+#   /vid/<b64>.mp4 — resolves arabic-toons episode pages to 6h foupix CDN
+#                    tokens (edge-cached 3.5h) and 302s the <video> to the MP4
+#   /hls/<asset>/*  — Spacetoon GO HLS playlist generator + segment proxy
+#                    (dormant: their public bucket holds JP audio only)
 [assets]
 directory = "./dist"
+binding = "ASSETS"
 html_handling = "force-trailing-slash"
 not_found_handling = "404-page"
 

@@ -128,10 +128,26 @@ export const ADBLOCK = {
   networkMode: 'soft',
 };
 
+// ── Live cartoon TV channels ──────────────────────────────────────────────
+// mode 'direct': CORS-open HLS the native player + hls.js can stream through
+//   the Worker's /live-stream/ redirect (which resolves the CURRENT m3u8 from
+//   the foupix player page, so stream rotation self-heals; 'm3u8' = fixed URL).
+// mode 'embed'  : referer/token-gated streams — iframe the foupix player page
+//   (framable, no X-Frame-Options); no bytes transit kartoney either way.
+export const CHANNELS = [
+  { slug: 'spacetoon', name: 'سبيستون', emoji: '🚀', desc: 'بث مباشر لقناة سبيستون — كرتون وأنمي مدبلج على مدار الساعة', mode: 'direct', htm: 'https://streamxx.foupix.com:8443/spacetoon/mbc3.htm' },
+  { slug: 'cartoon-network', name: 'كرتون نتورك بالعربية', emoji: '📺', desc: 'بث مباشر لقناة كرتون نتورك العربية', mode: 'direct', htm: 'https://streamxx.foupix.com:8443/cn_arabia/mbc3.htm' },
+  { slug: 'taha', name: 'قناة طه', emoji: '🐣', desc: 'بث مباشر لقناة طه للأطفال', mode: 'direct', m3u8: 'https://media1.livaat.com/static/TAHA_TV/playlist.m3u8' },
+  { slug: 'mbc-3', name: 'إم بي سي 3', emoji: '🎬', desc: 'بث مباشر لقناة إم بي سي 3 — أفلام وكرتون للأطفال', mode: 'embed', htm: 'https://streamxx.foupix.com:8443/mbc3/mbc3.htm' },
+  { slug: 'majid', name: 'قناة مجيد', emoji: '🦸', desc: 'بث مباشر لقناة مجيد من إم بي سي', mode: 'embed', htm: 'https://streamxx.foupix.com:8443/majed/mbc3.htm' },
+];
+
 // ── URL builders (single source of truth for the whole site) ──────────
 export const url = {
   home: () => '/',
   lives: () => '/lives/',
+  live: () => '/live/',
+  liveChannel: (slug) => `/live/${slug}/`,
   cartoon: (slug) => `/cartoon/${slug}/`,
   watch: (slug, epSlug) => `/watch/${slug}/${epSlug}/`,
   genre: (en) => `/genre/${en}/`,
