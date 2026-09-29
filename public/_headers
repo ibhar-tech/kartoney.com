@@ -36,16 +36,6 @@
   Content-Type: text/xsl; charset=utf-8
   Cache-Control: public, max-age=86400
 
-/*.apk
-  ! Cache-Control
-  Content-Type: application/vnd.android.package-archive
-  Cache-Control: public, max-age=300, must-revalidate
-  X-Robots-Tag: noindex
-
-/app-ads.txt
-  ! Cache-Control
-  Content-Type: text/plain; charset=utf-8
-  Cache-Control: public, max-age=86400
 
 /sw.js
   ! Cache-Control

@@ -40,3 +40,6 @@ desktop.ini
 # Logs
 *.log
 npm-debug.log*
+
+# Local DB migration backups (data/checkpoint before a URL rewrite)
+data/kartoney.db.bak-*

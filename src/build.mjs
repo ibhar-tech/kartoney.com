@@ -9,7 +9,7 @@ import { fileURLToPath } from 'node:url';
 import { asset } from './assets.mjs';
 import { loadData } from './data.mjs';
 import { SITE, ADS, url, ERAS, TYPES } from './config.mjs';
-import { homePage, landingPage, cartoonPage, episodePage, browsePage, genreChips } from './templates.mjs';
+import { homePage, cartoonPage, episodePage, browsePage, genreChips } from './templates.mjs';
 import { num, esc, clip, toISO } from './util.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -137,10 +137,9 @@ async function build() {
   asset.v = h.digest('hex').slice(0, 8);
   writeFile('sw.js', readFileSync(join(PUBLIC, 'sw.js'), 'utf8').replaceAll('__ASSET_V__', asset.v));
 
-  // 3) Home (Landing Page)
-  writePage('/', landingPage(data));
-
-  // 3.5) Lives Page (Cartoon Catalog)
+  // 3) Home — the catalog homepage is the front page now (the app landing
+  // page was removed; /lives/ stays canonical for this content).
+  writePage('/', homePage(data));
   writePage('/lives/', homePage(data));
 
   // 4) Cartoon + episode pages
@@ -249,7 +248,6 @@ async function build() {
   const pageUrls = [
     xmlUrl('/', today, 'daily', '1.0'),
     xmlUrl('/lives/', today, 'daily', '0.95'),
-    xmlUrl('/live_streaming_apps/', today, 'weekly', '0.9'),
     xmlUrl(url.library(), today, 'weekly', '0.9'),
     xmlUrl(url.genresIndex(), today, 'weekly', '0.8'),
     ...data.genres.map((g) => xmlUrl(url.genre(g.en), today, 'weekly', '0.7')),

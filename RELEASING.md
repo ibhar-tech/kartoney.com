@@ -1,23 +1,7 @@
-# Publishing a new app build
+# Deploying
 
-The site distributes one Android app — **Ostora Online O²** — as a direct APK in
-`public/`. One file covers phone, tablet and Android TV; there is no desktop build and no
-second TV package.
-
-## Steps
-
-1. Drop the new APK in `public/` as `ostora_online_v<version>.apk` and delete the old one.
-2. Update the version everywhere it is stated, not just in the link:
-   - `src/templates.mjs` — the five download links, the install-steps filename, and the
-     `SoftwareApplication` JSON-LD (`softwareVersion`, `downloadUrl`, `fileSize`).
-   - `public/live_streaming_apps.html` — the two download links, the `.version` line, the
-     button label, and the JSON-LD block.
-   - `public/live_streaming_apps.js` — `btn-download-now` in both languages.
-   - `public/llms.txt` — the app section.
-3. **Bump `?v=` on every download link.** See below.
-4. `npm run build && npx wrangler deploy`, then commit and push.
-
-## Deploying
+The site is web-only (the Android app was retired in Sept 2026 — its install
+page and APK are gone; old URLs redirect to `/lives/` via `public/_redirects`).
 
 The site runs on Cloudflare Workers static assets, served by the `kartoney.com/*` route in
 `wrangler.toml`. **Pushing to `main` does not deploy** — nothing is wired to the repo yet, so
@@ -27,41 +11,29 @@ but no longer serves any traffic; deleting that project is safe whenever you wan
 To roll back to Vercel, comment out the `[[routes]]` block and redeploy. The apex DNS record
 still points at Vercel behind the proxy, so traffic falls through within seconds.
 
-## Why the links carry `?v=<version>`
+## Steps
 
-Historically Cloudflare's zone-level Browser Cache TTL rewrote `max-age=300` to
-`max-age=14400` on the APK, so a replaced file was handed out stale for four hours. **That no
-longer applies** — zone cache settings do not touch Worker responses, and the APK now serves
-the `max-age=300, must-revalidate` from `public/_headers` verbatim.
+1. `npm run build && npx wrangler deploy`, then commit and push.
 
-The `?v=` is still worth keeping as cheap insurance, since Cloudflare keys its cache on the
-full URL including the query, but it is no longer load-bearing.
+## Traps
 
-One trap survives: **requesting a not-yet-deployed URL caches the 404.** Wait for
-`wrangler deploy` to finish before touching a new path, or clear it via
-Cloudflare → Caching → Purge.
+- **Requesting a not-yet-deployed URL caches the 404.** Wait for `wrangler deploy`
+  to finish before touching a new path, or clear it via
+  Cloudflare → Caching → Purge.
+- `wrangler deploy` will not attach `kartoney.com` as a `custom_domain` while the
+  Vercel A records exist, and a deploy that hits that error **leaves the Worker
+  with no assets attached** — every path 404s until you redeploy. That is why the
+  domain is wired up as a `[[routes]]` entry instead, which needs no DNS change
+  at all.
 
 ## Checks worth running after a deploy
 
 ```bash
-# the download resolves, with the right type and the full file, from several PoPs
-for i in 1 2 3 4 5; do
-  curl -s -o /dev/null -D - "https://kartoney.com/ostora_online_v<version>.apk?v=<version>" \
-    | grep -iE '^HTTP/|^content-length:|^content-type:|^cf-cache-status:' | tr -d '\r' | tr '\n' ' '
-  echo; sleep 3
-done
+# homepage + a watch page render, redirects work
+curl -s -o /dev/null -w "%{http_code}\n" https://kartoney.com/
+curl -s -o /dev/null -w "%{http_code} → %{redirect_url}\n" https://kartoney.com/live_streaming_apps/
+curl -s https://kartoney.com/watch/detective-conan/1-1/ | grep -o '<source src="[^"]*"'
 
-# no stale references to the previous build anywhere
-grep -rn "v<old-version>" dist/ | head
+# no stale references to the retired app anywhere
+grep -rn "ostora\|\.apk\|live_streaming_apps" dist/ | head
 ```
-
-The `Content-Type: application/vnd.android.package-archive` matters: served as
-`application/octet-stream`, some Android browsers refuse to hand the file to the package
-installer.
-
-## One more trap
-
-`wrangler deploy` will not attach `kartoney.com` as a `custom_domain` while the Vercel A
-records exist, and a deploy that hits that error **leaves the Worker with no assets attached**
-— every path 404s until you redeploy. That is why the domain is wired up as a `[[routes]]`
-entry instead, which needs no DNS change at all.
