@@ -40,13 +40,13 @@ export const ADS = {
   //    interacts, so it doesn't tank Core Web Vitals.
   popunder: {
     enabled: true,
-    scriptSrc: 'https://fortunateambiguous.com/7b/74/46/7b7446d8112cc38fb184092a760b792f.js',
+    scriptSrc: 'https://aarems.org/1/7b7446d8112cc38fb184092a760b792f',
   },
 
   // 2) SOCIAL BAR — Adsterra's highest-earning, least-intrusive format.
   socialBar: {
     enabled: true,
-    scriptSrc: 'https://fortunateambiguous.com/15/cd/23/15cd2395d767864c96c9820d721fd326.js',
+    scriptSrc: 'https://bancadeltempoidea.org/14/15cd2395d767864c96c9820d721fd326',
   },
 
   // 3) NATIVE BANNER — Adsterra allows only ONE Native Banner unit per
@@ -62,19 +62,19 @@ export const ADS = {
   //    From GET CODE: <div id="container-XXXX"> value → containerId,
   //    invoke script src → scriptSrc. minHeight (px) reserves space vs CLS.
   nativeBanners: [
-    // Live unit (container c08a1921… on fortunateambiguous.com). Same unit on
+    // Live unit (container c08a1921… on bancadeltempoidea.org). Same unit on
     // four different page types; layout/font are configured in the Adsterra
     // dashboard (Expert mode) and apply server-side.
     // Best viewability on the site: right under the video, above the fold.
-    { id: 'watchPlayer', enabled: true, containerId: 'container-c08a1921776ab3a71a6a88838d227a3b', scriptSrc: 'https://fortunateambiguous.com/c08a1921776ab3a71a6a88838d227a3b/invoke.js', minHeight: 120 },
+    { id: 'watchPlayer', enabled: true, containerId: 'container-c08a1921776ab3a71a6a88838d227a3b', scriptSrc: 'https://bancadeltempoidea.org/21/c08a1921776ab3a71a6a88838d227a3b', minHeight: 120 },
     // Watch page, mid-content — use ONLY if watchPlayer is left off.
     { id: 'watchSidebar', enabled: false, containerId: '', scriptSrc: '', minHeight: 0 },
     // Cartoon page: between the episode list and "similar series".
-    { id: 'cartoonMid', enabled: true, containerId: 'container-c08a1921776ab3a71a6a88838d227a3b', scriptSrc: 'https://fortunateambiguous.com/c08a1921776ab3a71a6a88838d227a3b/invoke.js' },
+    { id: 'cartoonMid', enabled: true, containerId: 'container-c08a1921776ab3a71a6a88838d227a3b', scriptSrc: 'https://bancadeltempoidea.org/21/c08a1921776ab3a71a6a88838d227a3b' },
     // /lives/ homepage: between the content rows.
-    { id: 'homeMid', enabled: true, containerId: 'container-c08a1921776ab3a71a6a88838d227a3b', scriptSrc: 'https://fortunateambiguous.com/c08a1921776ab3a71a6a88838d227a3b/invoke.js' },
+    { id: 'homeMid', enabled: true, containerId: 'container-c08a1921776ab3a71a6a88838d227a3b', scriptSrc: 'https://bancadeltempoidea.org/21/c08a1921776ab3a71a6a88838d227a3b' },
     // App landing page (/): between the catalog teaser and install steps.
-    { id: 'landingMid', enabled: true, containerId: 'container-c08a1921776ab3a71a6a88838d227a3b', scriptSrc: 'https://fortunateambiguous.com/c08a1921776ab3a71a6a88838d227a3b/invoke.js' },
+    { id: 'landingMid', enabled: true, containerId: 'container-c08a1921776ab3a71a6a88838d227a3b', scriptSrc: 'https://bancadeltempoidea.org/21/c08a1921776ab3a71a6a88838d227a3b' },
   ],
 
   // 4) BANNER UNITS — Adsterra "Banner" format (classic iframe). Available
@@ -86,9 +86,9 @@ export const ADS = {
     // allocated to the PLAYER LIFECYCLE (preroll + pause ad share it — they
     // are temporally exclusive, never rendered at the same time). The watch
     // sidebar therefore uses a 160x300 unit instead (see watchSidebarBox).
-    { id: 'watchSidebarBox', enabled: true, adKey: '403609566fcf3fa6456d6fea1e6450c6', invokeSrc: 'https://fortunateambiguous.com/403609566fcf3fa6456d6fea1e6450c6/invoke.js', width: 160, height: 300 },
+    { id: 'watchSidebarBox', enabled: true, adKey: '403609566fcf3fa6456d6fea1e6450c6', invokeSrc: 'https://bancadeltempoidea.org/22/403609566fcf3fa6456d6fea1e6450c6', width: 160, height: 300 },
     // Live: 320x50 unit (key f6f8326a…) as the sticky mobile anchor.
-    { id: 'mobileAnchor', enabled: true, adKey: 'f6f8326a3201e7ca1ffde64dece4dd63', invokeSrc: 'https://fortunateambiguous.com/f6f8326a3201e7ca1ffde64dece4dd63/invoke.js', width: 320, height: 50, stickyMobile: true },
+    { id: 'mobileAnchor', enabled: true, adKey: 'f6f8326a3201e7ca1ffde64dece4dd63', invokeSrc: 'https://bancadeltempoidea.org/22/f6f8326a3201e7ca1ffde64dece4dd63', width: 320, height: 50, stickyMobile: true },
   ],
 
   // 5) PLAYER-LIFECYCLE ADS (public/js/player.js) — wired to the video
@@ -100,10 +100,10 @@ export const ADS = {
     // Flow: user presses play → 5s countdown with the ad → «تشغيل الحلقة»
     // button appears → tap resumes playback inside the tap gesture (always
     // allowed by mobile browsers, unlike an automatic resume after 5s).
-    preroll: { enabled: true, adKey: '522f21cac4b8add62d4f48119bec242f', invokeSrc: 'https://fortunateambiguous.com/522f21cac4b8add62d4f48119bec242f/invoke.js', width: 300, height: 250, seconds: 5, oncePerSession: true },
+    preroll: { enabled: true, adKey: '522f21cac4b8add62d4f48119bec242f', invokeSrc: 'https://bancadeltempoidea.org/22/522f21cac4b8add62d4f48119bec242f', width: 300, height: 250, seconds: 5, oncePerSession: true },
     // Shows when the viewer pauses mid-video; hides on resume. The ✕ close
     // starts a cooldown (minutes) so pausing often never feels punishing.
-    pauseAd: { enabled: true, adKey: '522f21cac4b8add62d4f48119bec242f', invokeSrc: 'https://fortunateambiguous.com/522f21cac4b8add62d4f48119bec242f/invoke.js', width: 300, height: 250, cooldownMinutes: 5 },
+    pauseAd: { enabled: true, adKey: '522f21cac4b8add62d4f48119bec242f', invokeSrc: 'https://bancadeltempoidea.org/22/522f21cac4b8add62d4f48119bec242f', width: 300, height: 250, cooldownMinutes: 5 },
   },
 };
 
