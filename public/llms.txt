@@ -41,7 +41,6 @@ Kartoney.com is a free Arabic-language cartoon and anime streaming platform. The
 
 - [Detective Conan / المحقق كونان](https://kartoney.com/cartoon/detective-conan/): 437 episodes, Action/Mystery.
 - [Naruto / ناروتو عربي](https://kartoney.com/cartoon/naruto/): 692 episodes, Action/Adventure.
-- [One Piece / وان بيس](https://kartoney.com/cartoon/one-piece/): 936 episodes, Action/Adventure/Fantasy.
 - [Slam Dunk / سلام دانك](https://kartoney.com/cartoon/slam-dunk/): 106 episodes, Sports/Comedy.
 - [Heidi / هايدي](https://kartoney.com/cartoon/heidi/): 94 episodes, Family/Drama.
 - [Grendizer / جراندايزر](https://kartoney.com/cartoon/grendizer/): 74 episodes, Sci-Fi/Action.
